@@ -1,12 +1,21 @@
 @import "partials/variables";
 @import "partials/typography";
 
+@import "layout/navbar";
+@import "layout/mobile-menu";
+@import "layout/main";
+@import "layout/footer";
+
 // Reset
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Open Sans", sans-serif;
+}
+
+ul {
+  list-style: none;
 }
 
 // Global Styles
@@ -16,5 +25,6 @@ body {
 }
 
 .container {
+  margin: 0 auto;
   padding: 1rem;
 }

@@ -1,0 +1,66 @@
+.navbar {
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+
+  .logo {
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+  .navigation {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+
+    @media (max-width: $tablet) {
+      display: none;
+    }
+  }
+
+  .mobile-icon {
+    width: 2.4rem;
+    height: 2.4rem;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+    div {
+      width: 2.4rem;
+      height: 3px;
+      background-color: $text-color;
+      transition: transform $time;
+    }
+
+    div:nth-child(1) {
+      transform: translateY(-6px);
+    }
+    div:nth-child(2) {
+      transform: translateY(0);
+    }
+    div:nth-child(3) {
+      transform: translateY(6px);
+    }
+
+    &.open {
+      div:nth-child(1) {
+        transform: translateY(3px) rotate(45deg);
+      }
+      div:nth-child(2) {
+        transform: translateX(-5rem);
+      }
+      div:nth-child(3) {
+        transform: translateY(-3px) rotate(-45deg);
+      }
+    }
+
+    @media (max-width: $tablet) {
+      display: flex;
+    }
+  }
+}
