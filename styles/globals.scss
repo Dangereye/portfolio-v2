@@ -1,0 +1,20 @@
+@import "partials/variables";
+@import "partials/typography";
+
+// Reset
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+// Global Styles
+body {
+  font-size: 2rem;
+  color: $text-color;
+}
+
+.container {
+  padding: 1rem;
+}
