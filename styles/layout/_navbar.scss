@@ -1,5 +1,16 @@
 .navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 6rem;
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   .container {
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -22,43 +33,7 @@
   }
 
   .mobile-icon {
-    width: 2.4rem;
-    height: 2.4rem;
     display: none;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    cursor: pointer;
-
-    div {
-      width: 2.4rem;
-      height: 3px;
-      background-color: $text-color;
-      transition: transform $time;
-    }
-
-    div:nth-child(1) {
-      transform: translateY(-6px);
-    }
-    div:nth-child(2) {
-      transform: translateY(0);
-    }
-    div:nth-child(3) {
-      transform: translateY(6px);
-    }
-
-    &.open {
-      div:nth-child(1) {
-        transform: translateY(3px) rotate(45deg);
-      }
-      div:nth-child(2) {
-        transform: translateX(-5rem);
-      }
-      div:nth-child(3) {
-        transform: translateY(-3px) rotate(-45deg);
-      }
-    }
 
     @media (max-width: $tablet) {
       display: flex;

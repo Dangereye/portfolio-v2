@@ -1,12 +1,13 @@
-import useMobileMenu from "../hooks/useMobileMenu";
+import { useContext } from "react";
+import { AppContext } from "../context/AppContext";
 
 export default function MobileIcon() {
-  const { isOpen, setIsOpen } = useMobileMenu();
-  console.log({ isOpen });
+  const { menuIsOpen, setMenuIsOpen } = useContext(AppContext);
+
   return (
     <div
-      className={isOpen ? "mobile-icon open" : "mobile-icon"}
-      onClick={() => setIsOpen(!isOpen)}
+      className={menuIsOpen ? "mobile-icon open" : "mobile-icon"}
+      onClick={() => setMenuIsOpen(!menuIsOpen)}
     >
       <div></div>
       <div></div>

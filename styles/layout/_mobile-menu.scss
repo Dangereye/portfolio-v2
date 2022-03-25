@@ -1,0 +1,13 @@
+.mobile-menu {
+  position: fixed;
+  top: 10rem;
+  left: -100%;
+  width: 100%;
+  min-height: 100vh;
+  padding: 0 1rem;
+  transition: left $time;
+
+  &.open {
+    left: 0;
+  }
+}
