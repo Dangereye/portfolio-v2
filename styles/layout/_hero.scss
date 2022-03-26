@@ -1,0 +1,14 @@
+.hero {
+  min-height: 100vh;
+  padding: 0 1rem;
+  color: #fff;
+  background-color: #101010;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .lead-text {
+    max-width: 40ch;
+    color: rgba(#fff, 0.6);
+  }
+}
