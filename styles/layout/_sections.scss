@@ -1,0 +1,27 @@
+.section {
+  &__hero {
+    min-height: 100vh;
+    padding: 0 1rem;
+    color: #fff;
+    background-color: #101010;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+      line-height: 1;
+      span {
+        display: block;
+      }
+    }
+
+    .body-text {
+      max-width: 40ch;
+      color: rgba(#fff, 0.6);
+    }
+
+    .btns {
+      margin-top: 4rem;
+    }
+  }
+}

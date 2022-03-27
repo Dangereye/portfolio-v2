@@ -31,5 +31,8 @@ body {
 @import "layout/navigation";
 @import "layout/mobile-icon";
 @import "layout/main";
-@import "layout/hero";
+@import "layout/sections";
 @import "layout/footer";
+
+// Component Styles
+@import 'components/buttons'

@@ -1,0 +1,36 @@
+.btns {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2rem;
+}
+
+.btn {
+  min-width: max-content;
+  padding: 1rem 2rem;
+
+  display: flex;
+  align-items: center;
+
+  border: none;
+  border-radius: 5px;
+
+  text-transform: capitalize;
+  font-size: 2rem;
+  font-weight: 500;
+
+  cursor: pointer;
+
+  &--primary {
+    padding: 2rem 3rem;
+    color: #fff;
+    background-color: $primary-color;
+  }
+
+  &--full-width {
+    @media (max-width: $mobile) {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+}

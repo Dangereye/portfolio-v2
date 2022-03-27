@@ -1,14 +1,21 @@
+import Button from "../components/Button";
+
 export default function Hero() {
   return (
-    <div className="hero">
+    <section className="section section__hero">
       <div className="container">
-        <h1 className="display-heading">Front-End Developer</h1>
-        <p className="lead-text">
+        <h1 className="display-heading">
+          <span>Front-End</span>
+          <span>Developer</span>
+        </h1>
+        <p className="body-text">
           Not your average developer - get ready to transform your ideas into
           reality.
         </p>
-        <button>Recent Projects</button>
+        <div className="btns">
+          <Button name="recent projects" classes="btn--primary" />
+        </div>
       </div>
-    </div>
+    </section>
   );
 }
