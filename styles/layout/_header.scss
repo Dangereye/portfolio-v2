@@ -5,9 +5,14 @@
   width: 100%;
   min-height: 8rem;
   padding: 0 1rem;
+  transition: background-color $time ease-in-out;
   display: flex;
   align-items: center;
   justify-content: center;
+
+  &.background {
+    background-color: $bg-color-dark;
+  }
 
   .container {
     width: 100%;
