@@ -1,4 +1,4 @@
-import Button from "../components/Button";
+import Link from "next/link";
 
 export default function Hero() {
   return (
@@ -13,7 +13,9 @@ export default function Hero() {
           reality.
         </p>
         <div className="btns">
-          <Button name="recent projects" classes="btn--primary" />
+          <Link href="/#portfolio">
+            <a className="btn btn--primary">Recent Projects</a>
+          </Link>
         </div>
       </div>
     </section>

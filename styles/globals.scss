@@ -26,9 +26,14 @@ ul {
 }
 
 // Global Styles
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-size: 2rem;
   color: $text-color-dark;
+  background-color: $bg-color-light;
 }
 
 .container {

@@ -1,18 +1,18 @@
 .mobile-menu {
-  display: none;
+  visibility: hidden;
   position: fixed;
   top: 10rem;
   left: -100%;
   width: 100%;
   min-height: 100vh;
   padding: 0 1rem;
+  background-color: $bg-color-dark;
   transition: left $time;
 
   &.open {
     @media (max-width: $tablet) {
-      display: block;
-      background-color: $bg-color-dark;
-      animation: animateMM $time 0.1s forwards ease-out;
+      visibility: visible;
+      left: 0;
     }
   }
 
@@ -25,11 +25,5 @@
         padding: 0;
       }
     }
-  }
-}
-
-@keyframes animateMM {
-  100% {
-    left: 0;
   }
 }
