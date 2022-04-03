@@ -8,6 +8,17 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Open Sans", sans-serif;
+
+  &:focus {
+    outline: 2px solid $secondary-color;
+    animation: fade-focus $time 0.2s forwards;
+  }
+}
+
+@keyframes fade-focus {
+  100% {
+    outline-color: transparent;
+  }
 }
 
 ul {
@@ -17,7 +28,7 @@ ul {
 // Global Styles
 body {
   font-size: 2rem;
-  color: $text-color;
+  color: $text-color-dark;
 }
 
 .container {
@@ -35,4 +46,4 @@ body {
 @import "layout/footer";
 
 // Component Styles
-@import 'components/buttons'
+@import "components/buttons";

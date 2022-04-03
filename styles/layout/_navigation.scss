@@ -3,5 +3,15 @@
     font-size: 2rem;
     font-weight: 500;
     text-decoration: none;
+    transition: color $time;
+
+    &:hover {
+      color: $secondary-color;
+    }
+
+    &:focus:not(.btn) {
+      border-radius: 1px;
+      outline-offset: 5px;
+    }
   }
 }

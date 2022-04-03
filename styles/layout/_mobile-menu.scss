@@ -1,4 +1,5 @@
 .mobile-menu {
+  display: none;
   position: fixed;
   top: 10rem;
   left: -100%;
@@ -8,6 +9,27 @@
   transition: left $time;
 
   &.open {
+    @media (max-width: $tablet) {
+      display: block;
+      background-color: $bg-color-dark;
+      animation: animateMM $time 0.1s forwards ease-out;
+    }
+  }
+
+  .navigation {
+    &__link {
+      color: rgba(#fff, 0.6);
+
+      &.btn {
+        width: max-content;
+        padding: 0;
+      }
+    }
+  }
+}
+
+@keyframes animateMM {
+  100% {
     left: 0;
   }
 }

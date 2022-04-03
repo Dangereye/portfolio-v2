@@ -7,10 +7,15 @@
   overflow: hidden;
   cursor: pointer;
 
+  &:focus {
+    border-radius: 1px;
+    outline-offset: 5px;
+  }
+
   div {
     width: 2.4rem;
     height: 3px;
-    background-color: $text-color;
+    background-color: #fff;
     transition: transform $time;
   }
 
