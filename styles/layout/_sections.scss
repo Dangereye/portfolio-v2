@@ -34,20 +34,30 @@
       bottom: 0;
       left: 0;
 
+      display: flex;
+      align-items: center;
+      gap: 4rem;
+
       .highlight {
         &__icon {
-          font-size: 3rem;
-          font-weight: 700;
+          margin-bottom: 1rem;
+          display: flex;
+          align-items: center;
+          gap: 1rem;
+
           span {
-            margin-left: 5px;
-            color: $secondary-color;
+            width: 4rem;
+            height: 4rem;
+            svg {
+              fill: #fff;
+            }
           }
         }
         &__text {
           max-width: 10rem;
           color: rgba(#fff, 0.6);
           font-size: 1.6rem;
-          line-height: 1.2;
+          line-height: 1.3;
         }
       }
     }

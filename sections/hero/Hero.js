@@ -1,4 +1,9 @@
 import Link from "next/link";
+import CompassSvg from "../../svgs/Compass";
+import NextSVG from "../../svgs/Next";
+import ReactSvg from "../../svgs/React";
+import ScreenSvg from "../../svgs/Screens";
+import Highlight from "./Highlight";
 
 export default function Hero() {
   return (
@@ -20,12 +25,10 @@ export default function Hero() {
           </div>
         </div>
         <div className="highlights">
-          <div className="highlight">
-            <div className="highlight__icon">
-              10<span>+</span>
-            </div>
-            <div className="highlight__text">Years Experience</div>
-          </div>
+          <Highlight icon={<ReactSvg />} text="React JS Focused" />
+          <Highlight icon={<NextSVG />} text="Next JS Enhanced" />
+          <Highlight icon={<CompassSvg />} text="Modern Design" />
+          <Highlight icon={<ScreenSvg />} text="Fully Responsive" />
         </div>
       </div>
     </section>
