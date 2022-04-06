@@ -1,13 +1,17 @@
 .section {
   min-height: 100vh;
   padding: 12rem 1rem;
-
+  // Hero Section
   &__hero {
     color: #fff;
     background-color: $bg-color-dark;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+    .container {
+      height: calc(100vh - 24rem);
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
 
     h1 {
       line-height: 1;
@@ -23,6 +27,29 @@
 
     .btns {
       margin-top: 4rem;
+    }
+
+    .highlights {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+
+      .highlight {
+        &__icon {
+          font-size: 3rem;
+          font-weight: 700;
+          span {
+            margin-left: 5px;
+            color: $secondary-color;
+          }
+        }
+        &__text {
+          max-width: 10rem;
+          color: rgba(#fff, 0.6);
+          font-size: 1.6rem;
+          line-height: 1.2;
+        }
+      }
     }
   }
 }

@@ -1,13 +1,14 @@
 .mobile-menu {
   visibility: hidden;
   position: fixed;
-  top: 10rem;
+  top: 0;
   left: -100%;
   width: 100%;
   min-height: 100vh;
-  padding: 0 1rem;
+  padding: 12rem 1rem;
   background-color: $bg-color-dark;
   transition: left $time;
+  z-index: 99;
 
   &.open {
     @media (max-width: $tablet) {
