@@ -26,8 +26,8 @@ export default function Hero() {
         </div>
         <div className="highlights">
           <Highlight icon={<ReactSvg />} text="React JS Focused" />
-          <Highlight icon={<NextSVG />} text="Next JS Enhanced" />
-          <Highlight icon={<CompassSvg />} text="Modern Design" />
+          <Highlight icon={<NextSVG />} text="Enhanced with Next JS" />
+          <Highlight icon={<CompassSvg />} text="Modern Designs" />
           <Highlight icon={<ScreenSvg />} text="Fully Responsive" />
         </div>
       </div>
