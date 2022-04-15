@@ -33,7 +33,6 @@ html {
 body {
   font-size: 2rem;
   color: $text-color-dark;
-  background-color: $bg-color-light;
 }
 
 .container {
@@ -50,8 +49,8 @@ body {
 @import "layout/main";
 @import "layout/footer";
 
-// Sections Styles
-@import "sections/sections";
+// Article Styles
+@import "articles/articles";
 
 // Component Styles
 @import "components/buttons";

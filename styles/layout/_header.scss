@@ -12,7 +12,7 @@
   z-index: 100;
 
   &.background {
-    background-color: $bg-color-dark;
+    background-color: $primary-color;
   }
 
   .container {
@@ -43,7 +43,7 @@
         padding: 1rem 2rem;
         color: #fff;
         font-weight: 500;
-        background-color: #2f4ecb;
+        background-color: $secondary-color;
         border-radius: 5px;
       }
     }

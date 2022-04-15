@@ -1,6 +1,6 @@
 &__hero {
   color: #fff;
-  background-color: $bg-color-dark;
+  background-color: $primary-color;
 
   .container {
     height: calc(100vh - 24rem);
@@ -10,6 +10,7 @@
   }
 
   h1 {
+    margin-bottom: 2rem;
     line-height: 1;
     span {
       display: block;

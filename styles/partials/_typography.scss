@@ -7,29 +7,30 @@ html {
   line-height: 1.618;
 }
 .display-heading,
-.section-heading,
-.section-subheading {
+.article-heading,
+.article-subheading {
   margin-bottom: 2rem;
 }
 .display-heading {
   font-size: 7.2rem;
 }
-.section-heading-lead {
-  display: inline-block;
-  font-size: 2.4rem;
-  font-style: italic;
-  color: $secondary-color;
-}
-.section-heading {
-  font-size: 5.6rem;
+.article-heading-lead {
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-weight: 700;
   line-height: 1;
+  color: $secondary-color;
+  margin-bottom: 2rem;
+}
+.article-heading {
+  text-transform: uppercase;
+  font-size: 6rem;
+  font-weight: 600;
+  line-height: 1.618;
+  margin-bottom: 12rem;
 }
 
-.section-subheading {
-  font-size: 4rem;
-  font-weight: 300;
-  font-style: italic;
-  line-height: 1;
+.article-subheading {
 }
 
 .lead-text,

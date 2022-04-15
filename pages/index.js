@@ -1,9 +1,9 @@
-import About from "../sections/About";
-import Contact from "../sections/Contact";
-import Hero from "../sections/hero/Hero";
-import Photoshop from "../sections/Photoshop";
-import Portfolio from "../sections/Portfolio";
-import Skills from "../sections/Skills";
+import About from "../articles/About";
+import Contact from "../articles/Contact";
+import Hero from "../articles/hero/Hero";
+import Photoshop from "../articles/Photoshop";
+import Portfolio from "../articles/Portfolio";
+import Skills from "../articles/Skills";
 
 export default function Home() {
   return (

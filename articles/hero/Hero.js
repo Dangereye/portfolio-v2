@@ -7,16 +7,17 @@ import Highlight from "./Highlight";
 
 export default function Hero() {
   return (
-    <section className="section section__hero">
+    <article className="article article__hero">
       <div className="container">
         <div className="typography-and-cta">
-          <h1 className="display-heading">
-            <span>Front-End</span>
-            <span>Developer</span>
+          <div className="article-heading-lead">Front-end developer</div>
+          <h1 className="article-heading">
+            <span>Bringing it</span>
+            <span>all together</span>
           </h1>
           <p className="body-text">
-            Not your average developer - get ready to transform your ideas into
-            reality.
+            Together we'll develop & grow your ideas into a beautiful, modern,
+            easy to use - reality.
           </p>
           <div className="btns">
             <Link href="/#portfolio">
@@ -31,6 +32,6 @@ export default function Hero() {
           <Highlight icon={<ScreenSvg />} text="Fully Responsive" />
         </div>
       </div>
-    </section>
+    </article>
   );
 }

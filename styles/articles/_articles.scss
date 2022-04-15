@@ -1,0 +1,13 @@
+.article {
+  min-height: 100vh;
+  padding: 12rem 1rem;
+
+  display: flex;
+  justify-content: center;
+
+  // Hero Article
+  @import "hero";
+
+  // Portfolio Article
+  @import "portfolio";
+}
