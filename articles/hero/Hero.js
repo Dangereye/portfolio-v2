@@ -29,7 +29,7 @@ export default function Hero() {
           <Highlight icon={<ReactSvg />} text="React JS Focused" />
           <Highlight icon={<NextSVG />} text="Enhanced with Next JS" />
           <Highlight icon={<CompassSvg />} text="Modern Designs" />
-          <Highlight icon={<ScreenSvg />} text="Fully Responsive" />
+          <Highlight icon={<ScreenSvg />} text="Multi-device responsive" />
         </div>
       </div>
     </article>
