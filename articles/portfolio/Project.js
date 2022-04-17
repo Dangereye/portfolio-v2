@@ -1,30 +1,46 @@
 import Image from "next/image";
+import Link from "next/link";
 import Button from "../../components/Button";
 
-export default function Project({ project }) {
+export default function Project({ project, alt }) {
   console.log(project);
   return (
-    <div className="project">
-      <div className="project__img">
+    <div className={alt ? "project alt" : "project"}>
+      <div className={alt ? "project__img alt" : "project__img"}>
         <Image src={project.image} layout="fill" alt={project.name} />
       </div>
       <div className="project__details">
-        <div className="article-heading-lead">{project.date}</div>
-        <h2 className="article-heading">{project.name}</h2>
-        <div className="project__tech">
+        <div className="project__date">{project.date}</div>
+        <h2 className="project__name">{project.name}</h2>
+        <div className="tech">
           {project.tech.map((icon, i) => (
-            <div className="project__tech__icon">{icon}</div>
+            <div className="tech__icon">
+              <Image
+                src={icon.img}
+                width={icon.width}
+                height={icon.height}
+                alt={icon.name}
+              />
+            </div>
           ))}
         </div>
         <div className="project__description">{project.description}</div>
-        <div className="project__third-party">
-          {project.third_party.map((item, i) => (
-            <div className="project__third-party__item">{item}</div>
+        <div className="third-party">
+          {project.third_party.map((link, i) => (
+            <a
+              href={link.url}
+              target="_blank"
+              rel="noreferrer"
+              className="third-party__link"
+            >
+              {link.name}
+            </a>
           ))}
         </div>
-        <div className="btns"></div>
-        <Button />
-        <Button />
+        <div className="btns">
+          <Button />
+          <Button />
+        </div>
       </div>
     </div>
   );
@@ -32,12 +48,32 @@ export default function Project({ project }) {
 
 Project.defaultProps = {
   project: {
-    image: "/../../public/img/games-project.jpg",
-    date: "2022",
-    name: "Games",
-    tech: [],
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, doloremque facilis. Omnis quidem ad obcaecati quibusdam dolorem. Velit nam at et porro vitae, sequi, ullam dolorum quibusdam nobis, nihil molestias! Minus ullam velit labore. Nihil officiis aliquid beatae aut! Minus eius fugiat, nemo nisi perspiciatis consectetur animi dolore voluptate ea?",
-    third_party: [],
+    image: "/img/movies-project.jpg",
+    date: "2021",
+    name: "Movies",
+    tech: [
+      { img: "/svg/html5.svg", name: "HTML5", width: "34.29", height: "40" },
+      { img: "/svg/css3.svg", name: "CSS3", width: "34.29", height: "40" },
+      { img: "/svg/sass.svg", name: "SCSS", width: "53.38", height: "40" },
+      { img: "/svg/js.svg", name: "JavaScript", width: "40", height: "40" },
+      { img: "/svg/react.svg", name: "ReactJS", width: "45.71", height: "40" },
+    ],
+    description: (
+      <p className="body-text">
+        Explore millions of movies, television shows, cast & crew. Check out new
+        upcoming releases, or re-discover old favourites. View trailers, read
+        biographies, learn who or what is popular - right now! You'll probably
+        find a few gems along the way - that you didn't know existed!
+        <br />
+        <span>Caution</span> - can cause unexplained time loss.
+      </p>
+    ),
+    third_party: [
+      { url: "/", name: "#tmdb-api" },
+      { url: "/", name: "#youtube" },
+      { url: "/", name: "#react-icons" },
+      { url: "/", name: "#react-router" },
+      { url: "/", name: "#react-query" },
+    ],
   },
 };

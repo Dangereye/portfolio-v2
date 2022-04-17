@@ -7,6 +7,8 @@ export default function Portfolio() {
         <div className="article-heading-lead">Recent projects</div>
         <h2 className="article-heading">Portfolio </h2>
         <Project />
+        <Project alt />
+        <Project />
       </div>
     </article>
   );

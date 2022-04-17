@@ -15,6 +15,15 @@
   }
 }
 
+a {
+  color: $secondary-color;
+  transition: color $time;
+
+  &:hover {
+    color: $primary-color;
+  }
+}
+
 @keyframes fade-focus {
   100% {
     outline-color: transparent;
@@ -33,6 +42,7 @@ html {
 body {
   font-size: 2rem;
   color: $text-color-dark;
+  background-color: #fff;
 }
 
 .container {
@@ -54,3 +64,4 @@ body {
 
 // Component Styles
 @import "components/buttons";
+@import "components/project";
