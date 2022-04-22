@@ -47,6 +47,10 @@
   &--accent {
     color: #fff;
     background-color: $accent-color;
+
+    &:hover {
+      color: #fff;
+    }
   }
 
   &--full-width {

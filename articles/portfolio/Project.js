@@ -37,7 +37,7 @@ export default function Project({ project, alt }) {
         </div>
         <div className="btns">
           <a
-            href=""
+            href={project.project__url}
             target="_blank"
             rel="noreferrer"
             className="btn btn--accent btn--large"
@@ -45,7 +45,7 @@ export default function Project({ project, alt }) {
             Launch Site
           </a>
           <a
-            href=""
+            href={project.repo__url}
             target="_blank"
             rel="noreferrer"
             className="btn btn--secondary"
