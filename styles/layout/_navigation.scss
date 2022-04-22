@@ -6,7 +6,7 @@
     transition: color $time;
 
     &:hover {
-      color: $secondary-color;
+      color: $light-color;
     }
 
     &:focus:not(.btn) {

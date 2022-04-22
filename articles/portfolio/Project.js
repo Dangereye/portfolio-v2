@@ -1,9 +1,6 @@
 import Image from "next/image";
-import Link from "next/link";
-import Button from "../../components/Button";
 
 export default function Project({ project, alt }) {
-  console.log(project);
   return (
     <div className={alt ? "project alt" : "project"}>
       <div className={alt ? "project__img alt" : "project__img"}>
@@ -14,7 +11,7 @@ export default function Project({ project, alt }) {
         <h2 className="project__name">{project.name}</h2>
         <div className="tech">
           {project.tech.map((icon, i) => (
-            <div className="tech__icon">
+            <div className="tech__icon" key={`${project.name}-tech-${i}`}>
               <Image
                 src={icon.img}
                 width={icon.width}
@@ -28,6 +25,7 @@ export default function Project({ project, alt }) {
         <div className="third-party">
           {project.third_party.map((link, i) => (
             <a
+              key={`${project.name}-third-party-${i}`}
               href={link.url}
               target="_blank"
               rel="noreferrer"
@@ -38,8 +36,22 @@ export default function Project({ project, alt }) {
           ))}
         </div>
         <div className="btns">
-          <Button />
-          <Button />
+          <a
+            href=""
+            target="_blank"
+            rel="noreferrer"
+            className="btn btn--accent btn--large"
+          >
+            Launch Site
+          </a>
+          <a
+            href=""
+            target="_blank"
+            rel="noreferrer"
+            className="btn btn--secondary"
+          >
+            View Code
+          </a>
         </div>
       </div>
     </div>
@@ -75,5 +87,7 @@ Project.defaultProps = {
       { url: "/", name: "#react-router" },
       { url: "/", name: "#react-query" },
     ],
+    project__url: "/",
+    repo__url: "/",
   },
 };

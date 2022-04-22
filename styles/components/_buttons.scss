@@ -22,10 +22,31 @@
 
   cursor: pointer;
 
-  &--primary {
+  &--large {
     padding: 2rem 3rem;
+  }
+
+  &--primary {
     color: #fff;
-    background-color: $secondary-color;
+    background-color: $light-color;
+
+    &:hover {
+      color: #fff;
+    }
+  }
+
+  &--secondary {
+    color: $text-color-dark;
+    transition: color $time;
+
+    &:hover {
+      color: $light-color;
+    }
+  }
+
+  &--accent {
+    color: #fff;
+    background-color: $accent-color;
   }
 
   &--full-width {
