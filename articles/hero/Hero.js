@@ -1,4 +1,5 @@
 import Link from "next/link";
+import BgHighlight from "../../components/BgHighlight";
 import CompassSvg from "../../svgs/Compass";
 import NextSVG from "../../svgs/Next";
 import ReactSvg from "../../svgs/React";
@@ -8,6 +9,8 @@ import Highlight from "./Highlight";
 export default function Hero() {
   return (
     <article className="article article__hero">
+      <BgHighlight pos="top-left" />
+      <BgHighlight pos="bottom-right" />
       <div className="container">
         <div className="typography-and-cta">
           <div className="article-heading-lead">Front-end developer</div>

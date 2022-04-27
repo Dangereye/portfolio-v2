@@ -1,6 +1,8 @@
 &__hero {
+  position: relative;
   color: #fff;
   background-color: $dark-color;
+  overflow: hidden;
 
   .container {
     height: calc(100vh - 24rem);

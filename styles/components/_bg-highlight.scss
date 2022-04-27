@@ -1,0 +1,29 @@
+.bg-highlight {
+  position: absolute;
+  width: 200rem;
+  height: 200rem;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  background-image: radial-gradient($light-color 0%, $dark-color 60%);
+  opacity: 0.3;
+
+  &--top-left {
+    top: 0;
+    left: 0;
+  }
+
+  &--top-right {
+    top: 0;
+    left: 100%;
+  }
+
+  &--bottom-left {
+    top: 100%;
+    left: 0;
+  }
+
+  &--bottom-right {
+    top: 100%;
+    left: 100%;
+  }
+}
