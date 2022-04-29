@@ -8,7 +8,7 @@ export default function Portfolio() {
   return (
     <article className="article article__portfolio" id="portfolio">
       <div className="container">
-        <ArticleHeading first="Portfolio" second="Recent projects" />
+        <ArticleHeading lead="Portfolio" h2="Recent projects" />
         <Project project={games} />
         <Project project={the_weather} alt />
         <Project project={movies} />

@@ -3,7 +3,7 @@ import Contact from "../articles/Contact";
 import Hero from "../articles/hero/Hero";
 import Photoshop from "../articles/Photoshop";
 import Portfolio from "../articles/portfolio/Portfolio";
-import Skills from "../articles/Skills";
+import Skills from "../articles/skills/Skills";
 
 export default function Home() {
   return (

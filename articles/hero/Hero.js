@@ -13,8 +13,8 @@ export default function Hero() {
       <BgHighlight pos="bottom-right" />
       <div className="container">
         <div className="typography-and-cta">
-          <div className="article-heading-lead">Front-end developer</div>
-          <h1 className="article-heading">
+          <div className="heading heading--lead">Front-end developer</div>
+          <h1 className="heading heading--h1">
             <span>Bringing it</span>
             <span>all together</span>
           </h1>
@@ -24,7 +24,7 @@ export default function Hero() {
           </p>
           <div className="btns">
             <Link href="/#portfolio">
-              <a className="btn btn--primary">Recent Projects</a>
+              <a className="btn btn--primary btn--large">Recent Projects</a>
             </Link>
           </div>
         </div>

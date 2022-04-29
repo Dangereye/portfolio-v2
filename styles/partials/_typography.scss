@@ -6,33 +6,34 @@ html {
   font-weight: 400;
   line-height: 1.618;
 }
-.display-heading,
-.article-heading,
-.article-subheading {
-  margin-bottom: 2rem;
-}
-.display-heading {
-  font-size: 7.2rem;
-}
-.article-heading-lead {
-  text-transform: uppercase;
-  font-size: 2rem;
-  font-weight: 700;
-  letter-spacing: 1px;
-  line-height: 1;
-  color: $light-color;
-  margin-bottom: 2rem;
-}
-.article-heading {
-  text-transform: uppercase;
-  font-size: 6rem;
-  font-weight: 700;
-  letter-spacing: 1px;
-  line-height: 1.2;
-  margin-bottom: 12rem;
-}
 
-.article-subheading {
+.heading {
+  text-transform: uppercase;
+  line-height: 1.2;
+  letter-spacing: 1px;
+  margin-bottom: 2rem;
+
+  &--h1 {
+    font-size: 7.2rem;
+  }
+
+  &--lead {
+    font-size: 2rem;
+    font-weight: 700;
+    color: $light-color;
+  }
+
+  &--h2 {
+    font-size: 6rem;
+    font-weight: 700;
+    margin-bottom: 12rem;
+  }
+
+  &--h3 {
+    font-size: 3.2rem;
+    font-weight: 500;
+    letter-spacing: 0;
+  }
 }
 
 .lead-text,

@@ -1,13 +1,13 @@
-export default function ArticleHeading({ first, second }) {
+export default function ArticleHeading({ lead, h2 }) {
   return (
     <>
-      <div className="article-heading-lead">{first}</div>
-      <h2 className="article-heading">{second}</h2>
+      <div className="heading heading--lead">{lead}</div>
+      <h2 className="heading heading--h2">{h2}</h2>
     </>
   );
 }
 
 ArticleHeading.defaultProps = {
-  first: "first heading ",
-  second: "Second heading",
+  lead: "first heading ",
+  h2: "Second heading",
 };
