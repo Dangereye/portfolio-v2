@@ -1,6 +1,11 @@
 import Image from "next/image";
 import ArticleHeading from "../../components/ArticleHeading";
 import BgHighlight from "../../components/BgHighlight";
+import ListGroup from "./ListGroup";
+import { environment } from "../../data/skills/environment";
+import { designTools } from "../../data/skills/designTools";
+import { frontEnd } from "../../data/skills/frontEnd";
+import { backEnd } from "../../data/skills/backEnd";
 
 export default function Skills() {
   return (
@@ -21,45 +26,16 @@ export default function Skills() {
           </p>
           <div className="content">
             <div className="lists">
-              <div className="list-group">
-                <h3 className="heading heading--h3">Environment</h3>
-                <ul className="list">
-                  <li className="list__item">Windows</li>
-                  <li className="list__item">VS Code</li>
-                  <li className="list__item">NPM</li>
-                  <li className="list__item">Github</li>
-                </ul>
-              </div>
-              <div className="list-group">
-                <h3 className="heading heading--h3">Design tools</h3>
-                <ul className="list">
-                  <li className="list__item">Photoshop</li>
-                  <li className="list__item">Illustrator</li>
-                  <li className="list__item">Experience design (Xd)</li>
-                </ul>
-              </div>
-              <div className="list-group">
-                <h3 className="heading heading--h3">Front-end</h3>
-                <ul className="list">
-                  <li className="list__item">HTML5</li>
-                  <li className="list__item">CSS3</li>
-                  <li className="list__item">SCSS (SASS)</li>
-                  <li className="list__item">JavaScript</li>
-                  <li className="list__item">JavaScript</li>
-                  <li className="list__item">React JS</li>
-                  <li className="list__item">Redux</li>
-                  <li className="list__item">Next JS</li>
-                </ul>
-              </div>
-              <div className="list-group">
-                <h3 className="heading heading--h3">Back-end</h3>
-                <ul className="list">
-                  <li className="list__item">Node</li>
-                  <li className="list__item">Express</li>
-                  <li className="list__item">Mongoose</li>
-                  <li className="list__item">MongoDB</li>
-                </ul>
-              </div>
+              <ListGroup
+                heading={environment.heading}
+                list={environment.list}
+              />
+              <ListGroup
+                heading={designTools.heading}
+                list={designTools.list}
+              />
+              <ListGroup heading={frontEnd.heading} list={frontEnd.list} />
+              <ListGroup heading={backEnd.heading} list={backEnd.list} />
             </div>
           </div>
         </div>
