@@ -1,0 +1,66 @@
+&__photoshop {
+  .heading {
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  .body-text {
+    max-width: 83rem;
+    margin: 4rem auto 12rem auto;
+  }
+
+  .grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  }
+
+  .grid__item {
+    position: relative;
+    aspect-ratio: 16/9;
+  }
+
+  .beechfield-beanie {
+    grid-column: span 2;
+  }
+
+  .axq {
+    grid-column: span 4;
+    grid-row: span 2;
+  }
+
+  .beechfield-morp {
+    grid-column: span 4;
+    grid-row: span 2;
+  }
+
+  .yoko {
+    grid-column: span 2;
+  }
+
+  .fruit-of-the-loom {
+    grid-column: span 2;
+  }
+
+  .portwest {
+    grid-column: span 2;
+  }
+
+  .premier {
+    grid-column: span 4;
+    grid-row: span 2;
+  }
+  .bandc {
+    grid-column: span 4;
+    grid-row: span 2;
+  }
+  .workguard {
+    grid-column: span 4;
+    grid-row: span 2;
+  }
+
+  .btns {
+    margin-top: 12rem;
+    justify-content: center;
+  }
+}

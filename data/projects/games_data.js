@@ -1,5 +1,5 @@
 export const games = {
-  image: "/img/games-project.jpg",
+  image: "/img/portfolio/games-project.jpg",
   date: "Nov 2021",
   name: "Games",
   tech: [

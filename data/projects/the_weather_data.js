@@ -1,5 +1,5 @@
 export const the_weather = {
-  image: "/img/the-weather-project.jpg",
+  image: "/img/portfolio/the-weather-project.jpg",
   date: "Mar 2021",
   name: "The Weather",
   tech: [
