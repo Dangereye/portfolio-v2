@@ -11,52 +11,142 @@
 
   .grid {
     display: grid;
-    gap: 1rem;
     grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+
+    @media (max-width: $laptop) {
+      grid-template-columns: repeat(6, 1fr);
+    }
+
+    @media (max-width: $mobile) {
+      grid-template-columns: 1fr;
+      gap: 5px;
+    }
   }
 
   .grid__item {
     position: relative;
     aspect-ratio: 16/9;
+    cursor: pointer;
+
+    img {
+      transition: transform $time;
+    }
+
+    &:hover img {
+      transform: scale(1.1);
+      z-index: 50;
+    }
   }
 
   .beechfield-beanie {
     grid-column: span 2;
+
+    @media (max-width: $laptop) {
+      grid-column: span 3;
+      grid-row: span 2;
+    }
   }
 
   .axq {
     grid-column: span 4;
     grid-row: span 2;
+
+    @media (max-width: $laptop) {
+      grid-column: span 3;
+      grid-row: span 2;
+    }
   }
 
   .beechfield-morp {
     grid-column: span 4;
     grid-row: span 2;
+
+    @media (max-width: $laptop) {
+      grid-column: span 2;
+      grid-row: span 1;
+    }
   }
 
   .yoko {
     grid-column: span 2;
+
+    @media (max-width: $laptop) {
+      grid-column: span 4;
+      grid-row: span 2;
+    }
   }
 
-  .fruit-of-the-loom {
+  .fotl {
     grid-column: span 2;
+
+    @media (max-width: $laptop-l) {
+      grid-column: span 4;
+      grid-row: span 2;
+    }
+
+    @media (max-width: $laptop) {
+      grid-column: span 2;
+      grid-row: span 1;
+    }
   }
 
   .portwest {
     grid-column: span 2;
+
+    @media (max-width: $laptop-l) {
+      grid-column: span 4;
+      grid-row: span 2;
+    }
   }
 
   .premier {
     grid-column: span 4;
     grid-row: span 2;
+
+    @media (max-width: $laptop-l) {
+      grid-column: span 2;
+      grid-row: span 1;
+    }
   }
+
   .bandc {
     grid-column: span 4;
     grid-row: span 2;
+
+    @media (max-width: $laptop-l) {
+      grid-column: span 2;
+      grid-row: span 1;
+    }
   }
+
   .workguard {
     grid-column: span 4;
     grid-row: span 2;
+
+    @media (max-width: $laptop-l) {
+      grid-column: span 10;
+      grid-row: span 1;
+    }
+
+    @media (max-width: $laptop) {
+      grid-column: span 6;
+      grid-row: span 1;
+    }
+  }
+
+  @media (max-width: $mobile) {
+    .beechfield-beanie,
+    .axq,
+    .beechfield-morp,
+    .yoko,
+    .fotl,
+    .portwest,
+    .premier,
+    .bandc,
+    .workguard {
+      grid-column: span 1;
+      grid-row: span 1;
+    }
   }
 
   .btns {

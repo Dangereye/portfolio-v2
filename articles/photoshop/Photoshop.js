@@ -26,7 +26,7 @@ export default function Photoshop() {
           <div className="grid__item yoko">
             <Image src="/img/photoshop/yoko.jpg" layout="fill" />
           </div>
-          <div className="grid__item fruit-of-the-loom">
+          <div className="grid__item fotl">
             <Image src="/img/photoshop/fruit-of-the-loom.jpg" layout="fill" />
           </div>
           <div className="grid__item portwest">
