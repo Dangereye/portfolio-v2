@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { AppContext } from "../../context/AppContext";
 import { slides } from "../../data/slideshow/slides";
+import BgHighlight from "../BgHighlight";
 import Image from "next/image";
 import Button from "../Button";
 
@@ -25,6 +26,8 @@ export default function Slideshow() {
 
   return (
     <div className="slideshow">
+      <BgHighlight pos="top-left" />
+      <BgHighlight pos="bottom-right" />
       <div className="info-bar">
         <div className="container">
           <div className="name">{slides[slideshowIndex].name}</div>
