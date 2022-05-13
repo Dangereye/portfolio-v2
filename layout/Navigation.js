@@ -26,7 +26,9 @@ export default function Navigation() {
         </li>
         <li>
           <Link href="/#contact">
-            <a className="navigation__link btn">Contact</a>
+            <a className="navigation__link btn btn--small btn--primary">
+              Contact
+            </a>
           </Link>
         </li>
       </ul>

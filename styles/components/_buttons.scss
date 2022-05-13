@@ -3,6 +3,10 @@
   flex-wrap: wrap;
   align-items: center;
   gap: 2rem;
+
+  &.tags {
+    gap: 1rem;
+  }
 }
 
 .btn {
@@ -13,7 +17,7 @@
   align-items: center;
 
   border: none;
-  border-radius: 5px;
+  border-radius: 5rem;
 
   text-transform: capitalize;
   text-decoration: none;
@@ -23,7 +27,11 @@
   cursor: pointer;
 
   &--large {
-    padding: 2rem 3rem;
+    padding: 2.5rem 5rem;
+  }
+
+  &--small {
+    padding: 1rem 2rem;
   }
 
   &--primary {
@@ -44,13 +52,12 @@
     }
   }
 
-  &--accent {
-    color: #fff;
-    background-color: $accent-color;
-
-    &:hover {
-      color: #fff;
-    }
+  &--tag {
+    padding: 0.5rem 1.5rem;
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: $text-color-dark;
+    background-color: $grey-color;
   }
 
   &--full-width {

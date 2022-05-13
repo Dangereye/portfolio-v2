@@ -22,14 +22,14 @@ export default function Project({ project, alt }) {
           ))}
         </div>
         <div className="project__description">{project.description}</div>
-        <div className="third-party">
+        <div className="btns tags">
           {project.third_party.map((link, i) => (
             <a
               key={`${project.name}-third-party-${i}`}
               href={link.url}
               target="_blank"
               rel="noreferrer"
-              className="third-party__link"
+              className="btn btn--tag"
             >
               {link.name}
             </a>
@@ -40,7 +40,7 @@ export default function Project({ project, alt }) {
             href={project.project__url}
             target="_blank"
             rel="noreferrer"
-            className="btn btn--accent btn--large"
+            className="btn btn--primary btn--large"
           >
             Launch Site
           </a>

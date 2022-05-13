@@ -27,7 +27,9 @@ export default function Hero() {
           </p>
           <div className="btns">
             <Link href="/#portfolio">
-              <a className="btn btn--primary btn--large">Recent Projects</a>
+              <a className="btn btn--primary btn--large">
+                Explore latest projects
+              </a>
             </Link>
           </div>
         </div>
