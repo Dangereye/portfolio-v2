@@ -20,14 +20,14 @@ export const movies = {
     </p>
   ),
   third_party: [
-    { url: "https://www.themoviedb.org/documentation/api", name: "#tmdb-api" },
-    { url: "https://www.youtube.com/", name: "#youtube" },
-    { url: "https://react-icons.github.io/react-icons/", name: "#react-icons" },
+    { url: "https://www.themoviedb.org/documentation/api", name: "TMDB" },
+    { url: "https://www.youtube.com/", name: "YouTube" },
+    { url: "https://react-icons.github.io/react-icons/", name: "React icons" },
     {
       url: "https://v5.reactrouter.com/web/guides/quick-start",
-      name: "#react-router",
+      name: "React router",
     },
-    { url: "https://react-query.tanstack.com/", name: "#react-query" },
+    { url: "https://react-query.tanstack.com/", name: "React query" },
   ],
   project__url: "https://pux-movies.netlify.app/",
   repo__url: "https://github.com/Dangereye/Movies",

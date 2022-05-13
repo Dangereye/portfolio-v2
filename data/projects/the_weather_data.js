@@ -20,12 +20,12 @@ export const the_weather = {
     </p>
   ),
   third_party: [
-    { url: "https://www.weatherapi.com/", name: "#weather-api" },
-    { url: "https://unsplash.com/developers", name: "#unsplash-api" },
-    { url: "https://react-icons.github.io/react-icons/", name: "#react-icons" },
+    { url: "https://www.weatherapi.com/", name: "Weather" },
+    { url: "https://unsplash.com/developers", name: "Unsplash" },
+    { url: "https://react-icons.github.io/react-icons/", name: "React icons" },
     {
       url: "https://v5.reactrouter.com/web/guides/quick-start",
-      name: "#react-router",
+      name: "React router",
     },
   ],
   project__url: "https://pux-the-weather.netlify.app/",

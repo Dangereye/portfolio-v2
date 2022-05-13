@@ -20,7 +20,7 @@ export const games = {
       <span>Caution</span> - can cause unexplained time loss.
     </p>
   ),
-  third_party: [{ url: "https://rawg.io/apidocs", name: "#rawg-api" }],
+  third_party: [{ url: "https://rawg.io/apidocs", name: "RAWG" }],
   project__url: "https://games-inky-seven.vercel.app",
   repo__url: "https://github.com/Dangereye/games",
 };
