@@ -15,12 +15,15 @@ export default function Hero() {
         <div className="typography-and-cta">
           <div className="heading heading--lead">Front-end developer</div>
           <h1 className="heading heading--h1">
-            <span>Bringing it</span>
-            <span>all together</span>
+            <div>I build things</div>
+            <div>
+              for the <span>web</span>
+            </div>
           </h1>
           <p className="body-text">
-            Together we'll develop & grow your ideas into a beautiful, modern,
-            easy to use - reality.
+            I love building (and occasionally designing) exceptional user
+            experiences. Currently, I'm focused on building with{" "}
+            <span>React JS</span> &amp; <span>Next Js</span>.
           </p>
           <div className="btns">
             <Link href="/#portfolio">

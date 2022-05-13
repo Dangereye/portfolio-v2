@@ -7,21 +7,28 @@
   .container {
     height: calc(100vh - 24rem);
     position: relative;
-    display: flex;
-    align-items: center;
+  }
+
+  .typography-and-cta {
+    margin-top: 20rem;
   }
 
   h1 {
     margin-bottom: 2rem;
     line-height: 1;
     span {
-      display: block;
+      color: $light-color;
     }
   }
 
   .body-text {
     max-width: 40ch;
     color: rgba(#fff, 0.6);
+
+    span {
+      color: $light-color;
+      font-weight: 600;
+    }
   }
 
   .btns {
