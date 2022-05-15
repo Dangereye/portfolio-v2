@@ -1,5 +1,6 @@
 &__skills {
   background-color: $grey-color;
+
   .container {
     padding: 12rem;
     position: relative;
@@ -27,22 +28,10 @@
   }
 
   .heading {
-    margin-bottom: 2rem;
-
-    &--lead,
-    &--h2 {
-      text-align: center;
-    }
-
     &--h2,
     &--h3 {
       color: #fff;
     }
-  }
-
-  .body-text {
-    max-width: 83rem;
-    margin: 4rem auto 12rem auto;
   }
 
   .body-text,

@@ -1,14 +1,4 @@
 &__photoshop {
-  .heading {
-    margin-bottom: 2rem;
-    text-align: center;
-  }
-
-  .body-text {
-    max-width: 83rem;
-    margin: 4rem auto 12rem auto;
-  }
-
   .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));

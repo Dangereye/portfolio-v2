@@ -19,13 +19,16 @@ export default function Skills() {
           </div>
         </div>
         <div className="content">
-          <ArticleHeading lead="Skills" h2="Knowledge & experience" />
-          <p className="body-text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse,
-            tenetur maxime, tempore aspernatur aperiam ut fugit recusandae odit
-            corrupti at excepturi doloribus, tempora non? Autem assumenda neque
-            quisquam non id!
-          </p>
+          <div className="article__header">
+            <ArticleHeading lead="Skills" h2="Knowledge & experience" />
+            <p className="body-text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse,
+              tenetur maxime, tempore aspernatur aperiam ut fugit recusandae
+              odit corrupti at excepturi doloribus, tempora non? Autem assumenda
+              neque quisquam non id!
+            </p>
+          </div>
+
           <div className="content">
             <div className="lists">
               <ListGroup

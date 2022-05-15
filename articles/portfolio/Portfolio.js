@@ -8,7 +8,15 @@ export default function Portfolio() {
   return (
     <article className="article article__portfolio" id="portfolio">
       <div className="container">
-        <ArticleHeading lead="Portfolio" h2="Recent projects" />
+        <header className="article__header">
+          <ArticleHeading lead="Portfolio" h2="My latest projects" />
+          <p className="body-text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse,
+            tenetur maxime, tempore aspernatur aperiam ut fugit recusandae odit
+            corrupti at excepturi doloribus, tempora non? Autem assumenda neque
+            quisquam non id!
+          </p>
+        </header>
         <Project project={games} />
         <Project project={the_weather} alt />
         <Project project={movies} />
