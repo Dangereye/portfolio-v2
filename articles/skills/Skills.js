@@ -14,7 +14,9 @@ export default function Skills() {
         <BgHighlight pos="top-left" />
         <BgHighlight pos="bottom-right" />
         <div className="image">
-          <Image src="/img/skills/skills-article.png" layout="fill" />
+          <div className="image__wrapper">
+            <Image src="/img/skills/skills-article.png" layout="fill" />
+          </div>
         </div>
         <div className="content">
           <ArticleHeading lead="Skills" h2="Knowledge & experience" />
