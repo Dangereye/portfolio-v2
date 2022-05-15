@@ -12,6 +12,7 @@
   .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+    gap: 0.3rem;
 
     @media (max-width: $laptop) {
       grid-template-columns: repeat(6, 1fr);
@@ -19,7 +20,6 @@
 
     @media (max-width: $mobile) {
       grid-template-columns: 1fr;
-      gap: 5px;
     }
   }
 
