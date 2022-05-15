@@ -7,6 +7,7 @@ import Button from "../../components/Button";
 
 export default function Photoshop() {
   const { setSlideshowIsOpen, setSlideshowIndex } = useContext(AppContext);
+
   const openSlideshow = (i) => {
     i && setSlideshowIndex(i);
     setSlideshowIsOpen(true);
@@ -23,7 +24,7 @@ export default function Photoshop() {
         </p>
         <div className="grid">
           {slides.map((slide, i) => (
-            <div className={`grid__item ${slide.classes}`}>
+            <div className={`grid__item ${slide.classes}`} key={`slide-${i}`}>
               <Image
                 src={`/img/photoshop/${slide.src}`}
                 layout="fill"
