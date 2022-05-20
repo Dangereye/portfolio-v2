@@ -1,22 +1,19 @@
 &__photoshop {
+  padding: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
   .grid {
+    width: 100%;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
-    gap: 0.3rem;
-
-    @media (max-width: $laptop) {
-      grid-template-columns: repeat(6, 1fr);
-    }
-
-    @media (max-width: $mobile) {
-      grid-template-columns: 1fr;
-    }
+    grid-template-columns: repeat(12, 1fr);
   }
 
   .grid__item {
     position: relative;
     aspect-ratio: 16/9;
-    cursor: pointer;
 
     img {
       transition: transform $time;
@@ -28,115 +25,52 @@
     }
   }
 
-  .beechfield-beanie {
-    grid-column: span 2;
+  .click {
+    cursor: pointer;
+  }
 
-    @media (max-width: $laptop) {
-      grid-column: span 3;
-      grid-row: span 2;
-    }
+  .header {
+    grid-column: span 8;
+    grid-row: span 2;
+    display: grid;
+    place-content: center;
+  }
+
+  .beechfield-beanie {
+    grid-column: span 4;
   }
 
   .axq {
     grid-column: span 4;
-    grid-row: span 2;
-
-    @media (max-width: $laptop) {
-      grid-column: span 3;
-      grid-row: span 2;
-    }
   }
 
   .beechfield-morf {
-    grid-column: span 4;
-    grid-row: span 2;
-
-    @media (max-width: $laptop) {
-      grid-column: span 2;
-      grid-row: span 1;
-    }
+    grid-column: span 6;
   }
 
   .yoko {
-    grid-column: span 2;
-
-    @media (max-width: $laptop) {
-      grid-column: span 4;
-      grid-row: span 2;
-    }
+    grid-column: span 6;
   }
 
   .fotl {
-    grid-column: span 2;
-
-    @media (max-width: $laptop-l) {
-      grid-column: span 4;
-      grid-row: span 2;
-    }
-
-    @media (max-width: $laptop) {
-      grid-column: span 2;
-      grid-row: span 1;
-    }
+    grid-column: span 4;
   }
 
   .portwest {
-    grid-column: span 2;
-
-    @media (max-width: $laptop-l) {
-      grid-column: span 4;
-      grid-row: span 2;
-    }
+    grid-column: span 8;
+    grid-row: span 2;
   }
 
   .premier {
     grid-column: span 4;
-    grid-row: span 2;
-
-    @media (max-width: $laptop-l) {
-      grid-column: span 2;
-      grid-row: span 1;
-    }
   }
 
   .bandc {
-    grid-column: span 4;
-    grid-row: span 2;
-
-    @media (max-width: $laptop-l) {
-      grid-column: span 2;
-      grid-row: span 1;
-    }
+    grid-column: span 6;
   }
 
   .workguard {
-    grid-column: span 4;
-    grid-row: span 2;
-
-    @media (max-width: $laptop-l) {
-      grid-column: span 10;
-      grid-row: span 1;
-    }
-
-    @media (max-width: $laptop) {
-      grid-column: span 6;
-      grid-row: span 1;
-    }
-  }
-
-  @media (max-width: $mobile) {
-    .beechfield-beanie,
-    .axq,
-    .beechfield-morf,
-    .yoko,
-    .fotl,
-    .portwest,
-    .premier,
-    .bandc,
-    .workguard {
-      grid-column: span 1;
-      grid-row: span 1;
-    }
+    grid-column: span 6;
   }
 
   .btns {

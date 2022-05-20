@@ -14,36 +14,41 @@ export default function Photoshop() {
   };
   return (
     <article className="article article__photoshop" id="photoshop">
-      <div className="container">
-        <div className="article__header">
-          <ArticleHeading lead="Photoshop" h2="Product Slides" />
-          <p className="body-text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit soluta
-            quo vel excepturi consectetur esse ex quasi doloribus, eius eligendi
-            assumenda asperiores! Temporibus quaerat excepturi nulla repellendus
-            perferendis asperiores consectetur.
-          </p>
-        </div>
+      {/* <div className="container"> */}
 
-        <div className="grid">
-          {slides.map((slide, i) => (
-            <div className={`grid__item ${slide.classes}`} key={`slide-${i}`}>
-              <Image
-                src={`/img/photoshop/${slide.src}`}
-                layout="fill"
-                onClick={() => openSlideshow(i)}
-              />
-            </div>
-          ))}
+      <div className="grid">
+        <div className="grid__item header">
+          <header className="article__header">
+            <ArticleHeading lead="Photoshop" h2="Product Slides" />
+            <p className="body-text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit
+              soluta quo vel excepturi consectetur esse ex quasi doloribus, eius
+              eligendi assumenda asperiores! Temporibus quaerat excepturi nulla
+              repellendus perferendis asperiores consectetur.
+            </p>
+          </header>
         </div>
-        <div className="btns">
-          <Button
-            name="Open slideshow"
-            classes="btn--large btn--primary"
-            func={openSlideshow}
-          />
-        </div>
+        {slides.map((slide, i) => (
+          <div
+            className={`grid__item click ${slide.classes}`}
+            key={`slide-${i}`}
+          >
+            <Image
+              src={`/img/photoshop/${slide.src}`}
+              layout="fill"
+              onClick={() => openSlideshow(i)}
+            />
+          </div>
+        ))}
       </div>
+      <div className="btns">
+        <Button
+          name="View Fullscreen"
+          classes="btn--large btn--primary"
+          func={openSlideshow}
+        />
+      </div>
+      {/* </div> */}
     </article>
   );
 }
