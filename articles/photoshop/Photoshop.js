@@ -9,13 +9,12 @@ export default function Photoshop() {
   const { setSlideshowIsOpen, setSlideshowIndex } = useContext(AppContext);
 
   const openSlideshow = (i) => {
-    i && setSlideshowIndex(i);
+    setSlideshowIndex(i ? i : 0);
     setSlideshowIsOpen(true);
   };
+
   return (
     <article className="article article__photoshop" id="photoshop">
-      {/* <div className="container"> */}
-
       <div className="grid">
         <div className="grid__item header">
           <header className="article__header">
@@ -48,7 +47,6 @@ export default function Photoshop() {
           func={openSlideshow}
         />
       </div>
-      {/* </div> */}
     </article>
   );
 }
