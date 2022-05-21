@@ -37,13 +37,13 @@
   }
 
   &__date {
-    font-size: 2rem;
+    font-size: $h3-size;
     color: $light-color;
   }
 
   &__name {
     text-transform: uppercase;
-    font-size: 5rem;
+    font-size: $h2-size;
     font-weight: 600;
     letter-spacing: 1px;
     margin-bottom: 2rem;
@@ -60,6 +60,10 @@
 
   .btns {
     margin-top: 4rem;
+  }
+
+  .btn--secondary {
+    color: $heading-dark;
   }
 
   .tech {

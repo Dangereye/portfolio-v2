@@ -13,26 +13,26 @@ html {
   letter-spacing: 1px;
 
   &--h1 {
-    margin-bottom: 3rem;
-    font-size: 7.2rem;
+    margin-bottom: 2rem;
+    font-size: $h1-size;
   }
 
   &--lead {
     margin-bottom: 2rem;
-    font-size: 2rem;
-    font-weight: 700;
+    font-size: $h3-size;
+    font-weight: 500;
     color: $light-color;
   }
 
   &--h2 {
-    margin-bottom: 3rem;
-    font-size: 6rem;
+    margin-bottom: 2rem;
+    font-size: $h2-size;
     font-weight: 700;
   }
 
   &--h3 {
     margin-bottom: 2rem;
-    font-size: 3.2rem;
+    font-size: $h3-size;
     font-weight: 500;
     letter-spacing: 0;
   }
@@ -43,14 +43,13 @@ html {
   margin-bottom: 2rem;
   max-width: 80ch;
   line-height: 1.618;
-  color: rgba($text-color-dark, 0.6);
 }
 
 .lead-text {
-  font-size: 3.2rem;
+  font-size: $h3-size;
   font-weight: 500;
 }
 
 .body-text {
-  font-size: 2rem;
+  font-size: $body-text-size;
 }

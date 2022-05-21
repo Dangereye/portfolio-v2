@@ -4,6 +4,12 @@ $laptop: 1024px;
 $tablet: 768px;
 $mobile: 450px;
 
+// Font sizes
+$h1-size: clamp(3.4rem, 5vw, 7.2rem);
+$h2-size: clamp(2.4rem, 5vw, 5.4rem);
+$h3-size: clamp(2rem, 3vw, 2.4rem);
+$body-text-size: clamp(1.8rem, 3vw, 2rem);
+
 // Page
 $page-width: 1640px;
 
@@ -11,10 +17,11 @@ $page-width: 1640px;
 $time: 0.4s;
 
 // Colors
-$text-color-dark: #040f29;
-$text-color-light: #ffffff;
+$heading-dark: #040f29;
+$heading-light: #ffffff;
+$body-text-dark: rgba($heading-dark, 0.6);
+$body-text-light: rgba($heading-light, 0.6);
 
 $dark-color: #132c55;
 $light-color: #3cb5e5;
-$accent-color: #e6536f;
 $grey-color: #f1f2f8;

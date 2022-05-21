@@ -1,3 +1,11 @@
 &__portfolio {
   padding-bottom: 0;
+
+  .heading--h2 {
+    color: $heading-dark;
+  }
+
+  .body-text {
+    color: $body-text-dark;
+  }
 }

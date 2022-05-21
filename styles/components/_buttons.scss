@@ -21,13 +21,13 @@
 
   text-transform: capitalize;
   text-decoration: none;
-  font-size: 2rem;
+  font-size: $body-text-size;
   font-weight: 500;
 
   cursor: pointer;
 
   &--large {
-    padding: 2.5rem 5rem;
+    padding: clamp(1.5rem, 3vw, 2.5rem) clamp(3rem, 3vw, 5rem);
   }
 
   &--small {
@@ -44,7 +44,6 @@
   }
 
   &--secondary {
-    color: $text-color-dark;
     transition: color $time;
 
     &:hover {
@@ -56,7 +55,7 @@
     padding: 0.5rem 1.5rem;
     font-size: 1.6rem;
     font-weight: 400;
-    color: $text-color-dark;
+    color: $heading-dark;
     background-color: $grey-color;
   }
 

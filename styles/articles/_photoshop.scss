@@ -1,6 +1,5 @@
 &__photoshop {
   padding: 0;
-
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -14,6 +13,7 @@
   .grid__item {
     position: relative;
     aspect-ratio: 16/9;
+    grid-column: span 6;
 
     img {
       transition: transform $time;
@@ -29,11 +29,14 @@
     cursor: pointer;
   }
 
-  .header {
-    grid-column: span 8;
-    grid-row: span 2;
+  .header .article__header {
+    margin: 0;
     display: grid;
     place-content: center;
+    text-align: left;
+  }
+
+  .beechfield-morf {
   }
 
   .beechfield-beanie {
@@ -44,12 +47,18 @@
     grid-column: span 4;
   }
 
-  .beechfield-morf {
-    grid-column: span 6;
+  .yoko {
+    grid-column: span 4;
   }
 
-  .yoko {
-    grid-column: span 6;
+  .premier {
+  }
+
+  .bandc {
+  }
+
+  .workguard {
+    grid-column: span 4;
   }
 
   .fotl {
@@ -57,20 +66,7 @@
   }
 
   .portwest {
-    grid-column: span 8;
-    grid-row: span 2;
-  }
-
-  .premier {
     grid-column: span 4;
-  }
-
-  .bandc {
-    grid-column: span 6;
-  }
-
-  .workguard {
-    grid-column: span 6;
   }
 
   .btns {
