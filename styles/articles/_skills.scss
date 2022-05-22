@@ -1,10 +1,8 @@
 &__skills {
-  background-color: $grey-color;
-
   .container {
     padding: 12rem;
     position: relative;
-    background-color: $dark-color;
+    background-color: $grey-color;
     overflow: hidden;
   }
 
@@ -29,12 +27,12 @@
 
   .heading--h2,
   .heading--h3 {
-    color: $heading-light;
+    color: $heading-dark;
   }
 
   .body-text,
   .list__item {
-    color: $body-text-light;
+    color: $body-text-dark;
   }
 
   .list__item::before {

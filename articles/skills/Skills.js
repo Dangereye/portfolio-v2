@@ -1,6 +1,5 @@
 import Image from "next/image";
 import ArticleHeading from "../../components/ArticleHeading";
-import BgHighlight from "../../components/BgHighlight";
 import ListGroup from "./ListGroup";
 import { environment } from "../../data/skills/environment";
 import { designTools } from "../../data/skills/designTools";
@@ -11,8 +10,6 @@ export default function Skills() {
   return (
     <article className="article article__skills" id="skills">
       <div className="container">
-        <BgHighlight pos="top-left" />
-        <BgHighlight pos="bottom-right" />
         <div className="image">
           <div className="image__wrapper">
             <Image src="/img/skills/skills-article.png" layout="fill" />
