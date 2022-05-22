@@ -6,6 +6,7 @@
 
   .container {
     height: calc(100vh - 24rem);
+    max-height: 110rem;
     position: relative;
   }
 
@@ -15,6 +16,7 @@
 
   h1 {
     line-height: 1;
+    color: $heading-light;
     span {
       color: $light-color;
     }
@@ -22,7 +24,7 @@
 
   .body-text {
     max-width: 40ch;
-    color: rgba(#fff, 0.6);
+    color: $body-text-light;
 
     span {
       color: $light-color;
@@ -59,9 +61,10 @@
           }
         }
       }
+
       &__text {
         max-width: 10rem;
-        color: rgba(#fff, 0.6);
+        color: $body-text-light;
         font-size: 1.6rem;
         line-height: 1.3;
       }

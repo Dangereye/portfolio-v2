@@ -27,16 +27,14 @@
     }
   }
 
-  .heading {
-    &--h2,
-    &--h3 {
-      color: #fff;
-    }
+  .heading--h2,
+  .heading--h3 {
+    color: $heading-light;
   }
 
   .body-text,
   .list__item {
-    color: rgba(#fff, 0.6);
+    color: $body-text-light;
   }
 
   .list__item::before {

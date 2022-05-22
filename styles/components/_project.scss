@@ -2,7 +2,7 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 15.4rem;
+  gap: 12rem;
   padding: 12rem 0;
 
   &.alt {
@@ -50,6 +50,7 @@
   }
 
   &__description {
+    text-align: inherit;
     margin-bottom: 2rem;
 
     span {
@@ -69,22 +70,9 @@
   .tech {
     display: flex;
     align-items: center;
+    justify-content: flex-start;
     flex-wrap: wrap;
     gap: 2rem;
     margin-bottom: 2rem;
-
-    &__icon {
-    }
-  }
-
-  .third-party {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 1rem;
-    a {
-      // color: rgba($text-color-dark, 0.6);
-      font-size: 2rem;
-    }
   }
 }
