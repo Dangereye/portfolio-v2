@@ -1,6 +1,5 @@
 import { useContext } from "react";
 import { AppContext } from "../../context/AppContext";
-import { slides } from "../../data/slideshow/slides";
 import Image from "next/image";
 import ArticleHeading from "../../components/ArticleHeading";
 import Button from "../../components/Button";
@@ -8,44 +7,53 @@ import Button from "../../components/Button";
 export default function Photoshop() {
   const { setSlideshowIsOpen, setSlideshowIndex } = useContext(AppContext);
 
-  const openSlideshow = (i) => {
-    setSlideshowIndex(i ? i : 0);
+  const openSlideshow = () => {
+    setSlideshowIndex(0);
     setSlideshowIsOpen(true);
   };
 
   return (
     <article className="article article__photoshop" id="photoshop">
-      <div className="grid">
-        <div className="grid__item header">
-          <header className="article__header">
-            <ArticleHeading lead="Photoshop" h2="Product Slides" />
-            <p className="body-text">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit
-              soluta quo vel excepturi consectetur esse ex quasi doloribus, eius
-              eligendi assumenda asperiores! Temporibus quaerat excepturi nulla
-              repellendus perferendis asperiores consectetur.
-            </p>
-          </header>
-        </div>
-        {slides.map((slide, i) => (
-          <div
-            className={`grid__item click ${slide.classes}`}
-            key={`slide-${i}`}
-          >
-            <Image
-              src={`/img/photoshop/${slide.src}`}
-              layout="fill"
-              onClick={() => openSlideshow(i)}
+      <div className="container">
+        <header className="article__header">
+          <ArticleHeading lead="Photoshop" h2="Product Slides" />
+          <p className="body-text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit soluta
+            quo vel excepturi consectetur esse ex quasi doloribus, eius eligendi
+            assumenda asperiores! Temporibus quaerat excepturi nulla repellendus
+            perferendis asperiores consectetur.
+          </p>
+          <div className="btns">
+            <Button
+              name="View slideshow"
+              classes="btn--large btn--primary"
+              func={openSlideshow}
             />
           </div>
-        ))}
-      </div>
-      <div className="btns">
-        <Button
-          name="View Fullscreen"
-          classes="btn--large btn--primary"
-          func={openSlideshow}
-        />
+        </header>
+        <div className="images">
+          <div className="image">
+            <Image
+              src="/img/photoshop/axq.jpg"
+              layout="fill"
+              alt="AXQ face cover"
+            />
+          </div>
+          <div className="image">
+            <Image
+              src="/img/photoshop/fruit-of-the-loom.jpg"
+              layout="fill"
+              alt="AXQ face cover"
+            />
+          </div>
+          <div className="image">
+            <Image
+              src="/img/photoshop/bandc.jpg"
+              layout="fill"
+              alt="AXQ face cover"
+            />
+          </div>
+        </div>
       </div>
     </article>
   );

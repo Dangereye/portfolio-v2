@@ -1,76 +1,50 @@
 &__photoshop {
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  max-height: 56rem;
+  background-color: $dark-color;
 
-  .grid {
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 
-  .grid__item {
-    position: relative;
-    aspect-ratio: 16/9;
-    grid-column: span 6;
-
-    img {
-      transition: transform $time;
-    }
-
-    &:hover img {
-      transform: scale(1.02);
-      z-index: 50;
-    }
-  }
-
-  .click {
-    cursor: pointer;
-  }
-
-  .header .article__header {
+  .article__header {
     margin: 0;
-    display: grid;
-    place-content: center;
+  }
+
+  .heading {
     text-align: left;
+
+    &--h2 {
+      color: $heading-light;
+    }
   }
 
-  .beechfield-morf {
-  }
-
-  .beechfield-beanie {
-    grid-column: span 4;
-  }
-
-  .axq {
-    grid-column: span 4;
-  }
-
-  .yoko {
-    grid-column: span 4;
-  }
-
-  .premier {
-  }
-
-  .bandc {
-  }
-
-  .workguard {
-    grid-column: span 4;
-  }
-
-  .fotl {
-    grid-column: span 4;
-  }
-
-  .portwest {
-    grid-column: span 4;
+  .body-text {
+    margin: 0;
+    text-align: left;
+    color: $body-text-light;
   }
 
   .btns {
-    margin-top: 12rem;
-    justify-content: center;
+    margin-top: 4rem;
+  }
+
+  .image {
+    position: relative;
+    width: 55rem;
+    aspect-ratio: 16/9;
+    box-shadow: 5px 20px 20px rgba($dark-color, 0.2);
+    z-index: 10;
+
+    &:nth-child(1) {
+      transform: translateY(10rem) rotate(-6deg);
+    }
+    &:nth-child(2) {
+      transform: translateX(10rem) rotate(6deg);
+    }
+    &:nth-child(3) {
+      transform: translateY(-10rem) rotate(-3deg);
+    }
   }
 }
