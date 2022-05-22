@@ -31,7 +31,7 @@ export default function Slideshow() {
       <div className="info-bar">
         <div className="container">
           <div className="name">{slides[slideshowIndex].name}</div>
-          <div className="index">
+          <div className="results">
             Showing {slideshowIndex + 1} of {slides.length}
           </div>
           <Button

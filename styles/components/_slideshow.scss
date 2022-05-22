@@ -9,6 +9,7 @@
 
   .container {
     overflow: hidden;
+    max-width: 1920px;
   }
 
   .info-bar {
@@ -22,10 +23,11 @@
     z-index: 201;
 
     .name {
-      color: #fff;
+      font-size: $h3-size;
+      color: $heading-light;
     }
-    .index {
-      color: rgba(#fff, 0.7);
+    .results {
+      color: $body-text-light;
     }
   }
 

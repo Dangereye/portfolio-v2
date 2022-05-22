@@ -2,7 +2,7 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 12rem;
+  gap: 15rem;
   padding: 12rem 0;
 
   &.alt {
@@ -13,7 +13,7 @@
     position: relative;
     flex: 1 1 34rem;
     min-width: 34rem;
-    max-width: 67.4rem;
+    max-width: 80.3rem;
     aspect-ratio: 1/1;
 
     &::before {
