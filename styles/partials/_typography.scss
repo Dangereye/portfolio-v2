@@ -1,55 +1,52 @@
-// Font
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+// Fonts
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Hind:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap");
 
 html {
+  font-family: "Hind", sans-serif;
   font-size: 62.5%;
   font-weight: 400;
-  line-height: 1.618;
+  line-height: 1;
 }
 
 .heading {
-  text-transform: uppercase;
-  line-height: 1.2;
-  letter-spacing: 1px;
-
-  &--h1 {
-    margin-bottom: 2rem;
-    font-size: $h1-size;
-  }
-
+  &--h1,
+  &--h2,
+  &--h3,
   &--lead {
-    margin-bottom: 2rem;
-    font-size: $h3-size;
-    font-weight: 500;
-    color: $light-color;
+    font-family: "Poppins", sans-serif;
+    line-height: 1.2;
   }
 
-  &--h2 {
+  &--h1,
+  &--h2,
+  &--h3 {
     margin-bottom: 2rem;
-    font-size: $h2-size;
     font-weight: 700;
   }
 
-  &--h3 {
-    margin-bottom: 2rem;
+  &--lead {
+    margin-bottom: 1rem;
     font-size: $h3-size;
-    font-weight: 500;
-    letter-spacing: 0;
+    font-weight: 600;
+    color: $light-color;
+  }
+
+  &--h1 {
+    font-size: $h1-size;
+  }
+
+  &--h2 {
+    font-size: $h2-size;
+  }
+
+  &--h3 {
+    font-size: $h3-size;
   }
 }
 
-.lead-text,
 .body-text {
-  margin-bottom: 2rem;
   max-width: 80ch;
-  line-height: 1.618;
-}
-
-.lead-text {
-  font-size: $h3-size;
-  font-weight: 500;
-}
-
-.body-text {
   font-size: $body-text-size;
+  line-height: 1.618;
 }
