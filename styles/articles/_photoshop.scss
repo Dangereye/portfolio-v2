@@ -1,11 +1,17 @@
 &__photoshop {
-  max-height: 56rem;
   background-color: $dark-color;
+  @media screen and (max-width: 1075px) {
+    padding-bottom: 0;
+  }
 
   .container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8rem;
+
+    @media screen and (max-width: 1075px) {
+      grid-template-columns: 1fr;
+    }
   }
 
   .article__header {
@@ -30,21 +36,53 @@
     margin-top: 4rem;
   }
 
-  .image {
+  .images {
     position: relative;
+
+    @media screen and (max-width: 1075px) {
+      height: 70rem;
+    }
+  }
+
+  .image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
     width: 55rem;
     aspect-ratio: 16/9;
-    box-shadow: 5px 20px 20px rgba($dark-color, 0.2);
-    z-index: 10;
+    box-shadow: 0 3px 10px rgba($dark-color, 0.3),
+      0 20px 30px rgba($dark-color, 0.2);
+    transition: transform $time;
 
     &:nth-child(1) {
-      transform: translateY(10rem) rotate(-6deg);
+      transform: translate(-50%, -120%) rotate(-6deg);
+      z-index: 2;
+
+      @media screen and (max-width: 1075px) {
+        transform: translate(-60%, -120%) rotate(-6deg);
+      }
     }
     &:nth-child(2) {
-      transform: translateX(10rem) rotate(6deg);
+      transform: translate(-35%, -60%) rotate(6deg);
+      z-index: 3;
+
+      @media screen and (max-width: 1075px) {
+        transform: translate(-40%, -50%) rotate(6deg);
+      }
     }
     &:nth-child(3) {
-      transform: translateY(-10rem) rotate(-3deg);
+      transform: translate(-50%, 5%) rotate(-3deg);
+      z-index: 4;
+
+      @media screen and (max-width: 1075px) {
+        transform: translate(-50%, 30%) rotate(-3deg);
+      }
+    }
+
+    &__wrapper {
+      position: relative;
+      width: 100%;
+      height: 100%;
     }
   }
 }

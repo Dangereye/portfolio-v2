@@ -33,25 +33,31 @@ export default function Photoshop() {
         </header>
         <div className="images">
           <div className="image">
-            <Image
-              src="/img/photoshop/axq.jpg"
-              layout="fill"
-              alt="AXQ face cover"
-            />
+            <div className="image__wrapper">
+              <Image
+                src="/img/photoshop/axq.jpg"
+                layout="fill"
+                alt="AXQ face cover"
+              />
+            </div>
           </div>
           <div className="image">
-            <Image
-              src="/img/photoshop/fruit-of-the-loom.jpg"
-              layout="fill"
-              alt="AXQ face cover"
-            />
+            <div className="image__wrapper">
+              <Image
+                src="/img/photoshop/fruit-of-the-loom.jpg"
+                layout="fill"
+                alt="AXQ face cover"
+              />
+            </div>
           </div>
           <div className="image">
-            <Image
-              src="/img/photoshop/bandc.jpg"
-              layout="fill"
-              alt="AXQ face cover"
-            />
+            <div className="image__wrapper">
+              <Image
+                src="/img/photoshop/bandc.jpg"
+                layout="fill"
+                alt="AXQ face cover"
+              />
+            </div>
           </div>
         </div>
       </div>
