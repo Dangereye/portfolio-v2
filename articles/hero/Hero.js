@@ -17,19 +17,17 @@ export default function Hero() {
           <h1 className="heading heading--h1">
             <div>I build things</div>
             <div>
-              for the <span>web</span>
+              for the <span>Web</span>
             </div>
           </h1>
           <p className="body-text">
             I love building (and occasionally designing) exceptional user
-            experiences. Currently, I'm focused on building with{" "}
-            <span>React JS</span> &amp; <span>Next Js</span>.
+            experiences. Currently, my focus is primarily <span>React JS</span>{" "}
+            &amp; <span>Next Js</span> based.
           </p>
           <div className="btns">
             <Link href="/#portfolio">
-              <a className="btn btn--primary btn--large">
-                Explore latest projects
-              </a>
+              <a className="btn btn--primary btn--large">Latest projects</a>
             </Link>
           </div>
         </div>

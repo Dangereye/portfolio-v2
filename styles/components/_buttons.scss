@@ -21,17 +21,13 @@
 
   text-transform: capitalize;
   text-decoration: none;
-  font-size: $body-text-size;
+  font-size: 1.6rem;
   font-weight: 500;
 
   cursor: pointer;
 
   &--large {
     padding: clamp(1.5rem, 3vw, 2.5rem) clamp(3rem, 3vw, 5rem);
-  }
-
-  &--small {
-    padding: 0.5rem 1.5rem;
   }
 
   &--primary {
@@ -45,6 +41,15 @@
 
   &--secondary {
     transition: color $time;
+    border: 1px solid $dark-grey-color;
+
+    &:hover {
+      color: $light-color;
+    }
+  }
+  &--tertiary {
+    padding: 1rem;
+    transition: color $time;
 
     &:hover {
       color: $light-color;
@@ -53,7 +58,7 @@
 
   &--tag {
     padding: 0.5rem 1.5rem;
-    font-size: 1.6rem;
+    font-size: clamp(1.2rem, 2vw, 1.6rem);
     font-weight: 400;
     color: #000;
     background-color: $grey-color;
