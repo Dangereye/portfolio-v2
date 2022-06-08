@@ -15,11 +15,11 @@ export default function Home() {
       {!slideshowIsOpen ? (
         <>
           <Hero />
-          <Portfolio />
+          {/* <Portfolio />
           <Photoshop />
           <Skills />
           <About />
-          <Contact />
+          <Contact /> */}
         </>
       ) : (
         <Slideshow />
