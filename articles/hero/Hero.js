@@ -4,7 +4,7 @@ import CompassSvg from "../../svgs/Compass";
 import NextSVG from "../../svgs/Next";
 import ReactSvg from "../../svgs/React";
 import ScreenSvg from "../../svgs/Screens";
-import Highlight from "./Highlight";
+import Feature from "./Feature";
 
 export default function Hero() {
   return (
@@ -12,7 +12,7 @@ export default function Hero() {
       <BgHighlight pos="top-left" />
       <BgHighlight pos="bottom-right" />
       <div className="container">
-        <div className="typography-and-cta">
+        <div className="typography">
           <div className="heading heading--lead">Front-end developer</div>
           <h1 className="heading heading--h1">
             <div>I build things</div>
@@ -21,9 +21,9 @@ export default function Hero() {
             </div>
           </h1>
           <p className="body-text">
-            I love building (and occasionally designing) exceptional user
-            experiences. Currently, my focus is primarily <span>React JS</span>{" "}
-            &amp; <span>Next Js</span> based.
+            I love building (and increasingly designing) exceptional user
+            experiences. Currently, my focus is <span>React JS</span> &amp;{" "}
+            <span>Next Js</span> driven.
           </p>
           <div className="btns">
             <Link href="/#portfolio">
@@ -31,11 +31,11 @@ export default function Hero() {
             </Link>
           </div>
         </div>
-        <div className="highlights">
-          <Highlight icon={<ReactSvg />} text="React JS Focused" />
-          <Highlight icon={<NextSVG />} text="Enhanced with Next JS" />
-          <Highlight icon={<CompassSvg />} text="Modern Designs" />
-          <Highlight icon={<ScreenSvg />} text="Multi-device responsive" />
+        <div className="features">
+          <Feature icon={<ReactSvg />} text="React JS Focused" />
+          <Feature icon={<NextSVG />} text="Enhanced with Next JS" />
+          <Feature icon={<CompassSvg />} text="Modern Designs" />
+          <Feature icon={<ScreenSvg />} text="Multi-device responsive" />
         </div>
       </div>
     </article>

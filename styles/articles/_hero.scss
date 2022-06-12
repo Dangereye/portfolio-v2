@@ -1,17 +1,21 @@
 &__hero {
   position: relative;
+  height: 100vh;
+  max-height: 130rem;
   color: #fff;
   background-color: $dark-color;
   overflow: hidden;
 
   .container {
-    height: calc(100vh - 24rem);
-    max-height: 110rem;
     position: relative;
   }
 
-  .typography-and-cta {
-    margin-top: 20rem;
+  .typography {
+    margin-top: 15rem;
+
+    @media (max-width: $tablet) {
+      margin-top: 7.5rem;
+    }
   }
 
   h1 {
@@ -34,9 +38,16 @@
 
   .btns {
     margin-top: 4rem;
+
+    @media (max-width: $mobile) {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
   }
 
-  .highlights {
+  .features {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -44,18 +55,24 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    gap: 4rem;
+    justify-content: flex-start;
+    gap: clamp(2rem, 3vw, 4rem);
 
-    .highlight {
+    .feature {
+      flex: 0 1 auto;
+
+      @media (max-width: $mobile) {
+        display: none;
+      }
+
       &__icon {
         margin-bottom: 1rem;
         display: flex;
         align-items: center;
-        gap: 1rem;
 
         span {
-          width: 4rem;
-          height: 4rem;
+          width: clamp(3rem, 2vw, 4rem);
+          height: clamp(3rem, 2vw, 4rem);
           svg {
             fill: #fff;
           }
@@ -63,9 +80,10 @@
       }
 
       &__text {
-        max-width: 10rem;
+        display: inline-block;
+        width: 10ch;
         color: $body-text-light;
-        font-size: 1.6rem;
+        font-size: $small-text-size;
         line-height: 1.3;
       }
     }

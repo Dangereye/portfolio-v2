@@ -4,6 +4,10 @@
   display: flex;
   justify-content: center;
 
+  @media (max-width: $mobile) {
+    padding: 4rem 1.6rem;
+  }
+
   &__header {
     margin-bottom: 12rem;
     text-align: center;
