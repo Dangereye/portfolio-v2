@@ -39,7 +39,7 @@ html {
 }
 
 body {
-  font-size: 2rem;
+  font-size: clamp(1.6rem, 2vw, 2rem);
   color: $heading-dark;
   background-color: #fff;
 }
