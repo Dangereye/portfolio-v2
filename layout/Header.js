@@ -6,7 +6,7 @@ export default function Header() {
   const [background, setBackground] = useState(false);
 
   const handleScroll = () => {
-    window.scrollY > 200 ? setBackground(true) : setBackground(false);
+    window.scrollY > 25 ? setBackground(true) : setBackground(false);
   };
 
   useEffect(() => {
