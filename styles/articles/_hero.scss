@@ -1,10 +1,15 @@
 &__hero {
   position: relative;
+  min-height: 750px;
   height: 100vh;
   max-height: 130rem;
   color: #fff;
   background-color: $dark-color;
   overflow: hidden;
+
+  @media (max-width: $mobile) {
+    min-height: 660px;
+  }
 
   .container {
     position: relative;
@@ -13,7 +18,7 @@
   .typography {
     margin-top: 15rem;
 
-    @media (max-width: $tablet) {
+    @media (max-width: $tablet), (max-height: 950px) {
       margin-top: 7.5rem;
     }
   }

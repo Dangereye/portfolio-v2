@@ -4,8 +4,8 @@
   display: flex;
   justify-content: center;
 
-  @media (max-width: $mobile) {
-    padding: 4rem 1.6rem;
+  @media (max-width: $mobile), (max-height: 820px) {
+    padding: 6rem 1.6rem;
   }
 
   &__header {
