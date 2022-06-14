@@ -21,9 +21,9 @@ export default function Hero() {
             </div>
           </h1>
           <p className="body-text">
-            I love building (and increasingly designing) exceptional user
-            experiences. Currently, my focus is <span>React JS</span> &amp;{" "}
-            <span>Next Js</span> driven.
+            I love building (and occasionally designing) exceptional user
+            experiences. My niche concerns <span>React JS</span> &amp;{" "}
+            <span>Next JS</span> orientated development.
           </p>
           <div className="btns">
             <Link href="/#portfolio">
@@ -32,10 +32,10 @@ export default function Hero() {
           </div>
         </div>
         <div className="features">
-          <Feature icon={<ReactSvg />} text="React JS Focused" />
+          <Feature icon={<ReactSvg />} text="React JS focused" />
           <Feature icon={<NextSVG />} text="Enhanced with Next JS" />
-          <Feature icon={<CompassSvg />} text="Modern Designs" />
-          <Feature icon={<ScreenSvg />} text="Multi-device responsive" />
+          <Feature icon={<CompassSvg />} text="Modern designs" />
+          <Feature icon={<ScreenSvg />} text="Device responsive" />
         </div>
       </div>
     </article>
