@@ -9,7 +9,7 @@ export default function Portfolio() {
     <article className="article article__portfolio" id="portfolio">
       <div className="container">
         <header className="article__header">
-          <ArticleHeading lead="Portfolio" h2="My latest projects" />
+          <ArticleHeading lead="Portfolio" h2="Latest projects" />
           <p className="body-text">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse,
             tenetur maxime, tempore aspernatur aperiam ut fugit recusandae odit

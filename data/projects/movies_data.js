@@ -11,12 +11,11 @@ export const movies = {
   ],
   description: (
     <p className="body-text">
-      Explore millions of movies, television shows, cast & crew. Check out new
-      upcoming releases, or re-discover old favourites. View trailers, read
-      biographies, learn who or what is popular - right now! You'll probably
-      find a few gems along the way - that you didn't know existed!
-      <br />
-      <span>Caution</span> - can cause unexplained time loss.
+      Search and explore millions of movies, television shows and people. Peruse
+      upcoming releases and re-discover past favourites - while keeping up to
+      date with who or what is currently popular and trending. Features include
+      trailers and cast biographies. Additionally, discover where to watch, buy,
+      rent and stream content.
     </p>
   ),
   third_party: [

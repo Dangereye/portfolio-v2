@@ -12,12 +12,11 @@ export const games = {
   ],
   description: (
     <p className="body-text">
-      Explore millions of movies, television shows, cast & crew. Check out new
-      upcoming releases, or re-discover old favourites. View trailers, read
-      biographies, learn who or what is popular - right now! You'll probably
-      find a few gems along the way - that you didn't know existed!
-      <br />
-      <span>Caution</span> - can cause unexplained time loss.
+      Search and explore 500,000+ games for 50 platforms - including mobiles.
+      Containing comprehensive video game data - courtesy of RAWG: videos,
+      screenshots, descriptions, genres, ERSB-ratings, Metacritic ratings and
+      more... Games utilizes the intersection observer API to provide an
+      optional infinite scrolling feature.
     </p>
   ),
   third_party: [{ url: "https://rawg.io/apidocs", name: "RAWG" }],
