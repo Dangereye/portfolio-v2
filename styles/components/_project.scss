@@ -15,19 +15,6 @@
     min-width: 34rem;
     max-width: 80.3rem;
     aspect-ratio: 1/1;
-
-    &::before {
-      content: "";
-      display: block;
-      width: 100%;
-      height: 100%;
-      background-color: $grey-color;
-      transform: translate(-12rem, -12rem);
-    }
-
-    &.alt::before {
-      transform: translate(12rem, -12rem);
-    }
   }
 
   &__details {
@@ -36,17 +23,30 @@
     max-width: 67.4rem;
   }
 
-  &__date {
-    font-size: $h3-size;
-    color: $light-color;
+  &__header {
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 
-  &__name {
-    text-transform: uppercase;
-    font-size: $h2-size;
-    font-weight: 600;
-    letter-spacing: 1px;
-    margin-bottom: 2rem;
+  .heading--h2 {
+    margin: 0;
+  }
+
+  &__date {
+    display: flex;
+    align-items: center;
+    font-size: $body-text-size;
+    color: $dark-grey-color;
+
+    &::before {
+      display: inline-block;
+      content: url("/svg/time-icon.svg");
+      width: 2rem;
+      height: 2rem;
+      margin-right: 8px;
+    }
   }
 
   &__description {
@@ -59,20 +59,32 @@
     }
   }
 
-  .btns {
-    margin-top: 4rem;
-  }
-
   .btn--secondary {
     color: $heading-dark;
   }
 
   .tech {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-    gap: 2rem;
     margin-bottom: 2rem;
+
+    &__items {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+  }
+
+  .apis,
+  .third-party {
+    margin-bottom: 2rem;
+
+    .btns {
+      margin: 0;
+    }
+  }
+
+  .btns {
+    margin-top: 4rem;
   }
 }

@@ -1,40 +1,23 @@
 import Image from "next/image";
+import Apis from "./Apis";
+import Technologies from "./Technologies";
+import ThirdParty from "./ThirdParty";
 
 export default function Project({ project, alt }) {
   return (
     <div className={alt ? "project alt" : "project"}>
-      <div className={alt ? "project__img alt" : "project__img"}>
+      <div className="project__img">
         <Image src={project.image} layout="fill" alt={project.name} />
       </div>
       <div className="project__details">
-        <div className="project__date">{project.date}</div>
-        <h2 className="project__name">{project.name}</h2>
-        <div className="tech">
-          {project.tech.map((icon, i) => (
-            <div className="tech__icon" key={`${project.name}-tech-${i}`}>
-              <Image
-                src={icon.img}
-                width={icon.width}
-                height={icon.height}
-                alt={icon.name}
-              />
-            </div>
-          ))}
-        </div>
+        <header className="project__header">
+          <h3 className="heading heading--h2">{project.name}</h3>
+          <div className="project__date">{project.date}</div>
+        </header>
         <div className="project__description">{project.description}</div>
-        <div className="btns tags">
-          {project.third_party.map((link, i) => (
-            <a
-              key={`${project.name}-third-party-${i}`}
-              href={link.url}
-              target="_blank"
-              rel="noreferrer"
-              className="btn btn--tag"
-            >
-              {link.name}
-            </a>
-          ))}
-        </div>
+        <Technologies project={project} />
+        <Apis project={project} />
+        <ThirdParty project={project} />
         <div className="btns">
           <a
             href={project.project__url}
@@ -48,7 +31,7 @@ export default function Project({ project, alt }) {
             href={project.repo__url}
             target="_blank"
             rel="noreferrer"
-            className="btn btn--secondary"
+            className="btn btn--secondary btn--large"
           >
             View Code
           </a>

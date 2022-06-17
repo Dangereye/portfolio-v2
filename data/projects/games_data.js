@@ -14,12 +14,23 @@ export const games = {
     <p className="body-text">
       Search and explore 500,000+ games for 50 platforms - including mobiles.
       Containing comprehensive video game data - courtesy of RAWG: videos,
-      screenshots, descriptions, genres, ERSB-ratings, Metacritic ratings and
+      screenshots, descriptions, genres, ERSB ratings, Metacritic ratings and
       more... Games utilizes the intersection observer API to provide an
       optional infinite scrolling feature.
     </p>
   ),
-  third_party: [{ url: "https://rawg.io/apidocs", name: "RAWG" }],
+  apis: [
+    { url: "https://rawg.io/apidocs", name: "RAWG" },
+    {
+      url: "https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage",
+      name: "Local storage",
+    },
+    {
+      url: "https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API",
+      name: "Intersection observer",
+    },
+  ],
+  third_party: [],
   project__url: "https://games-inky-seven.vercel.app",
   repo__url: "https://github.com/Dangereye/games",
 };

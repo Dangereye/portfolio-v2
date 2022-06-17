@@ -12,14 +12,14 @@ export const movies = {
   description: (
     <p className="body-text">
       Search and explore millions of movies, television shows and people. Peruse
-      upcoming releases and re-discover past favourites - while keeping up to
-      date with who or what is currently popular and trending. Features include
-      trailers and cast biographies. Additionally, discover where to watch, buy,
+      upcoming releases or re-discover forgotten favourites. We'll help keep you
+      up to date with who or what is currently popular and trending. Other
+      features include trailers, cast biographies and services to watch, buy,
       rent and stream content.
     </p>
   ),
+  apis: [{ url: "https://www.themoviedb.org/documentation/api", name: "TMDB" }],
   third_party: [
-    { url: "https://www.themoviedb.org/documentation/api", name: "TMDB" },
     { url: "https://www.youtube.com/", name: "YouTube" },
     { url: "https://react-icons.github.io/react-icons/", name: "React icons" },
     {

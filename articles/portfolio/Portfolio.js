@@ -1,4 +1,4 @@
-import Project from "./Project";
+import Project from "./project/Project";
 import { games } from "../../data/projects/games_data";
 import { movies } from "../../data/projects/movies_data";
 import { the_weather } from "../../data/projects/the_weather_data";
