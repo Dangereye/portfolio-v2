@@ -7,9 +7,11 @@ import Photoshop from "../articles/photoshop/Photoshop";
 import Portfolio from "../articles/portfolio/Portfolio";
 import Skills from "../articles/skills/Skills";
 import Slideshow from "../components/Slideshow/Slideshow";
+import usePageScroll from "../hooks/usePageScroll";
 
 export default function Home() {
   const { slideshowIsOpen } = useContext(AppContext);
+  const {} = usePageScroll();
   return (
     <>
       {!slideshowIsOpen ? (

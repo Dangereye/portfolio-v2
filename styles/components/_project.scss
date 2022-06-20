@@ -2,8 +2,8 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 15rem;
-  padding: 12rem 0;
+  gap: clamp(4rem, 6.6vw, 12rem);
+  padding: clamp(4rem, 6.6vw, 12rem) 0;
 
   &.alt {
     flex-direction: row-reverse;
@@ -11,15 +11,14 @@
 
   &__img {
     position: relative;
-    flex: 1 1 34rem;
-    min-width: 34rem;
+    flex: 1 2 25rem;
+    align-self: flex-start;
     max-width: 80rem;
     aspect-ratio: 4/5;
   }
 
   &__details {
-    flex: 1 1 34rem;
-    min-width: 34rem;
+    flex: 1 1 40rem;
     max-width: 67.4rem;
   }
 
@@ -28,6 +27,8 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
   }
 
   .heading--h2 {
@@ -76,7 +77,7 @@
   .tech,
   .apis,
   .third-party {
-    margin-bottom: 4rem;
+    margin-bottom: clamp(2rem, 3vw, 4rem);
 
     .btns {
       margin: 0;
