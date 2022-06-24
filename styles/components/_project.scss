@@ -1,9 +1,13 @@
 .project {
+  margin-bottom: clamp(4rem, 6.6vw, 12rem);
+  padding: clamp(1.6rem, 6.6vw, 12rem);
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: clamp(4rem, 6.6vw, 12rem);
-  padding: clamp(4rem, 6.6vw, 12rem) 0;
+  gap: clamp(2rem, 6.6vw, 12rem);
+  background-color: #fff;
+  border-radius: clamp(2rem, 8vw, 4.3rem);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
 
   &.alt {
     flex-direction: row-reverse;
@@ -19,7 +23,7 @@
 
   &__details {
     flex: 1 1 40rem;
-    max-width: 67.4rem;
+    max-width: 80rem;
   }
 
   &__header {
@@ -70,7 +74,13 @@
       align-items: center;
       justify-content: flex-start;
       flex-wrap: wrap;
-      gap: 2rem;
+      gap: clamp(1rem, 2vw, 2rem);
+    }
+
+    @media (max-width: $mobile) {
+      &__icon {
+        max-width: 3rem;
+      }
     }
   }
 
