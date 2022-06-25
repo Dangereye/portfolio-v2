@@ -1,29 +1,61 @@
 .project {
-  margin-bottom: clamp(4rem, 6.6vw, 12rem);
-  padding: clamp(1.6rem, 6.6vw, 12rem);
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: clamp(2rem, 6.6vw, 12rem);
-  background-color: #fff;
-  border-radius: clamp(2rem, 8vw, 4.3rem);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  padding: 12rem 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12rem;
+
+  @media (max-width: $laptop-l) {
+    padding: 8rem 0;
+    gap: 8rem;
+  }
+
+  @media (max-width: $laptop) {
+    padding: 6rem 0;
+    grid-template-columns: 1fr;
+  }
+
+  @media (max-width: $mobile) {
+    padding: 4rem 0;
+    gap: 4rem;
+  }
 
   &.alt {
-    flex-direction: row-reverse;
+    .project__details {
+      order: 1;
+      @media (max-width: $laptop) {
+        order: 2;
+      }
+    }
+    .project__img {
+      order: 2;
+      @media (max-width: $laptop) {
+        order: 1;
+      }
+    }
   }
 
   &__img {
-    position: relative;
-    flex: 1 2 25rem;
-    align-self: flex-start;
-    max-width: 80rem;
-    aspect-ratio: 4/5;
+    &__wrapper {
+      position: relative;
+      aspect-ratio: 4/5;
+
+      @media (max-width: $laptop) {
+        margin: 0 auto;
+        max-width: 50rem;
+      }
+
+      @media (max-width: $tablet) {
+        max-width: 40rem;
+      }
+
+      @media (max-width: $mobile) {
+        max-width: 25rem;
+      }
+    }
   }
 
   &__details {
-    flex: 1 1 40rem;
-    max-width: 80rem;
+    align-self: center;
   }
 
   &__header {

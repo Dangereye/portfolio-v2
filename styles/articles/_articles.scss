@@ -1,8 +1,20 @@
 .article {
-  padding: clamp(4rem, 6.6vw, 12rem) 1.6rem;
+  padding: 12rem 8rem;
 
   display: flex;
   justify-content: center;
+
+  @media (max-width: $laptop) {
+    padding: 8rem 6rem;
+  }
+
+  @media (max-width: $tablet) {
+    padding: 6rem 4rem;
+  }
+
+  @media (max-width: $mobile) {
+    padding: 4rem 2rem;
+  }
 
   &__header {
     margin-bottom: clamp(4rem, 6.6vw, 12rem);

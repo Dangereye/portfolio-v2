@@ -7,7 +7,9 @@ export default function Project({ project, alt }) {
   return (
     <div className={alt ? "project alt" : "project"}>
       <div className="project__img">
-        <Image src={project.image} layout="fill" alt={project.name} />
+        <div className="project__img__wrapper">
+          <Image src={project.image} layout="fill" alt={project.name} />
+        </div>
       </div>
       <div className="project__details">
         <header className="project__header">
