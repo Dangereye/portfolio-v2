@@ -1,21 +1,18 @@
 .project {
-  padding: 12rem 0;
+  @include vert-padding;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 12rem;
 
   @media (max-width: $laptop-l) {
-    padding: 8rem 0;
     gap: 8rem;
   }
 
   @media (max-width: $laptop) {
-    padding: 6rem 0;
     grid-template-columns: 1fr;
   }
 
   @media (max-width: $mobile) {
-    padding: 4rem 0;
     gap: 4rem;
   }
 

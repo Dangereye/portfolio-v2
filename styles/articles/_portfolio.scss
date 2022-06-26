@@ -1,4 +1,6 @@
 &__portfolio {
+  @include vert-padding;
+
   .heading--h2 {
     color: $heading-dark;
   }

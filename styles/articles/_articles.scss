@@ -1,23 +1,12 @@
 .article {
-  padding: 12rem 8rem;
+  @include vert-padding;
+  @include hoz-padding;
 
   display: flex;
   justify-content: center;
 
-  @media (max-width: $laptop) {
-    padding: 8rem 6rem;
-  }
-
-  @media (max-width: $tablet) {
-    padding: 6rem 4rem;
-  }
-
-  @media (max-width: $mobile) {
-    padding: 4rem 2rem;
-  }
-
   &__header {
-    margin-bottom: clamp(4rem, 6.6vw, 12rem);
+    @include bottom-margin;
     text-align: center;
 
     .body-text {

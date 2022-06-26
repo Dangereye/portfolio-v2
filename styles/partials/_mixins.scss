@@ -1,0 +1,49 @@
+@mixin hoz-padding {
+  padding-left: 6rem;
+  padding-right: 6rem;
+
+  @media (max-width: $tablet) {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+
+  @media (max-width: $mobile) {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+@mixin vert-padding {
+  padding-top: 12rem;
+  padding-bottom: 12rem;
+
+  @media (max-width: $laptop-l) {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+  }
+
+  @media (max-width: $laptop) {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+
+  @media (max-width: $mobile) {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+}
+
+@mixin bottom-margin {
+  margin-bottom: 12rem;
+
+  @media (max-width: $laptop-l) {
+    margin-bottom: 8rem;
+  }
+  @media (max-width: $laptop) {
+    margin-bottom: 6rem;
+  }
+
+  @media (max-width: $mobile) {
+    margin-bottom: 4rem;
+  }
+}
