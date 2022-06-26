@@ -93,7 +93,7 @@
     }
   }
 
-  .btn--secondary {
+  .btn--tertiary {
     color: $heading-dark;
   }
 
@@ -112,7 +112,11 @@
       }
     }
   }
-
+  .btns {
+    @media (max-width: 355px) {
+      justify-content: center;
+    }
+  }
   .tech,
   .apis,
   .third-party {
@@ -120,10 +124,7 @@
 
     .btns {
       margin: 0;
+      justify-content: flex-start;
     }
-  }
-
-  .btns {
-    margin-top: 4rem;
   }
 }

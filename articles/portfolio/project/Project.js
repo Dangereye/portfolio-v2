@@ -33,7 +33,7 @@ export default function Project({ project, alt }) {
             href={project.repo__url}
             target="_blank"
             rel="noreferrer"
-            className="btn btn--secondary btn--large"
+            className="btn btn--tertiary "
           >
             View Code
           </a>

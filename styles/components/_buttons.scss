@@ -1,4 +1,5 @@
 .btns {
+  margin-top: 5rem;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -27,7 +28,7 @@
   cursor: pointer;
 
   &--large {
-    padding: clamp(1.5rem, 3vw, 2.5rem) clamp(3rem, 3vw, 5rem);
+    padding: 2.5rem 5rem;
   }
 
   &--primary {
