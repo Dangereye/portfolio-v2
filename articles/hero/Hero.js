@@ -34,7 +34,9 @@ export default function Hero() {
             </div>
           </div>{" "}
           <div className="image">
-            <Image src="/img/hero/profile.png" width="800" height="800" />
+            <div className="image__wrapper">
+              <Image src="/img/hero/profile.png" width="800" height="800" />
+            </div>
           </div>
         </div>
 

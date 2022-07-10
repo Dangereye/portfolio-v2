@@ -6,9 +6,9 @@
 
   .container {
     display: flex;
-    gap: 4rem;
     flex-direction: column;
     justify-content: space-between;
+    gap: 4rem;
   }
 
   .content {
@@ -20,9 +20,9 @@
   }
 
   .typography {
-    flex: 1 1 45rem;
+    flex: 1 2 40rem;
 
-    @media (max-width: 1076px) {
+    @media (max-width: 976px) {
       margin-top: 7.5rem;
     }
   }
@@ -47,10 +47,11 @@
 
   .btns {
     @media (max-width: $mobile) {
-      width: 100%;
-      justify-content: center;
-      position: absolute;
-      bottom: 0;
+      // width: 100%;
+      // justify-content: center;
+      // position: absolute;
+      // bottom: 0;
+      display: none;
     }
   }
 
@@ -93,12 +94,17 @@
   }
 
   .image {
-    flex: 1 1 45rem;
+    flex: 2 1 40rem;
     display: flex;
     justify-content: center;
 
+    &__wrapper {
+      @media (max-width: 976px) {
+        max-width: 60rem;
+      }
+    }
+
     @media (max-width: $mobile) {
-      margin: 0 auto 6rem auto;
     }
   }
 }
