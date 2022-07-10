@@ -1,0 +1,25 @@
+&__contact {
+  position: relative;
+  background-color: $dark-color;
+  overflow: hidden;
+
+  .article__header {
+    text-align: left;
+  }
+
+  .heading--h2 {
+    color: $heading-dark;
+  }
+
+  .body-text {
+    margin: 0;
+    color: $body-text-dark;
+  }
+
+  .container {
+    @include hoz-padding;
+    @include vert-padding;
+    background-color: #fff;
+    border-radius: 4.3rem;
+  }
+}

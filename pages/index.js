@@ -21,7 +21,7 @@ export default function Home() {
           {/* <Photoshop /> */}
           {/* <Skills /> */}
           {/* <About /> */}
-          {/* <Contact /> */}
+          <Contact />
         </>
       ) : (
         <Slideshow />

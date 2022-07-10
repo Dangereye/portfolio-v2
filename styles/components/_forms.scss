@@ -1,0 +1,34 @@
+.form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+
+  &__input-group {
+    flex: 1 1 50%;
+  }
+
+  &__textarea-group {
+    flex: 1 1 100%;
+  }
+
+  label {
+    margin-bottom: 1rem;
+    display: block;
+  }
+
+  input,
+  textarea {
+    font-family: "Hind", sans-serif;
+    width: 100%;
+    font-size: 2rem;
+    border: none;
+    background-color: $grey-color;
+    padding: 1rem 3rem;
+    border-radius: 3rem;
+  }
+
+  textarea {
+    padding: 3rem;
+    min-height: 30rem;
+  }
+}
