@@ -21,5 +21,33 @@
     @include vert-padding;
     background-color: #fff;
     border-radius: 4.3rem;
+
+    @media (max-width: $mobile) {
+      border-radius: 2.3rem;
+    }
+  }
+
+  .icon-text {
+    margin: 2rem 0;
+    display: flex;
+    gap: 8px;
+  }
+
+  .social-icon {
+    width: 5.8rem;
+    height: 5.8rem;
+
+    &.github {
+      fill: #000;
+    }
+    &.linkedin {
+      fill: #0072b1;
+    }
+
+    svg {
+      width: 100%;
+      height: 100%;
+      fill: inherit;
+    }
   }
 }
