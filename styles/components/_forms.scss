@@ -1,5 +1,5 @@
 .form {
-  width: 50%;
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
@@ -31,5 +31,9 @@
   textarea {
     padding: 3rem;
     min-height: 30rem;
+  }
+
+  .btns {
+    width: 100%;
   }
 }

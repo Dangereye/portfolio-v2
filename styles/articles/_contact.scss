@@ -1,9 +1,31 @@
 &__contact {
   position: relative;
-  background-color: $dark-color;
   overflow: hidden;
+  background-color: $dark-color;
+
+  .container {
+    @include hoz-padding;
+    @include vert-padding;
+    background-color: #fff;
+    border-radius: 4.3rem;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 12rem;
+
+    @media (max-width: 1176px) {
+      gap: 8rem;
+    }
+
+    @media (max-width: $mobile) {
+      border-radius: 2.3rem;
+      gap: 4rem;
+    }
+  }
 
   .article__header {
+    flex: 1 1 40rem;
     text-align: left;
   }
 
@@ -13,35 +35,29 @@
 
   .body-text {
     margin: 0;
-    color: $body-text-dark;
+    max-width: 55rem;
   }
 
-  .container {
-    @include hoz-padding;
-    @include vert-padding;
-    background-color: #fff;
-    border-radius: 4.3rem;
-
-    @media (max-width: $mobile) {
-      border-radius: 2.3rem;
-    }
+  .form {
+    flex: 1 1 40rem;
   }
 
   .icon-text {
     margin: 2rem 0;
+    font-weight: 500;
     display: flex;
     gap: 8px;
   }
 
   .social-icon {
-    width: 5.8rem;
-    height: 5.8rem;
+    width: 5rem;
+    height: 5rem;
 
     &.github {
-      fill: #000;
+      fill: rgba(0, 0, 0, 0.8);
     }
     &.linkedin {
-      fill: #0072b1;
+      fill: rgba(0, 115, 177, 0.8);
     }
 
     svg {
