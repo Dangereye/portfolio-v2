@@ -22,10 +22,22 @@
     font-family: "Hind", sans-serif;
     width: 100%;
     font-size: 2rem;
-    border: none;
+    border: 1px solid $grey-color;
     background-color: $grey-color;
     padding: 1rem 3rem;
     border-radius: 3rem;
+    transition: border $time, background-color $time;
+
+    &.error {
+      background-color: white;
+      border-color: crimson;
+    }
+  }
+
+  &__error-text {
+    margin-top: 5px;
+    color: crimson;
+    font-size: 1.5rem;
   }
 
   textarea {

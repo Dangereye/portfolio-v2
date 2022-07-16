@@ -1,10 +1,4 @@
 export default function Button({ icon, name, classes, func }) {
-  const handleClick = (e) => {
-    e.stopPropagation();
-    console.log("Button click.");
-    func();
-  };
-
   const handleKeyDown = (e) => {
     if (e.code === "Enter") {
       console.log("Key press.");
@@ -15,7 +9,7 @@ export default function Button({ icon, name, classes, func }) {
   return (
     <button
       className={`btn ${classes}`}
-      onClick={handleClick}
+      onClick={func}
       onKeyDown={handleKeyDown}
     >
       {icon && <span>{icon}</span>}

@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { AppContext } from "../context/AppContext";
 import About from "../articles/About";
-import Contact from "../articles/Contact";
+import Contact from "../articles/contact/Contact";
 import Hero from "../articles/hero/Hero";
 import Photoshop from "../articles/photoshop/Photoshop";
 import Portfolio from "../articles/portfolio/Portfolio";
