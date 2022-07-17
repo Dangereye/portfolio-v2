@@ -1,18 +1,19 @@
-export default function InputGroup({ label, type, name, value, func, error }) {
+export default function InputGroup({ name, type, value, func, error_msg }) {
   return (
     <div className="form__input-group">
-      <label htmlFor={label}>{label}</label>
+      <label htmlFor={name}>{name}</label>
       <input type={type} name={name} value={value} onChange={func} />
-      <div className="form__error-text">{error}</div>
+      <div className="form__error-text">{error_msg}</div>
     </div>
   );
 }
 
 InputGroup.defaultProps = {
-  label: "label",
-  type: "text",
   name: "name",
-  value: "unset",
-  func: () => {},
-  error: "",
+  type: "text",
+  value: "",
+  func: () => {
+    return;
+  },
+  error_msg: "",
 };

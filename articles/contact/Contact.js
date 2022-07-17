@@ -6,6 +6,7 @@ import Button from "../../components/Button";
 import { MdEmail } from "react-icons/md";
 import { BsGithub, BsLinkedin } from "react-icons/bs";
 import InputGroup from "./InputGroup";
+import { TextAreaGroup } from "./TextAreaGroup";
 
 const defaultState = {
   name: { value: "", error_msg: "" },
@@ -23,11 +24,14 @@ export default function Contact() {
 
   const resetValidation = () => {
     setState({ ...state, isError: false, error_msg: "" });
-    const target = document.querySelectorAll("input");
-    target.forEach((input) => {
+    const input = document.querySelectorAll("input");
+    input.forEach((input) => {
       input.classList.remove("success");
       input.classList.remove("error");
     });
+    const textArea = document.querySelector("textarea");
+    textArea.classList.remove("success");
+    textArea.classList.remove("error");
   };
 
   const checkName = () => {
@@ -80,10 +84,25 @@ export default function Contact() {
     target.classList.add("success");
   };
 
+  const checkMessage = () => {
+    if (state.message.value === "") {
+      setState((prev) => ({
+        ...prev,
+        message: { ...state.message, error_msg: "Please enter your message." },
+      }));
+      const target = document.querySelector("[name='message']");
+      target.classList.add("error");
+      return;
+    }
+    const target = document.querySelector("[name='message']");
+    target.classList.add("success");
+  };
+
   const validation = () => {
     resetValidation();
     checkName();
     checkEmail();
+    checkMessage();
   };
 
   const handleSubmit = (e) => {
@@ -118,33 +137,30 @@ export default function Contact() {
           </div>
         </header>
 
-        <form className="form">
+        <form className="form" onSubmit={handleSubmit}>
           <InputGroup
-            label="Name"
             type="text"
             name="name"
             value={state.name.value}
             func={handleUpdateInput}
-            error={state.name.error_msg}
+            error_msg={state.name.error_msg}
           />
           <InputGroup
-            label="Email"
             type="email"
             name="email"
             value={state.email.value}
             func={handleUpdateInput}
-            error={state.email.error_msg}
+            error_msg={state.email.error_msg}
           />
-          <div className="form__textarea-group">
-            <label htmlFor="message">Message</label>
-            <textarea name="message" />
-          </div>
+          <TextAreaGroup
+            name="message"
+            value={state.message.value}
+            func={handleUpdateInput}
+            error_msg={state.message.error_msg}
+          />
+
           <div className="btns">
-            <Button
-              classes="btn--primary btn--large"
-              name="Send message"
-              func={handleSubmit}
-            />
+            <Button classes="btn--primary btn--large" name="Send message" />
           </div>
         </form>
       </div>
