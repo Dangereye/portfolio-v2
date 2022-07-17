@@ -16,6 +16,8 @@
     margin-bottom: 1rem;
     display: block;
     text-transform: capitalize;
+    font-size: 1.6rem;
+    font-weight: 500;
   }
 
   input,
@@ -30,19 +32,19 @@
     transition: border $time, background-color $time;
 
     &.success {
-      background-color: rgba(#78c930, 0.05);
-      border-color: #78c930;
+      background-color: rgba($success-color, 0.05);
+      border-color: $success-color;
     }
 
     &.error {
-      background-color: rgba(crimson, 0.05);
-      border-color: crimson;
+      background-color: rgba($error-color, 0.05);
+      border-color: $error-color;
     }
   }
 
   &__error-text {
     margin-top: 5px;
-    color: crimson;
+    color: $error-color;
     font-size: 1.5rem;
   }
 
