@@ -1,4 +1,4 @@
-export function TextAreaGroup({
+export default function TextAreaGroup({
   name,
   value,
   handleChange,

@@ -1,0 +1,30 @@
+.toast {
+  position: fixed;
+  bottom: -100%;
+  left: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  width: 100%;
+  padding: 4rem;
+  color: #fff;
+  background-color: $light-color;
+
+  transition: bottom $time;
+
+  z-index: 2;
+
+  &.active {
+    bottom: 0;
+  }
+
+  &__text {
+  }
+
+  .btn {
+    color: inherit;
+  }
+}

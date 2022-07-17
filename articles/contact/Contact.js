@@ -1,34 +1,58 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { AppContext } from "../../context/AppContext";
 import ArticleHeading from "../../components/ArticleHeading";
 import BgHighlight from "../../components/BgHighlight";
+import InputGroup from "./InputGroup";
+import TextAreaGroup from "./TextAreaGroup";
 import Button from "../../components/Button";
 
 import { MdEmail } from "react-icons/md";
 import { BsGithub, BsLinkedin } from "react-icons/bs";
-import InputGroup from "./InputGroup";
-import { TextAreaGroup } from "./TextAreaGroup";
 
 const defaultState = {
   name: { value: "", error_msg: "" },
   email: { value: "", error_msg: "" },
   message: { value: "", error_msg: "" },
+  complete: false,
 };
 
 export default function Contact() {
+  const { setToast } = useContext(AppContext);
   const [state, setState] = useState(defaultState);
+
+  const useToast = (message) => {
+    setToast({ isActive: true, message });
+    setTimeout(() => {
+      setToast({ isActive: false, message: "" });
+    }, 5000);
+  };
 
   const handleUpdateInput = (e) => {
     const { name, value } = e.target;
-    setState({ ...state, [name]: { value, error_msg: "" } });
+    setState({
+      ...state,
+      [name]: {
+        value,
+        error_msg: "",
+      },
+    });
   };
 
   const resetValidation = () => {
-    setState({ ...state, isError: false, error_msg: "" });
+    setState((prev) => ({
+      ...prev,
+      complete: false,
+      name: { ...prev.name, error_msg: "" },
+      email: { ...prev.email, error_msg: "" },
+      message: { ...prev.message, error_msg: "" },
+    }));
+
     const input = document.querySelectorAll("input");
     input.forEach((input) => {
       input.classList.remove("success");
       input.classList.remove("error");
     });
+
     const textArea = document.querySelector("textarea");
     textArea.classList.remove("success");
     textArea.classList.remove("error");
@@ -49,10 +73,11 @@ export default function Contact() {
       setState((prev) => ({
         ...prev,
         name: {
-          ...state.name,
-          error_msg: "Minimum of 3 characters.",
+          ...prev.name,
+          error_msg: "3 characters min.",
         },
       }));
+
       const target = document.querySelector("[name='name']");
       target.classList.add("error");
       return;
@@ -66,8 +91,9 @@ export default function Contact() {
     if (state.email.value.length < 1) {
       setState((prev) => ({
         ...prev,
-        email: { ...state.email, error_msg: "Please enter your email." },
+        email: { ...prev.email, error_msg: "Please enter your email." },
       }));
+
       const target = document.querySelector("[name='email']");
       target.classList.add("error");
       return;
@@ -76,8 +102,9 @@ export default function Contact() {
     if (!state.email.value.includes("@")) {
       setState((prev) => ({
         ...prev,
-        email: { ...state.email, error_msg: "Please enter a vaild email." },
+        email: { ...prev.email, error_msg: "Please enter a valid email." },
       }));
+
       const target = document.querySelector("[name='email']");
       target.classList.add("error");
       return;
@@ -91,15 +118,28 @@ export default function Contact() {
     if (state.message.value.length < 1) {
       setState((prev) => ({
         ...prev,
-        message: { ...state.message, error_msg: "Please enter your message." },
+        message: { ...prev.message, error_msg: "Please enter your message." },
       }));
+
       const target = document.querySelector("[name='message']");
       target.classList.add("error");
       return;
     }
+
     const target = document.querySelector("[name='message']");
     target.classList.remove("error");
     target.classList.add("success");
+    setState((prev) => ({ ...prev, complete: true }));
+  };
+
+  const sendMail = () => {
+    setTimeout(() => {
+      if (state.complete) {
+        useToast("Message sent Successfully!");
+        resetValidation();
+        setState(defaultState);
+      }
+    }, 100);
   };
 
   const validation = () => {
@@ -112,6 +152,7 @@ export default function Contact() {
   const handleSubmit = (e) => {
     e.preventDefault();
     validation();
+    sendMail();
   };
 
   return (

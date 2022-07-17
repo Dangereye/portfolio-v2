@@ -8,6 +8,7 @@ import Portfolio from "../articles/portfolio/Portfolio";
 import Skills from "../articles/skills/Skills";
 import Slideshow from "../components/Slideshow/Slideshow";
 import usePageScroll from "../hooks/usePageScroll";
+import { Toast } from "../articles/contact/Toast";
 
 export default function Home() {
   const { slideshowIsOpen } = useContext(AppContext);
@@ -22,6 +23,7 @@ export default function Home() {
           {/* <Skills /> */}
           {/* <About /> */}
           <Contact />
+          <Toast />
         </>
       ) : (
         <Slideshow />
