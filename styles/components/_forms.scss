@@ -28,8 +28,13 @@
     border-radius: 3rem;
     transition: border $time, background-color $time;
 
+    &.success {
+      background-color: $grey-color;
+      border-color: green;
+    }
+
     &.error {
-      background-color: white;
+      background-color: #fff;
       border-color: crimson;
     }
   }

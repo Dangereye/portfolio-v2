@@ -21,32 +21,69 @@ export default function Contact() {
     setState({ ...state, [name]: { value, error_msg: "" } });
   };
 
-  const validation = () => {
+  const resetValidation = () => {
     setState({ ...state, isError: false, error_msg: "" });
     const target = document.querySelectorAll("input");
     target.forEach((input) => {
+      input.classList.remove("success");
       input.classList.remove("error");
     });
+  };
 
+  const checkName = () => {
     if (state.name.value === "") {
-      setState({
-        ...state,
-        name: { value: "", error_msg: "Please enter your name." },
-      });
+      setState((prev) => ({
+        ...prev,
+        name: { ...state.name, error_msg: "Please enter your name." },
+      }));
       const target = document.querySelector("[name='name']");
       target.classList.add("error");
       return;
     }
+
+    if (state.name.value.length < 3) {
+      setState((prev) => ({
+        ...prev,
+        name: {
+          ...state.name,
+          error_msg: "Minimum of 3 characters.",
+        },
+      }));
+      const target = document.querySelector("[name='name']");
+      target.classList.add("error");
+      return;
+    }
+    const target = document.querySelector("[name='name']");
+    target.classList.add("success");
+  };
+
+  const checkEmail = () => {
     if (state.email.value === "") {
-      setState({
-        ...state,
-        email: { value: "", error_msg: "Please enter your email." },
-      });
+      setState((prev) => ({
+        ...prev,
+        email: { ...state.email, error_msg: "Please enter your email." },
+      }));
       const target = document.querySelector("[name='email']");
       target.classList.add("error");
       return;
     }
-    console.log("Success!");
+
+    if (!state.email.value.includes("@")) {
+      setState((prev) => ({
+        ...prev,
+        email: { ...state.email, error_msg: "Please enter a vaild email." },
+      }));
+      const target = document.querySelector("[name='email']");
+      target.classList.add("error");
+    }
+    const target = document.querySelector("[name='email']");
+    target.classList.add("success");
+  };
+
+  const validation = () => {
+    resetValidation();
+    checkName();
+    checkEmail();
   };
 
   const handleSubmit = (e) => {
