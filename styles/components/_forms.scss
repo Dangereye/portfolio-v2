@@ -23,19 +23,19 @@
     font-family: "Hind", sans-serif;
     width: 100%;
     font-size: 2rem;
-    border: 1px solid $grey-color;
+    border: 2px solid $grey-color;
     background-color: $grey-color;
     padding: 1rem 3rem;
     border-radius: 3rem;
     transition: border $time, background-color $time;
 
     &.success {
-      background-color: $grey-color;
-      border-color: green;
+      background-color: rgba(#78c930, 0.05);
+      border-color: #78c930;
     }
 
     &.error {
-      background-color: #fff;
+      background-color: rgba(crimson, 0.05);
       border-color: crimson;
     }
   }

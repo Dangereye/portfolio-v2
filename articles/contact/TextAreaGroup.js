@@ -1,8 +1,19 @@
-export function TextAreaGroup({ name, value, func, error_msg }) {
+export function TextAreaGroup({
+  name,
+  value,
+  handleChange,
+  handleBlur,
+  error_msg,
+}) {
   return (
     <div className="form__textarea-group">
       <label htmlFor={name}>{name}</label>
-      <textarea name={name} value={value} onChange={func} />
+      <textarea
+        name={name}
+        value={value}
+        onChange={handleChange}
+        onBlur={handleBlur}
+      />
       <div className="form__error-text">{error_msg}</div>
     </div>
   );
@@ -11,7 +22,10 @@ export function TextAreaGroup({ name, value, func, error_msg }) {
 TextAreaGroup.defaultProps = {
   name: "name",
   value: "",
-  func: () => {
+  handleChange: () => {
+    return;
+  },
+  handleBlur: () => {
     return;
   },
   error_msg: "",

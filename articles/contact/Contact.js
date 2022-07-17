@@ -35,7 +35,7 @@ export default function Contact() {
   };
 
   const checkName = () => {
-    if (state.name.value === "") {
+    if (state.name.value.length < 1) {
       setState((prev) => ({
         ...prev,
         name: { ...state.name, error_msg: "Please enter your name." },
@@ -58,11 +58,12 @@ export default function Contact() {
       return;
     }
     const target = document.querySelector("[name='name']");
+    target.classList.remove("error");
     target.classList.add("success");
   };
 
   const checkEmail = () => {
-    if (state.email.value === "") {
+    if (state.email.value.length < 1) {
       setState((prev) => ({
         ...prev,
         email: { ...state.email, error_msg: "Please enter your email." },
@@ -79,13 +80,15 @@ export default function Contact() {
       }));
       const target = document.querySelector("[name='email']");
       target.classList.add("error");
+      return;
     }
     const target = document.querySelector("[name='email']");
+    target.classList.remove("error");
     target.classList.add("success");
   };
 
   const checkMessage = () => {
-    if (state.message.value === "") {
+    if (state.message.value.length < 1) {
       setState((prev) => ({
         ...prev,
         message: { ...state.message, error_msg: "Please enter your message." },
@@ -95,6 +98,7 @@ export default function Contact() {
       return;
     }
     const target = document.querySelector("[name='message']");
+    target.classList.remove("error");
     target.classList.add("success");
   };
 
@@ -142,20 +146,23 @@ export default function Contact() {
             type="text"
             name="name"
             value={state.name.value}
-            func={handleUpdateInput}
+            handleChange={handleUpdateInput}
+            handleBlur={checkName}
             error_msg={state.name.error_msg}
           />
           <InputGroup
             type="email"
             name="email"
             value={state.email.value}
-            func={handleUpdateInput}
+            handleChange={handleUpdateInput}
+            handleBlur={checkEmail}
             error_msg={state.email.error_msg}
           />
           <TextAreaGroup
             name="message"
             value={state.message.value}
-            func={handleUpdateInput}
+            handleChange={handleUpdateInput}
+            handleBlur={checkMessage}
             error_msg={state.message.error_msg}
           />
 
