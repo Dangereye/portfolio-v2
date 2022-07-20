@@ -1,5 +1,6 @@
 import { useState, useContext } from "react";
 import { AppContext } from "../../context/AppContext";
+import emailjs from "emailjs-com";
 import ArticleHeading from "../../components/ArticleHeading";
 import BgHighlight from "../../components/BgHighlight";
 import InputGroup from "./InputGroup";
@@ -131,15 +132,26 @@ export default function Contact() {
     target.classList.add("success");
     setState((prev) => ({ ...prev, complete: true }));
   };
-
-  const sendMail = () => {
-    setTimeout(() => {
-      if (state.complete) {
-        useToast("Message sent Successfully!");
-        resetValidation();
-        setState(defaultState);
-      }
-    }, 100);
+  const sendMail = (e) => {
+    if (state.complete) {
+      emailjs
+        .sendForm(
+          "gmail",
+          "portfolio_template",
+          e.target,
+          `${process.env.NEXT_PUBLIC_EMAIL_JS_KEY}`
+        )
+        .then(
+          (result) => {
+            useToast("Message sent Successfully!");
+            resetValidation();
+            setState(defaultState);
+          },
+          (error) => {
+            useToast("Oops! Something went wrong. Please, try again.");
+          }
+        );
+    }
   };
 
   const validation = () => {
@@ -152,7 +164,7 @@ export default function Contact() {
   const handleSubmit = (e) => {
     e.preventDefault();
     validation();
-    sendMail();
+    sendMail(e);
   };
 
   return (
