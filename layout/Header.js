@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import Link from "next/link";
 import MobileIcon from "./MobileIcon";
 import Navigation from "./Navigation";
 
@@ -21,7 +22,9 @@ export default function Header() {
     <>
       <header className={background ? "header background" : "header"}>
         <div className="container">
-          <div className="logo">Craig Puxty</div>
+          <Link href="/">
+            <a className="logo">Craig Puxty</a>
+          </Link>
           <Navigation />
           <MobileIcon />
         </div>
