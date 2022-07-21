@@ -30,6 +30,7 @@
     padding: 1rem 3rem;
     border-radius: 3rem;
     transition: border $time, background-color $time;
+    resize: vertical;
 
     &.success {
       background-color: rgba($success-color, 0.05);
