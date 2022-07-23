@@ -20,7 +20,7 @@ export default function Home() {
           <Hero />
           <Portfolio />
           {/* <Photoshop /> */}
-          {/* <Skills /> */}
+          <Skills />
           {/* <About /> */}
           <Contact />
           <Toast />

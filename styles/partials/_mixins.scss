@@ -23,11 +23,11 @@
   }
 
   @media (max-width: $laptop) {
-    padding-top: 6rem;
-    padding-bottom: 6rem;
+    padding-top: 8rem;
+    padding-bottom: 8rem;
   }
 
-  @media (max-width: $mobile) {
+  @media (max-width: $tablet) {
     padding-top: 4rem;
     padding-bottom: 4rem;
   }
@@ -37,10 +37,10 @@
   margin-bottom: 12rem;
 
   @media (max-width: $laptop-l) {
-    margin-bottom: 8rem;
+    margin-bottom: 10rem;
   }
   @media (max-width: $laptop) {
-    margin-bottom: 6rem;
+    margin-bottom: 8rem;
   }
 
   @media (max-width: $mobile) {
