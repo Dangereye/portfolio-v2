@@ -169,8 +169,6 @@ export default function Contact() {
 
   return (
     <article className="article article__contact" id="contact">
-      <BgHighlight pos="top-left" />
-      <BgHighlight pos="bottom-right" />
       <div className="container">
         <header className="article__header">
           <ArticleHeading lead="Contact" h2="Let's talk!" />

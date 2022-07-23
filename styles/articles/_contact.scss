@@ -1,11 +1,7 @@
 &__contact {
   position: relative;
-  overflow: hidden;
-  background-color: $dark-color;
 
   .container {
-    @include hoz-padding;
-    @include vert-padding;
     background-color: #fff;
     border-radius: 4.3rem;
 

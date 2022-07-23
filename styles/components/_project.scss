@@ -1,7 +1,5 @@
 .project {
-  &:not(:last-child) {
-    @include bottom-margin;
-  }
+  @include vert-padding;
 
   display: grid;
   grid-template-columns: repeat(2, 1fr);
