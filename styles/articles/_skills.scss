@@ -55,8 +55,10 @@
     z-index: 2;
 
     @media (max-width: $laptop) {
-      max-width: 50rem;
+      max-width: 45rem;
       padding: 0;
+      column-gap: 2rem;
+      row-gap: 4rem;
     }
   }
 
@@ -64,6 +66,10 @@
     &__item {
       min-width: 20rem;
       margin-bottom: 1rem;
+
+      @media (max-width: $mobile) {
+        min-width: 18rem;
+      }
 
       &::before {
         display: inline-block;
