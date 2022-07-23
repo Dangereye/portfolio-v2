@@ -15,11 +15,6 @@ export default function Navigation() {
           </Link>
         </li>
         <li>
-          <Link href="/#photoshop">
-            <a className="navigation__link">Photoshop</a>
-          </Link>
-        </li>
-        <li>
           <Link href="/#about">
             <a className="navigation__link">About</a>
           </Link>

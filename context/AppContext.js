@@ -8,8 +8,6 @@ const toastDefault = {
 
 export default function AppProvider({ children }) {
   const [menuIsOpen, setMenuIsOpen] = useState(false);
-  const [slideshowIsOpen, setSlideshowIsOpen] = useState(false);
-  const [slideshowIndex, setSlideshowIndex] = useState(0);
   const [toast, setToast] = useState(toastDefault);
 
   return (
@@ -17,10 +15,6 @@ export default function AppProvider({ children }) {
       value={{
         menuIsOpen,
         setMenuIsOpen,
-        slideshowIsOpen,
-        setSlideshowIsOpen,
-        slideshowIndex,
-        setSlideshowIndex,
         toast,
         setToast,
       }}
