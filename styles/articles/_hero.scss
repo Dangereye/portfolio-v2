@@ -30,19 +30,24 @@
     background-position: center right;
     background-size: 1920px 1400px;
     background-repeat: no-repeat;
-    transition: opacity $time;
 
     @media (max-width: 1770px) {
-      background-position: center right -200px;
+      background-position: center right -150px;
     }
 
-    @media (max-width: 1200px) {
+    @media (orientation: landscape) {
+      background-size: cover;
+    }
+
+    @media (orientation: portrait) and(max-width: 1210px) {
       opacity: 0.1;
     }
-    @media (max-width: $tablet) {
+
+    @media (max-width: 950px) {
       background-image: url("/img/hero/hero_bg_tablet.jpg");
       background-size: cover;
       background-position: center;
+      opacity: 0.1;
     }
   }
 
@@ -56,7 +61,7 @@
   .typography {
     margin-top: 12rem;
 
-    @media (max-width: $tablet) {
+    @media (max-width: $mobile) {
       margin-top: 6rem;
     }
   }
@@ -85,10 +90,6 @@
     align-items: center;
     justify-content: flex-start;
     gap: 3rem;
-
-    @media (max-width: 1060px) {
-      grid-column: 1/-1;
-    }
 
     @media (max-width: $mobile) {
       gap: 1.6rem;
