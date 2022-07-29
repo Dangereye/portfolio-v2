@@ -10,7 +10,7 @@ import Feature from "./Feature";
 export default function Hero() {
   return (
     <article className="article article__hero">
-      <BgHighlight pos="top-center" />
+      <div className="background"></div>
       <div className="container">
         <div className="typography">
           <div className="heading heading--lead">Front-end developer</div>
@@ -37,11 +37,11 @@ export default function Hero() {
           <Feature icon={<CompassSvg />} text="Modern designs" />
           <Feature icon={<ScreenSvg />} text="Device responsive" />
         </div>
-        <div className="image">
+        {/* <div className="image">
           <div className="image__wrapper">
             <Image src="/img/hero/profile.png" width="800" height="800" />
           </div>
-        </div>
+        </div> */}
       </div>
     </article>
   );
