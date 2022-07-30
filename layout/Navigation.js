@@ -10,8 +10,8 @@ export default function Navigation() {
           </Link>
         </li>
         <li>
-          <Link href="/#portfolio">
-            <a className="navigation__link">Portfolio</a>
+          <Link href="/#about">
+            <a className="navigation__link">About</a>
           </Link>
         </li>
         <li>
@@ -20,10 +20,11 @@ export default function Navigation() {
           </Link>
         </li>
         <li>
-          <Link href="/#about">
-            <a className="navigation__link">About</a>
+          <Link href="/#portfolio">
+            <a className="navigation__link">Portfolio</a>
           </Link>
         </li>
+
         <li>
           <Link href="/#contact">
             <a className="navigation__link btn btn--small btn--primary">
