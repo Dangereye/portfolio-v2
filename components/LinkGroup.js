@@ -16,6 +16,7 @@ export default function LinkGroup({ heading, list }) {
     </div>
   );
 }
+
 LinkGroup.defaultProps = {
   heading: "Links heading",
   list: [

@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 export default function ListGroup({ heading, list, image }) {
   return (
     <div className="list-group">
@@ -17,4 +18,10 @@ ListGroup.defaultProps = {
   heading: "Lists heading",
   list: ["List item 01", "List item 02", "List item 03", "List item 034"],
   image: false,
+};
+
+ListGroup.propTypes = {
+  heading: PropTypes.string,
+  list: PropTypes.arrayOf(PropTypes.string),
+  image: PropTypes.bool,
 };

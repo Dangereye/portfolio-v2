@@ -14,6 +14,7 @@ export default function AnchorGroup({ heading, list }) {
     </div>
   );
 }
+
 AnchorGroup.defaultProps = {
   heading: "Anchors heading",
   list: [
