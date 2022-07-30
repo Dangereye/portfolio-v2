@@ -1,0 +1,26 @@
+&__about {
+  .article__header {
+    margin-bottom: 2rem;
+    text-align: left;
+  }
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6rem;
+  }
+
+  .image {
+    flex: 1 1 40rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .text {
+    flex: 1 1 40rem;
+  }
+
+  .body-text + .body-text {
+    margin-top: 2rem;
+  }
+}

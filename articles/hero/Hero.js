@@ -37,11 +37,6 @@ export default function Hero() {
           <Feature icon={<CompassSvg />} text="Modern designs" />
           <Feature icon={<ScreenSvg />} text="Device responsive" />
         </div>
-        {/* <div className="image">
-          <div className="image__wrapper">
-            <Image src="/img/hero/profile.png" width="800" height="800" />
-          </div>
-        </div> */}
       </div>
     </article>
   );
