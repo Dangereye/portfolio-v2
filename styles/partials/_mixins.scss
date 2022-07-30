@@ -28,6 +28,10 @@
   }
 
   @media (max-width: $tablet) {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+  @media (max-width: $mobile) {
     padding-top: 4rem;
     padding-bottom: 4rem;
   }

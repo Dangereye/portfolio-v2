@@ -25,4 +25,10 @@
   .body-text + .body-text {
     margin-top: 2rem;
   }
+
+  .btns {
+    @media (max-width: 355px) {
+      justify-content: center;
+    }
+  }
 }

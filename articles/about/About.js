@@ -46,7 +46,7 @@ export default function About() {
             <Link href="/#contact">
               <a className="btn btn--large btn--primary">Contact me</a>
             </Link>
-            <a href="/" className="btn btn--large btn-secondary">
+            <a href="/" className="btn btn--large btn--tertiary">
               Download CV
             </a>
           </div>
