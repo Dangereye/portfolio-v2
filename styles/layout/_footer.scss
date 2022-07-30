@@ -1,0 +1,21 @@
+.footer {
+  background-color: $dark-color;
+
+  .heading {
+    color: $heading-light;
+  }
+  color: $body-text-light;
+  @include hoz-padding;
+  .copyright {
+    text-align: center;
+    padding-bottom: 4rem;
+  }
+  &__links {
+    @include vert-padding-small;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    gap: 4rem;
+  }
+}
