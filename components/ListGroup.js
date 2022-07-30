@@ -16,7 +16,7 @@ export default function ListGroup({ heading, list, image }) {
 
 ListGroup.defaultProps = {
   heading: "Lists heading",
-  list: ["List item 01", "List item 02", "List item 03", "List item 034"],
+  list: ["List item 01", "List item 02", "List item 03", "List item 04"],
   image: false,
 };
 
