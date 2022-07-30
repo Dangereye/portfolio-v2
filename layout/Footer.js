@@ -1,8 +1,10 @@
 import ListGroup from "../components/ListGroup";
+import LinkGroup from "../components/LinkGroup";
 import { Pages } from "../data/Pages";
 import { Connect } from "../data/Connect";
 import { MdEmail } from "react-icons/md";
 import IconText from "../components/IconText";
+import AnchorGroup from "../components/AnchorGroup";
 
 export default function () {
   return (
@@ -10,8 +12,8 @@ export default function () {
       <footer className="footer">
         <div className="container">
           <div className="footer__links">
-            <ListGroup heading="Pages" list={Pages} links />
-            <ListGroup heading="Connect" list={Connect} anchors />
+            <LinkGroup heading="Pages" list={Pages} />
+            <AnchorGroup heading="Connect" list={Connect} />
             <ListGroup
               heading="Contact"
               list={[

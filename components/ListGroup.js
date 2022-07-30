@@ -1,28 +1,11 @@
-import Link from "next/link";
-
-export default function ListGroup({ heading, list, image, links, anchors }) {
+export default function ListGroup({ heading, list, image }) {
   return (
     <div className="list-group">
       <h3 className="heading heading--h3">{heading}</h3>
       <ul className="list">
         {list.map((item) => (
-          <li
-            key={item.name ? item.name : item}
-            className={image ? "list__item image" : "list__item"}
-          >
-            {links ? (
-              <Link href={item.link}>
-                <a>{item.name}</a>
-              </Link>
-            ) : anchors ? (
-              <a href={item.anchor} target="_blank" rel="noreferrer">
-                {item.name}
-              </a>
-            ) : item.name ? (
-              item.name
-            ) : (
-              item
-            )}
+          <li key={item} className={image ? "list__item image" : "list__item"}>
+            {item}
           </li>
         ))}
       </ul>
@@ -31,9 +14,7 @@ export default function ListGroup({ heading, list, image, links, anchors }) {
 }
 
 ListGroup.defaultProps = {
-  heading: "List heading",
-  list: [],
+  heading: "Lists heading",
+  list: ["List item 01", "List item 02", "List item 03", "List item 034"],
   image: false,
-  links: false,
-  anchors: false,
 };
