@@ -6,8 +6,12 @@ export default function AnchorGroup({ heading, list }) {
       <ul className="list">
         {list.map((item) => (
           <li key={item.name} className="list__item">
-            <a href={item.anchor} target="_blank" rel="noreferrer">
-              {item.name}
+            <a
+              href={item.anchor ? item.anchor : "/"}
+              target="_blank"
+              rel="noreferrer"
+            >
+              {item.name ? item.name : "N/A"}
             </a>
           </li>
         ))}
