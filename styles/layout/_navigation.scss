@@ -5,12 +5,7 @@
     transition: color $time;
 
     &:hover {
-      color: $light-color;
-    }
-
-    &:focus:not(.btn) {
-      border-radius: 1px;
-      outline-offset: 5px;
+      color: #fff;
     }
   }
 }
