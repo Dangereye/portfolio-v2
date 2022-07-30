@@ -7,7 +7,7 @@ export default function ListGroup({ heading, list, image, links, anchors }) {
       <ul className="list">
         {list.map((item) => (
           <li
-            key={item.name}
+            key={item.name ? item.name : item}
             className={image ? "list__item image" : "list__item"}
           >
             {links ? (

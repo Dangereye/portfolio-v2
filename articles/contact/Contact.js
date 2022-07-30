@@ -9,6 +9,7 @@ import Button from "../../components/Button";
 
 import { MdEmail } from "react-icons/md";
 import { BsGithub, BsLinkedin } from "react-icons/bs";
+import IconText from "../../components/IconText";
 
 const defaultState = {
   name: { value: "", error_msg: "" },
@@ -176,12 +177,7 @@ export default function Contact() {
             To discuss career & freelance opportunities, contact me directly or
             fill out the form and I'll get back to you promptly.
           </p>
-          <div className="icon-text">
-            <span>
-              <MdEmail />
-            </span>
-            <span>craig_puxty@talktalk.net</span>
-          </div>
+          <IconText icon={<MdEmail />} text="craig_puxty@talktalk.net" />
           <div className="btns">
             <a href="/" className="social-icon github">
               <BsGithub />

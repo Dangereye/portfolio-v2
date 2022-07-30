@@ -2,6 +2,7 @@ import ListGroup from "../components/ListGroup";
 import { Pages } from "../data/Pages";
 import { Connect } from "../data/Connect";
 import { MdEmail } from "react-icons/md";
+import IconText from "../components/IconText";
 
 export default function () {
   return (
@@ -14,12 +15,7 @@ export default function () {
             <ListGroup
               heading="Contact"
               list={[
-                <div className="icon-text">
-                  <span>
-                    <MdEmail />
-                  </span>
-                  <span>craig_puxty@talktalk.net</span>
-                </div>,
+                <IconText icon={<MdEmail />} text="craig_puxty@talktalk.net" />,
               ]}
             />
           </div>
