@@ -1,5 +1,10 @@
 &__skills {
-  padding: 0;
+  padding-bottom: 0;
+
+  @media (max-width: $laptop) {
+    padding-left: 0;
+    padding-right: 0;
+  }
 
   .container {
     position: relative;
@@ -33,7 +38,7 @@
   .article__header {
     position: relative;
     margin: 0;
-    @include vert-padding;
+    @include vert-padding-small;
     @include hoz-padding;
     z-index: 2;
 

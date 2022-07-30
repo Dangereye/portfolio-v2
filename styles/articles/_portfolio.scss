@@ -9,4 +9,8 @@
   .body-text {
     color: $body-text-dark;
   }
+
+  .project:not(:last-child) {
+    @include bottom-margin;
+  }
 }
