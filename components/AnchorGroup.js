@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 export default function AnchorGroup({ heading, list }) {
   return (
     <div className="list-group">
@@ -23,4 +24,14 @@ AnchorGroup.defaultProps = {
     { name: "Anchor item 03", anchor: "/" },
     { name: "Anchor item 04", anchor: "/" },
   ],
+};
+
+AnchorGroup.propTypes = {
+  heading: PropTypes.string,
+  list: PropTypes.arrayOf(
+    PropTypes.exact({
+      name: PropTypes.string,
+      anchor: PropTypes.string,
+    })
+  ),
 };
