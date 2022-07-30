@@ -22,6 +22,8 @@ ListGroup.defaultProps = {
 
 ListGroup.propTypes = {
   heading: PropTypes.string,
-  list: PropTypes.arrayOf(PropTypes.string),
+  list: PropTypes.arrayOf(
+    PropTypes.oneOfType([PropTypes.string, PropTypes.element])
+  ),
   image: PropTypes.bool,
 };
