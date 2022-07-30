@@ -8,8 +8,8 @@ export default function LinkGroup({ heading, list }) {
       <ul className="list">
         {list.map((item) => (
           <li key={item.name} className="list__item">
-            <Link href={item.link}>
-              <a>{item.name}</a>
+            <Link href={item.link ? item.link : "/"}>
+              <a>{item.name ? item.name : "N/A"}</a>
             </Link>
           </li>
         ))}
