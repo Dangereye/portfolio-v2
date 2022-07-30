@@ -64,21 +64,4 @@
       row-gap: 4rem;
     }
   }
-
-  .list {
-    &__item {
-      min-width: 20rem;
-      margin-bottom: 1rem;
-
-      @media (max-width: $mobile) {
-        min-width: 18rem;
-      }
-
-      &::before {
-        display: inline-block;
-        content: url("/svg/list-img.svg");
-        margin-right: 1rem;
-      }
-    }
-  }
 }

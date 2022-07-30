@@ -20,10 +20,18 @@ export default function Skills() {
           </p>
         </header>
         <div className="lists">
-          <ListGroup heading={environment.heading} list={environment.list} />
-          <ListGroup heading={designTools.heading} list={designTools.list} />
-          <ListGroup heading={frontEnd.heading} list={frontEnd.list} />
-          <ListGroup heading={backEnd.heading} list={backEnd.list} />
+          <ListGroup
+            heading={environment.heading}
+            list={environment.list}
+            image
+          />
+          <ListGroup
+            heading={designTools.heading}
+            list={designTools.list}
+            image
+          />
+          <ListGroup heading={frontEnd.heading} list={frontEnd.list} image />
+          <ListGroup heading={backEnd.heading} list={backEnd.list} image />
         </div>
       </div>
     </article>
