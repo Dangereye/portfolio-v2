@@ -1,5 +1,5 @@
 import ArticleHeading from "../../components/ArticleHeading";
-import ListGroup from "./ListGroup";
+import ListGroup from "../../components/ListGroup";
 import { environment } from "../../data/skills/environment";
 import { designTools } from "../../data/skills/designTools";
 import { frontEnd } from "../../data/skills/frontEnd";

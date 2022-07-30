@@ -12,3 +12,8 @@ export default function ListGroup({ heading, list }) {
     </div>
   );
 }
+
+ListGroup.defaultProps = {
+  heading: "List heading",
+  list: [],
+};
