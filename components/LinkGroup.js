@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import Link from "next/link";
 
 export default function LinkGroup({ heading, list }) {
@@ -25,4 +26,14 @@ LinkGroup.defaultProps = {
     { name: "Link item 03", link: "/" },
     { name: "Link item 04", link: "/" },
   ],
+};
+
+LinkGroup.propTypes = {
+  heading: PropTypes.string,
+  list: PropTypes.arrayOf(
+    PropTypes.exact({
+      name: PropTypes.string,
+      link: PropTypes.string,
+    })
+  ),
 };
