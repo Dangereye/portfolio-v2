@@ -5,6 +5,11 @@ export default function Navigation() {
     <nav className="navigation">
       <ul className="navigation__list">
         <li>
+          <Link href="/">
+            <a className="navigation__link">Home</a>
+          </Link>
+        </li>
+        <li>
           <Link href="/#portfolio">
             <a className="navigation__link">Portfolio</a>
           </Link>
