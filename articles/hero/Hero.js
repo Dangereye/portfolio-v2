@@ -1,6 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
-import BgHighlight from "../../components/BgHighlight";
 import CompassSvg from "../../svgs/Compass";
 import NextSVG from "../../svgs/Next";
 import ReactSvg from "../../svgs/React";

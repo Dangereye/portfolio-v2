@@ -6,6 +6,7 @@ export default function IconText({ icon, text }) {
     </div>
   );
 }
+
 IconText.defaultProps = {
   icon: "",
   text: "Icon text",
