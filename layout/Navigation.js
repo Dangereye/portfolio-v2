@@ -1,38 +1,36 @@
+import PropTypes from "prop-types";
+import { Pages } from "../data/Pages";
 import Link from "next/link";
 
 export default function Navigation() {
   return (
     <nav className="navigation">
       <ul className="navigation__list">
-        <li>
-          <Link href="/">
-            <a className="navigation__link">Home</a>
-          </Link>
-        </li>
-        <li>
-          <Link href="/#about">
-            <a className="navigation__link">About</a>
-          </Link>
-        </li>
-        <li>
-          <Link href="/#skills">
-            <a className="navigation__link">Skills</a>
-          </Link>
-        </li>
-        <li>
-          <Link href="/#portfolio">
-            <a className="navigation__link">Portfolio</a>
-          </Link>
-        </li>
-
-        <li>
-          <Link href="/#contact">
-            <a className="navigation__link btn btn--small btn--primary">
-              Contact
-            </a>
-          </Link>
-        </li>
+        {Pages.map((item, i) => (
+          <li key={`navigation-link-${i}`}>
+            <Link href={item.link ? item.link : "/"}>
+              <a
+                className={
+                  item.name.includes("Contact")
+                    ? "navigation__link btn btn--primary"
+                    : "navigation__link"
+                }
+              >
+                {item.name ? item.name : "N/A"}
+              </a>
+            </Link>
+          </li>
+        ))}
       </ul>
     </nav>
   );
 }
+
+Navigation.propTypes = {
+  Pages: PropTypes.arrayOf(
+    PropTypes.exact({
+      name: PropTypes.string,
+      link: PropTypes.string,
+    })
+  ),
+};
