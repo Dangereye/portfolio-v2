@@ -12,11 +12,8 @@
 
 a {
   color: $light-color;
+  text-decoration: none;
   transition: color $time;
-
-  &:hover {
-    color: $dark-color;
-  }
 }
 
 ul {
