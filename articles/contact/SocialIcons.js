@@ -1,4 +1,3 @@
-import { Connect } from "../../data/Connect";
 import PropTypes from "prop-types";
 export default function SocialIcons({ list }) {
   return (
@@ -7,6 +6,8 @@ export default function SocialIcons({ list }) {
         <a
           key={`social-icon-${item.name}`}
           href={item.anchor ? item.anchor : "/"}
+          target="_blank"
+          rel="noreferrer"
           className="social-icon"
         >
           {item.icon ? item.icon : "N/A"}

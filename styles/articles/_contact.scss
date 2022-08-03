@@ -42,6 +42,14 @@
     width: 3.2rem;
     height: 3.2rem;
     fill: $dark-color;
+    transition: transform $time, fill $time;
+
+    @media (hover: hover) {
+      &:hover {
+        transform: translateY(-4px);
+        fill: $light-color;
+      }
+    }
 
     svg {
       width: 100%;
