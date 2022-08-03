@@ -60,4 +60,10 @@
       justify-content: flex-start;
     }
   }
+
+  @media (hover: hover) {
+    a:hover {
+      color: #fff;
+    }
+  }
 }
