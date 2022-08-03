@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import Hero from "../articles/hero/Hero";
-import Portfolio from "../articles/portfolio/Portfolio";
+import Projects from "../articles/projects/Projects";
 import Skills from "../articles/skills/Skills";
 import About from "../articles/about/About";
 import Contact from "../articles/contact/Contact";
@@ -19,7 +19,7 @@ export default function Home() {
           <Hero />
           <About />
           <Skills />
-          <Portfolio />
+          <Projects />
           <Contact />
           <Toast />
         </>

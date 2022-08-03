@@ -4,12 +4,12 @@ import { movies } from "../../data/projects/movies_data";
 import { the_weather } from "../../data/projects/the_weather_data";
 import ArticleHeading from "../../components/ArticleHeading";
 
-export default function Portfolio() {
+export default function Projects() {
   return (
-    <article className="article article__portfolio" id="portfolio">
+    <article className="article article__projects" id="projects">
       <div className="container">
         <header className="article__header">
-          <ArticleHeading lead="Portfolio" h2="Latest projects" />
+          <ArticleHeading lead="projects" h2="Latest projects" />
           <p className="body-text">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse,
             tenetur maxime, tempore aspernatur aperiam ut fugit recusandae odit
