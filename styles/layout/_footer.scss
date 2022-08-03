@@ -18,5 +18,9 @@
     align-items: flex-start;
     justify-content: space-evenly;
     gap: 4rem;
+
+    @media (max-width: 1104px) {
+      justify-content: flex-start;
+    }
   }
 }
