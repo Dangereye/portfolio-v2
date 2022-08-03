@@ -33,7 +33,7 @@ AnchorGroup.defaultProps = {
 AnchorGroup.propTypes = {
   heading: PropTypes.string,
   list: PropTypes.arrayOf(
-    PropTypes.exact({
+    PropTypes.shape({
       name: PropTypes.string,
       anchor: PropTypes.string,
     })

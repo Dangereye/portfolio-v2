@@ -1,6 +1,24 @@
+import { BsGithub, BsLinkedin, BsTwitter, BsTelegram } from "react-icons/bs";
+
 export const Connect = [
-  { name: "Github", anchor: "https://github.com/Dangereye" },
-  { name: "Linkedin", anchor: "https://uk.linkedin.com/" },
-  { name: "Twitter", anchor: "https://twitter.com/CraigPuxty" },
-  { name: "Telegram", anchor: "https://t.me/craig_puxty/" },
+  {
+    name: "Github",
+    anchor: "https://github.com/Dangereye",
+    icon: <BsGithub />,
+  },
+  {
+    name: "Linkedin",
+    anchor: "https://uk.linkedin.com/",
+    icon: <BsLinkedin />,
+  },
+  {
+    name: "Twitter",
+    anchor: "https://twitter.com/CraigPuxty",
+    icon: <BsTwitter />,
+  },
+  {
+    name: "Telegram",
+    anchor: "https://t.me/craig_puxty",
+    icon: <BsTelegram />,
+  },
 ];

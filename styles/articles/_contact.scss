@@ -39,15 +39,9 @@
   }
 
   .social-icon {
-    width: 5rem;
-    height: 5rem;
-
-    &.github {
-      fill: rgba(0, 0, 0, 0.8);
-    }
-    &.linkedin {
-      fill: rgba(0, 115, 177, 0.8);
-    }
+    width: 3.2rem;
+    height: 3.2rem;
+    fill: $dark-color;
 
     svg {
       width: 100%;

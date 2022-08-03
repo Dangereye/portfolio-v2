@@ -2,14 +2,14 @@ import { useState, useContext } from "react";
 import { AppContext } from "../../context/AppContext";
 import emailjs from "emailjs-com";
 import ArticleHeading from "../../components/ArticleHeading";
-import BgHighlight from "../../components/BgHighlight";
 import InputGroup from "./InputGroup";
 import TextAreaGroup from "./TextAreaGroup";
 import Button from "../../components/Button";
 
 import { MdEmail } from "react-icons/md";
-import { BsGithub, BsLinkedin } from "react-icons/bs";
 import IconText from "../../components/IconText";
+import SocialIcons from "./SocialIcons";
+import { Connect } from "../../data/Connect";
 
 const defaultState = {
   name: { value: "", error_msg: "" },
@@ -178,14 +178,7 @@ export default function Contact() {
             fill out the form and I'll get back to you promptly.
           </p>
           <IconText icon={<MdEmail />} text="craig_puxty@talktalk.net" />
-          <div className="btns">
-            <a href="/" className="social-icon github">
-              <BsGithub />
-            </a>
-            <a href="/" className="social-icon linkedin">
-              <BsLinkedin />
-            </a>
-          </div>
+          <SocialIcons list={Connect} />
         </header>
 
         <form className="form" onSubmit={handleSubmit}>
