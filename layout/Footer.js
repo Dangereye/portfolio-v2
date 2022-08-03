@@ -4,13 +4,21 @@ import { Pages } from "../data/Pages";
 import { Connect } from "../data/Connect";
 import { SourceCode } from "../data/SourceCode";
 import { MdEmail } from "react-icons/md";
+import { BiArrowToTop } from "react-icons/bi";
 import IconText from "../components/IconText";
 import AnchorGroup from "../components/AnchorGroup";
+import Link from "next/link";
 
 export default function () {
   return (
     <>
       <footer className="footer">
+        <Link href="/">
+          <a className="footer__back-to-top">
+            <BiArrowToTop />
+          </a>
+        </Link>
+
         <div className="container">
           <div className="footer__links">
             <LinkGroup heading="Pages" list={Pages} />
