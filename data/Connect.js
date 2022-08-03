@@ -3,4 +3,5 @@ export const Connect = [
   { name: "Linkedin", anchor: "/" },
   { name: "Twitter", anchor: "/" },
   { name: "Telegram", anchor: "/" },
+  { name: "Truth Social", anchor: "/" },
 ];
