@@ -3,12 +3,12 @@ export const games = {
   date: "Nov 2021",
   name: "Games",
   tech: [
-    { img: "/svg/html5.svg", name: "HTML5", width: "34.29", height: "40" },
-    { img: "/svg/css3.svg", name: "CSS3", width: "34.29", height: "40" },
-    { img: "/svg/sass.svg", name: "SCSS", width: "53.38", height: "40" },
-    { img: "/svg/js.svg", name: "JavaScript", width: "40", height: "40" },
-    { img: "/svg/react.svg", name: "ReactJS", width: "45.71", height: "40" },
-    { img: "/svg/next.svg", name: "ReactJS", width: "40", height: "40" },
+    { image: "/svg/html5.svg", name: "HTML5", width: "34.29", height: "40" },
+    { image: "/svg/css3.svg", name: "CSS3", width: "34.29", height: "40" },
+    { image: "/svg/sass.svg", name: "SCSS", width: "53.38", height: "40" },
+    { image: "/svg/js.svg", name: "JavaScript", width: "40", height: "40" },
+    { image: "/svg/react.svg", name: "ReactJS", width: "45.71", height: "40" },
+    { image: "/svg/next.svg", name: "ReactJS", width: "40", height: "40" },
   ],
   description: (
     <p className="body-text">
@@ -20,17 +20,19 @@ export const games = {
     </p>
   ),
   apis: [
-    { url: "https://rawg.io/apidocs", name: "RAWG" },
+    { name: "RAWG", anchor: "https://rawg.io/apidocs" },
     {
-      url: "https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage",
       name: "Local storage",
+      anchor:
+        "https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage",
     },
     {
-      url: "https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API",
       name: "Intersection observer",
+      anchor:
+        "https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API",
     },
   ],
   third_party: [],
-  project__url: "https://games-inky-seven.vercel.app",
-  repo__url: "https://github.com/Dangereye/games",
+  project__anchor: "https://games-inky-seven.vercel.app",
+  repo__anchor: "https://github.com/Dangereye/games",
 };

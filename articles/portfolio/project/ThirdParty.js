@@ -1,19 +1,20 @@
-export default function ThirdParty({ project }) {
+import PropTypes from "prop-types";
+export default function ThirdParty({ name, third_party }) {
   return (
     <>
-      {project.third_party.length > 0 && (
+      {third_party.length > 0 && (
         <div className="third-party">
           <h4 className="heading heading--h3">Third party</h4>
           <div className="btns tags">
-            {project.third_party.map((link, i) => (
+            {third_party.map((item, i) => (
               <a
-                key={`${project.name}-api-${i}`}
-                href={link.url}
+                key={`${name}-api-${i}`}
+                href={item.anchor}
                 target="_blank"
                 rel="noreferrer"
                 className="btn btn--tag"
               >
-                {link.name}
+                {item.name}
               </a>
             ))}
           </div>
@@ -24,5 +25,16 @@ export default function ThirdParty({ project }) {
 }
 
 ThirdParty.defaultProps = {
-  project: { third_party: [] },
+  name: "",
+  third_party: [],
+};
+
+ThirdParty.propTypes = {
+  name: PropTypes.string,
+  third_party: PropTypes.arrayOf(
+    PropTypes.exact({
+      name: PropTypes.string,
+      anchor: PropTypes.string,
+    })
+  ),
 };

@@ -3,11 +3,11 @@ export const movies = {
   date: " Jan 2021",
   name: "Movies",
   tech: [
-    { img: "/svg/html5.svg", name: "HTML5", width: "34.29", height: "40" },
-    { img: "/svg/css3.svg", name: "CSS3", width: "34.29", height: "40" },
-    { img: "/svg/sass.svg", name: "SCSS", width: "53.38", height: "40" },
-    { img: "/svg/js.svg", name: "JavaScript", width: "40", height: "40" },
-    { img: "/svg/react.svg", name: "ReactJS", width: "45.71", height: "40" },
+    { image: "/svg/html5.svg", name: "HTML5", width: "34.29", height: "40" },
+    { image: "/svg/css3.svg", name: "CSS3", width: "34.29", height: "40" },
+    { image: "/svg/sass.svg", name: "SCSS", width: "53.38", height: "40" },
+    { image: "/svg/js.svg", name: "JavaScript", width: "40", height: "40" },
+    { image: "/svg/react.svg", name: "ReactJS", width: "45.71", height: "40" },
   ],
   description: (
     <p className="body-text">
@@ -18,16 +18,21 @@ export const movies = {
       rent and stream content.
     </p>
   ),
-  apis: [{ url: "https://www.themoviedb.org/documentation/api", name: "TMDB" }],
-  third_party: [
-    { url: "https://www.youtube.com/", name: "YouTube" },
-    { url: "https://react-icons.github.io/react-icons/", name: "React icons" },
-    {
-      url: "https://v5.reactrouter.com/web/guides/quick-start",
-      name: "React router",
-    },
-    { url: "https://react-query.tanstack.com/", name: "React query" },
+  apis: [
+    { name: "TMDB", anchor: "https://www.themoviedb.org/documentation/api" },
   ],
-  project__url: "https://pux-movies.netlify.app/",
-  repo__url: "https://github.com/Dangereye/Movies",
+  third_party: [
+    { name: "YouTube", anchor: "https://www.youtube.com/" },
+    {
+      name: "React icons",
+      anchor: "https://react-icons.github.io/react-icons/",
+    },
+    {
+      name: "React router",
+      anchor: "https://v5.reactrouter.com/web/guides/quick-start",
+    },
+    { name: "React query", anchor: "https://react-query.tanstack.com/" },
+  ],
+  project__anchor: "https://pux-movies.netlify.app/",
+  repo__anchor: "https://github.com/Dangereye/Movies",
 };

@@ -2,6 +2,7 @@ import Image from "next/image";
 import Apis from "./Apis";
 import Technologies from "./Technologies";
 import ThirdParty from "./ThirdParty";
+import PropTypes from "prop-types";
 
 export default function Project({ project, alt }) {
   return (
@@ -17,9 +18,9 @@ export default function Project({ project, alt }) {
           <div className="project__date">{project.date}</div>
         </header>
         <div className="project__description">{project.description}</div>
-        <Technologies project={project} />
-        <Apis project={project} />
-        <ThirdParty project={project} />
+        <Technologies name={project.name} tech={project.tech} />
+        <Apis name={project.name} apis={project.apis} />
+        <ThirdParty name={project.name} third_party={project.third_party} />
         <div className="btns">
           <a
             href={project.project__url}
@@ -45,34 +46,38 @@ export default function Project({ project, alt }) {
 
 Project.defaultProps = {
   project: {
-    image: "/img/movies-project.jpg",
-    date: "2021",
-    name: "Movies",
-    tech: [
-      { img: "/svg/html5.svg", name: "HTML5", width: "34.29", height: "40" },
-      { img: "/svg/css3.svg", name: "CSS3", width: "34.29", height: "40" },
-      { img: "/svg/sass.svg", name: "SCSS", width: "53.38", height: "40" },
-      { img: "/svg/js.svg", name: "JavaScript", width: "40", height: "40" },
-      { img: "/svg/react.svg", name: "ReactJS", width: "45.71", height: "40" },
-    ],
+    image: "/img/portfolio/games-project.jpg",
+    date: "date",
+    name: "Project",
+    tech: [],
     description: (
       <p className="body-text">
-        Explore millions of movies, television shows, cast & crew. Check out new
-        upcoming releases, or re-discover old favourites. View trailers, read
-        biographies, learn who or what is popular - right now! You'll probably
-        find a few gems along the way - that you didn't know existed!
-        <br />
-        <span>Caution</span> - can cause unexplained time loss.
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim,
+        doloremque cupiditate quasi in pariatur repudiandae cumque suscipit,
+        nulla placeat consectetur ab? Deserunt veritatis vel libero, in, nostrum
+        blanditiis consequatur repellendus quia laboriosam ullam quod nesciunt
+        incidunt itaque mollitia ipsam. Repudiandae.
       </p>
     ),
-    third_party: [
-      { url: "/", name: "#tmdb-api" },
-      { url: "/", name: "#youtube" },
-      { url: "/", name: "#react-icons" },
-      { url: "/", name: "#react-router" },
-      { url: "/", name: "#react-query" },
-    ],
-    project__url: "/",
-    repo__url: "/",
+    apis: [],
+    third_party: [],
+    project__anchor: "/",
+    repo__anchor: "/",
   },
+  alt: false,
+};
+
+Project.propTypes = {
+  project: PropTypes.shape({
+    image: PropTypes.string,
+    date: PropTypes.string,
+    name: PropTypes.string,
+    tech: PropTypes.array,
+    description: PropTypes.element,
+    apis: PropTypes.array,
+    third_party: PropTypes.array,
+    project_anchor: PropTypes.string,
+    repo__anchor: PropTypes.string,
+  }),
+  alt: PropTypes.bool,
 };

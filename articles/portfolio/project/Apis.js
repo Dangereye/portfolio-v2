@@ -1,19 +1,20 @@
-export default function Apis({ project }) {
+import PropTypes from "prop-types";
+export default function Apis({ name, apis }) {
   return (
     <>
-      {project.apis.length > 0 && (
+      {apis.length > 0 && (
         <div className="apis">
           <h4 className="heading heading--h3">APIs</h4>
           <div className="btns tags">
-            {project.apis.map((link, i) => (
+            {apis.map((item, i) => (
               <a
-                key={`${project.name}-api-${i}`}
-                href={link.url}
+                key={`${name}-api-${i}`}
+                href={item.anchor}
                 target="_blank"
                 rel="noreferrer"
                 className="btn btn--tag"
               >
-                {link.name}
+                {item.name}
               </a>
             ))}
           </div>
@@ -24,5 +25,16 @@ export default function Apis({ project }) {
 }
 
 Apis.defaultProps = {
-  project: { apis: [] },
+  name: "",
+  apis: [],
+};
+
+Apis.propTypes = {
+  name: PropTypes.string,
+  apis: PropTypes.arrayOf(
+    PropTypes.exact({
+      name: PropTypes.string,
+      anchor: PropTypes.string,
+    })
+  ),
 };
