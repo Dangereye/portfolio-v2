@@ -20,7 +20,6 @@ export default function Projects() {
         <Project project={games} />
         <Project project={the_weather} alt />
         <Project project={movies} />
-        <Project />
       </div>
     </article>
   );
