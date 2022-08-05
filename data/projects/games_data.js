@@ -8,7 +8,7 @@ export const games = {
     { image: "/svg/sass.svg", name: "SCSS", width: "53.38", height: "40" },
     { image: "/svg/js.svg", name: "JavaScript", width: "40", height: "40" },
     { image: "/svg/react.svg", name: "ReactJS", width: "45.71", height: "40" },
-    { image: "/svg/next.svg", name: "ReactJS", width: "40", height: "40" },
+    { image: "/svg/next.svg", name: "NextJS", width: "40", height: "40" },
   ],
   description: (
     <p className="body-text">
