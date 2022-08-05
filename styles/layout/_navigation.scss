@@ -3,9 +3,10 @@
     font-size: 2rem;
     text-decoration: none;
     transition: color $time;
-
-    &:hover {
-      color: #fff;
+    @media (hover: hover) {
+      &:hover {
+        color: #fff;
+      }
     }
   }
 }

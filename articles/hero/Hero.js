@@ -24,7 +24,7 @@ export default function Hero() {
             <span>Next JS</span> orientated development.
           </p>
           <div className="btns">
-            <Link href="/#portfolio">
+            <Link href="/#projects">
               <a className="btn btn--primary btn--large">Latest projects</a>
             </Link>
           </div>
