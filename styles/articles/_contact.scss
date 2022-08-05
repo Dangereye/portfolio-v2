@@ -44,6 +44,8 @@
     fill: $dark-color;
     transition: transform $time, fill $time;
 
+    @include tooltip;
+
     @media (hover: hover) {
       &:hover {
         transform: translateY(-4px);

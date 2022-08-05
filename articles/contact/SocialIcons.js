@@ -9,6 +9,7 @@ export default function SocialIcons({ list }) {
           target="_blank"
           rel="noreferrer"
           className="social-icon"
+          data-tooltip={item.name ? item.name : ""}
         >
           {item.icon ? item.icon : "N/A"}
         </a>
