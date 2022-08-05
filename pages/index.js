@@ -7,25 +7,18 @@ import Contact from "../articles/contact/Contact";
 import MobileMenu from "../layout/MobileMenu";
 import usePageScroll from "../hooks/usePageScroll";
 import { Toast } from "../articles/contact/Toast";
-import { AppContext } from "../context/AppContext";
 
 export default function Home() {
-  const { menuIsOpen } = useContext(AppContext);
   const {} = usePageScroll();
   return (
     <>
-      {!menuIsOpen ? (
-        <>
-          <Hero />
-          <About />
-          <Skills />
-          <Projects />
-          <Contact />
-          <Toast />
-        </>
-      ) : (
-        <MobileMenu />
-      )}
+      <Hero />
+      <About />
+      <Skills />
+      <Projects />
+      <Contact />
+      <Toast />
+      <MobileMenu />
     </>
   );
 }
