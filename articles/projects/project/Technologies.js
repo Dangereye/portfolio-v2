@@ -9,7 +9,11 @@ export default function Technologies({ name, tech }) {
           <h4 className="heading heading--h3">Technologies</h4>
           <div className="tech__items">
             {tech.map((item, i) => (
-              <div className="tech__icon" key={`${name}-tech-${i}`}>
+              <div
+                key={`${name}-tech-${i}`}
+                className="tech__icon"
+                data-tooltip={item.name}
+              >
                 <Image
                   src={item.image}
                   width={item.width}

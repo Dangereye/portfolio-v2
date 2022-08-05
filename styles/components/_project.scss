@@ -104,6 +104,10 @@
       gap: clamp(1rem, 2vw, 2rem);
     }
 
+    &__icon {
+      @include tooltip;
+    }
+
     @media (max-width: $mobile) {
       &__icon {
         max-width: 3rem;

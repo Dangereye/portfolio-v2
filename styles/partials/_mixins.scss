@@ -71,3 +71,28 @@
     margin-bottom: 6rem;
   }
 }
+
+@mixin tooltip {
+  position: relative;
+  &::before {
+    content: attr(data-tooltip);
+    display: block;
+    position: absolute;
+    top: -3rem;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 5px 10px;
+    color: #fff;
+    background-color: $light-color;
+    opacity: 0;
+    transition: opacity $time, top $time;
+  }
+  @media (hover: hover) {
+    &:hover {
+      &::before {
+        top: -5rem;
+        opacity: 1;
+      }
+    }
+  }
+}
