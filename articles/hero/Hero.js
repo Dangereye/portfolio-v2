@@ -16,19 +16,33 @@ export default function Hero() {
   useEffect(() => {
     const animate = gsap.from(".hero-animate", {
       opacity: 0,
-      y: -100,
+      y: -150,
       stagger: 0.1,
-      duration: 0.3,
+      duration: 0.8,
       delay: 1,
+      ease: "back.out(1.1)",
       scrollTrigger: "#hero",
     });
     return () => {
       animate.kill();
     };
   }, []);
+  useEffect(() => {
+    const animateBg = gsap.from(".hero-animate-bg", {
+      opacity: 0,
+      scale: 1.2,
+      duration: 1,
+      delay: 0.3,
+      ease: "back.out(1.1)",
+      scrollTrigger: "#hero",
+    });
+    return () => {
+      animateBg.kill();
+    };
+  }, []);
   return (
     <article className="article article__hero" id="hero">
-      <div className="background"></div>
+      <div className="background hero-animate-bg"></div>
       <div className="container">
         <div className="typography">
           <div className="heading heading--lead hero-animate">
