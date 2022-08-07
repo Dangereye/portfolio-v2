@@ -34,7 +34,11 @@ export default function Project({ project, alt }) {
         <div className={`project__description ${id()}-animate-text`}>
           {project.description}
         </div>
-        <Technologies name={project.name} tech={project.tech} />
+        <Technologies
+          name={project.name}
+          tech={project.tech}
+          anim={`${id()}-animate-text`}
+        />
         <Apis name={project.name} apis={project.apis} />
         <ThirdParty name={project.name} third_party={project.third_party} />
         <div className="btns">
@@ -42,7 +46,7 @@ export default function Project({ project, alt }) {
             href={project.project__url}
             target="_blank"
             rel="noreferrer"
-            className="btn btn--primary btn--large"
+            className={`btn btn--primary btn--large ${id()}-animate-text`}
           >
             Launch Site
           </a>
@@ -50,7 +54,7 @@ export default function Project({ project, alt }) {
             href={project.repo__url}
             target="_blank"
             rel="noreferrer"
-            className="btn btn--tertiary "
+            className={`btn btn--tertiary ${id()}-animate-text`}
           >
             View Code
           </a>
