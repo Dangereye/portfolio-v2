@@ -4,10 +4,11 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-export default function useFadeRight(
+export default function useFadeHorizontal(
   condition = true,
   id,
   trigger,
+  x = -150,
   stagger = 0.1,
   duration = 0.6,
   delay = 0
@@ -16,7 +17,7 @@ export default function useFadeRight(
     if (condition) {
       const animate = gsap.from(id, {
         opacity: 0,
-        x: -150,
+        x,
         stagger,
         duration,
         delay,
@@ -28,5 +29,5 @@ export default function useFadeRight(
       };
     }
   }, [condition]);
-  return { condition, id, trigger, stagger, duration, delay };
+  return { condition, id, trigger, x, stagger, duration, delay };
 }

@@ -3,32 +3,37 @@ import Apis from "./Apis";
 import Technologies from "./Technologies";
 import ThirdParty from "./ThirdParty";
 import PropTypes from "prop-types";
-import useFadeRight from "../../../hooks/animation/useFadeRight";
+import useFadeHorizontal from "../../../hooks/animation/useFadeHorizontal";
+import useFadeDown from "../../../hooks/animation/useFadeDown";
 
 export default function Project({ project, alt }) {
-  const {} = useFadeRight(
+  const id = () => {
+    return project.name.replace(" ", "-").toLowerCase();
+  };
+
+  const {} = useFadeHorizontal(
     true,
-    `.${project.name.replace(" ", "-")}-animate-img`,
-    `#${project.name.replace(" ", "-")}`
+    `.${id()}-animate-img`,
+    `#${id()}`,
+    alt ? 150 : -150
   );
+
+  const {} = useFadeDown(`.${id()}-animate-text`, `#${id()}`);
   return (
-    <div
-      className={alt ? "project alt" : "project"}
-      id={project.name.replace(" ", "-")}
-    >
-      <div
-        className={`project__img ${project.name.replace(" ", "-")}-animate-img`}
-      >
+    <div className={alt ? "project alt" : "project"} id={id()}>
+      <div className={`project__img ${id()}-animate-img`}>
         <div className="project__img__wrapper">
           <Image src={project.image} layout="fill" alt={project.name} />
         </div>
       </div>
       <div className="project__details">
-        <header className="project__header">
+        <header className={`project__header ${id()}-animate-text`}>
           <h3 className="heading heading--h2">{project.name}</h3>
           <div className="project__date">{project.date}</div>
         </header>
-        <div className="project__description">{project.description}</div>
+        <div className={`project__description ${id()}-animate-text`}>
+          {project.description}
+        </div>
         <Technologies name={project.name} tech={project.tech} />
         <Apis name={project.name} apis={project.apis} />
         <ThirdParty name={project.name} third_party={project.third_party} />
