@@ -39,7 +39,11 @@ export default function Project({ project, alt }) {
           tech={project.tech}
           anim={`${id()}-animate-text`}
         />
-        <Apis name={project.name} apis={project.apis} />
+        <Apis
+          name={project.name}
+          apis={project.apis}
+          anim={`${id()}-animate-text`}
+        />
         <ThirdParty name={project.name} third_party={project.third_party} />
         <div className="btns">
           <a

@@ -1,10 +1,10 @@
 import PropTypes from "prop-types";
-export default function Apis({ name, apis }) {
+export default function Apis({ name, apis, anim }) {
   return (
     <>
       {apis.length > 0 && (
         <div className="apis">
-          <h4 className="heading heading--h3">APIs</h4>
+          <h4 className={`heading heading--h3 ${anim}`}>APIs</h4>
           <div className="btns tags">
             {apis.map((item, i) => (
               <a
@@ -12,7 +12,7 @@ export default function Apis({ name, apis }) {
                 href={item.anchor}
                 target="_blank"
                 rel="noreferrer"
-                className="btn btn--tag"
+                className={`btn btn--tag ${anim}`}
               >
                 {item.name}
               </a>
@@ -27,6 +27,7 @@ export default function Apis({ name, apis }) {
 Apis.defaultProps = {
   name: "",
   apis: [],
+  anim: "",
 };
 
 Apis.propTypes = {
@@ -37,4 +38,5 @@ Apis.propTypes = {
       anchor: PropTypes.string,
     })
   ),
+  anim: PropTypes.string,
 };
