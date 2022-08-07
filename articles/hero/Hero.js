@@ -5,30 +5,12 @@ import ReactSvg from "../../svgs/React";
 import ScreenSvg from "../../svgs/Screens";
 import Feature from "./Feature";
 
-import { useEffect } from "react";
-
-import { gsap } from "gsap/dist/gsap";
-import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import useScaleIn from "../../hooks/animation/useScaleIn";
-
-gsap.registerPlugin(ScrollTrigger);
+import useFadeDown from "../../hooks/animation/useFadeDown";
 
 export default function Hero() {
   const {} = useScaleIn(".hero-animate-bg", "#hero");
-  useEffect(() => {
-    const animate = gsap.from(".hero-animate", {
-      opacity: 0,
-      y: -150,
-      stagger: 0.1,
-      duration: 0.8,
-      delay: 1,
-      ease: "back.out(1.1)",
-      scrollTrigger: "#hero",
-    });
-    return () => {
-      animate.kill();
-    };
-  }, []);
+  const {} = useFadeDown(".hero-animate", "#hero");
 
   return (
     <article className="article article__hero" id="hero">
