@@ -1,10 +1,10 @@
 import PropTypes from "prop-types";
-export default function ThirdParty({ name, third_party }) {
+export default function ThirdParty({ name, third_party, anim }) {
   return (
     <>
       {third_party.length > 0 && (
         <div className="third-party">
-          <h4 className="heading heading--h3">Third party</h4>
+          <h4 className={`heading heading--h3 ${anim}`}>Third party</h4>
           <div className="btns tags">
             {third_party.map((item, i) => (
               <a
@@ -12,7 +12,7 @@ export default function ThirdParty({ name, third_party }) {
                 href={item.anchor}
                 target="_blank"
                 rel="noreferrer"
-                className="btn btn--tag"
+                className={`btn btn--tag ${anim}`}
               >
                 {item.name}
               </a>
@@ -27,6 +27,7 @@ export default function ThirdParty({ name, third_party }) {
 ThirdParty.defaultProps = {
   name: "",
   third_party: [],
+  anim: "",
 };
 
 ThirdParty.propTypes = {
@@ -37,4 +38,5 @@ ThirdParty.propTypes = {
       anchor: PropTypes.string,
     })
   ),
+  anim: PropTypes.string,
 };

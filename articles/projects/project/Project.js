@@ -18,7 +18,7 @@ export default function Project({ project, alt }) {
     alt ? 150 : -150
   );
 
-  const {} = useFadeDown(`.${id()}-animate-text`, `#${id()}`);
+  const {} = useFadeDown(`.${id()}-animate-text`, `#${id()}`, 0.03, 0.6, 0.3);
   return (
     <div className={alt ? "project alt" : "project"} id={id()}>
       <div className={`project__img ${id()}-animate-img`}>
@@ -44,7 +44,11 @@ export default function Project({ project, alt }) {
           apis={project.apis}
           anim={`${id()}-animate-text`}
         />
-        <ThirdParty name={project.name} third_party={project.third_party} />
+        <ThirdParty
+          name={project.name}
+          third_party={project.third_party}
+          anim={`${id()}-animate-text`}
+        />
         <div className="btns">
           <a
             href={project.project__url}
