@@ -2,14 +2,11 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import MobileIcon from "./MobileIcon";
 import Navigation from "./Navigation";
-
-import { gsap } from "gsap/dist/gsap";
-import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-
-gsap.registerPlugin(ScrollTrigger);
+import useScaleIn from "../hooks/animation/useScaleIn";
 
 export default function Header() {
   const [background, setBackground] = useState(false);
+  const {} = useScaleIn(".header-animate", "#hero");
 
   const handleScroll = () => {
     window.scrollY > 25 ? setBackground(true) : setBackground(false);
@@ -22,20 +19,6 @@ export default function Header() {
       window.removeEventListener("scroll", handleScroll);
     };
   });
-
-  useEffect(() => {
-    const animate = gsap.from(".header-animate", {
-      opacity: 0,
-      scale: 1.2,
-      duration: 1,
-      delay: 0.3,
-      ease: "back.out(1.1)",
-      scrollTrigger: "#hero",
-    });
-    return () => {
-      animate.kill();
-    };
-  }, []);
 
   return (
     <>
