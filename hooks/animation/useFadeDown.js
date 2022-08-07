@@ -8,7 +8,7 @@ export default function useFadeDown(
   id,
   trigger,
   stagger = 0.1,
-  duration = 0.8,
+  duration = 0.6,
   delay = 1
 ) {
   useEffect(() => {
@@ -19,7 +19,7 @@ export default function useFadeDown(
       duration,
       delay,
       ease: "back.out(1.1)",
-      scrollTrigger: trigger,
+      scrollTrigger: { trigger, start: "top center", markers: true },
     });
     return () => {
       animate.kill();
