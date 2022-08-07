@@ -12,7 +12,7 @@ export default function useScaleDown(id, trigger, duration = 1, delay = 0.3) {
       duration,
       delay,
       ease: "back.out(1.1)",
-      scrollTrigger: { trigger, start: "top center", markers: true },
+      scrollTrigger: { trigger, start: "top center", markers: false },
     });
     return () => {
       animate.kill();
