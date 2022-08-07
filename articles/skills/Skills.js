@@ -9,7 +9,7 @@ import useFadeDown from "../../hooks/animation/useFadeDown";
 
 export default function Skills() {
   const {} = useScaleDown(".skills-animate-bg", "#skills");
-  const {} = useFadeDown(".skills-animate", "#skills");
+  const {} = useFadeDown(".skills-animate", "#skills", 0.02);
   return (
     <article className="article article__skills" id="skills">
       <div className="container skills-animate-bg">
