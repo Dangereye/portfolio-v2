@@ -3,11 +3,22 @@ import Apis from "./Apis";
 import Technologies from "./Technologies";
 import ThirdParty from "./ThirdParty";
 import PropTypes from "prop-types";
+import useFadeRight from "../../../hooks/animation/useFadeRight";
 
 export default function Project({ project, alt }) {
+  const {} = useFadeRight(
+    true,
+    `.${project.name.replace(" ", "-")}-animate-img`,
+    `#${project.name.replace(" ", "-")}`
+  );
   return (
-    <div className={alt ? "project alt" : "project"}>
-      <div className="project__img">
+    <div
+      className={alt ? "project alt" : "project"}
+      id={project.name.replace(" ", "-")}
+    >
+      <div
+        className={`project__img ${project.name.replace(" ", "-")}-animate-img`}
+      >
         <div className="project__img__wrapper">
           <Image src={project.image} layout="fill" alt={project.name} />
         </div>
