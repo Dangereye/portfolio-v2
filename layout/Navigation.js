@@ -2,12 +2,12 @@ import PropTypes from "prop-types";
 import { Pages } from "../data/Pages";
 import Link from "next/link";
 
-export default function Navigation() {
+export default function Navigation({ anim }) {
   return (
     <nav className="navigation">
       <ul className="navigation__list">
         {Pages.map((item, i) => (
-          <li key={`navigation-link-${i}`}>
+          <li key={`navigation-link-${i}`} className={anim}>
             <Link href={item.link ? item.link : "/"}>
               <a
                 className={
@@ -26,7 +26,12 @@ export default function Navigation() {
   );
 }
 
+Navigation.defaultProps = {
+  anim: "",
+};
+
 Navigation.propTypes = {
+  anim: PropTypes.string,
   Pages: PropTypes.arrayOf(
     PropTypes.exact({
       name: PropTypes.string,
