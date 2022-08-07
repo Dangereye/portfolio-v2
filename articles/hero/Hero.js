@@ -9,10 +9,12 @@ import { useEffect } from "react";
 
 import { gsap } from "gsap/dist/gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import useScaleIn from "../../hooks/animation/useScaleIn";
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Hero() {
+  const {} = useScaleIn(".hero-animate-bg", "#hero");
   useEffect(() => {
     const animate = gsap.from(".hero-animate", {
       opacity: 0,
@@ -27,19 +29,7 @@ export default function Hero() {
       animate.kill();
     };
   }, []);
-  useEffect(() => {
-    const animateBg = gsap.from(".hero-animate-bg", {
-      opacity: 0,
-      scale: 1.2,
-      duration: 1,
-      delay: 0.3,
-      ease: "back.out(1.1)",
-      scrollTrigger: "#hero",
-    });
-    return () => {
-      animateBg.kill();
-    };
-  }, []);
+
   return (
     <article className="article article__hero" id="hero">
       <div className="background hero-animate-bg"></div>
