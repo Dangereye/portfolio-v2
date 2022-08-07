@@ -48,6 +48,11 @@
     }
   }
 
+  .heading--h2,
+  .heading--h3 {
+    color: $heading-dark;
+  }
+
   .lists {
     position: relative;
     padding: 0 12rem 12rem 12rem;
