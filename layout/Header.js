@@ -2,11 +2,11 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import MobileIcon from "./MobileIcon";
 import Navigation from "./Navigation";
-import useScaleIn from "../hooks/animation/useScaleIn";
+import useScaleDown from "../hooks/animation/useScaleDown";
 
 export default function Header() {
   const [background, setBackground] = useState(false);
-  const {} = useScaleIn(".header-animate", "#hero");
+  const {} = useScaleDown(".header-animate", "#hero");
 
   const handleScroll = () => {
     window.scrollY > 25 ? setBackground(true) : setBackground(false);

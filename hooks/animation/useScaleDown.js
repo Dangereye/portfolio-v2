@@ -4,7 +4,7 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-export default function useScaleIn(id, trigger, duration = 1, delay = 0.3) {
+export default function useScaleDown(id, trigger, duration = 1, delay = 0.3) {
   useEffect(() => {
     const animate = gsap.from(id, {
       opacity: 0,

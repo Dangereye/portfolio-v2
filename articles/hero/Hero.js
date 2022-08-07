@@ -5,11 +5,11 @@ import ReactSvg from "../../svgs/React";
 import ScreenSvg from "../../svgs/Screens";
 import Feature from "./Feature";
 
-import useScaleIn from "../../hooks/animation/useScaleIn";
+import useScaleDown from "../../hooks/animation/useScaleDown";
 import useFadeDown from "../../hooks/animation/useFadeDown";
 
 export default function Hero() {
-  const {} = useScaleIn(".hero-animate-bg", "#hero");
+  const {} = useScaleDown(".hero-animate-bg", "#hero");
   const {} = useFadeDown(".hero-animate", "#hero");
 
   return (
