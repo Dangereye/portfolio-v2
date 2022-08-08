@@ -1,0 +1,14 @@
+@mixin hoz-padding {
+  padding-left: 6rem;
+  padding-right: 6rem;
+
+  @media (max-width: $tablet) {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+
+  @media (max-width: $mobile) {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}

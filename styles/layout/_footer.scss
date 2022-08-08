@@ -49,7 +49,7 @@
   &__links {
     position: relative;
     top: -2rem;
-    @include vert-padding-small;
+    @include vert-padding;
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;

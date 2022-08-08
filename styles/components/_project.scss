@@ -1,5 +1,9 @@
 .project {
-  // @include vert-padding;
+  @include vert-padding;
+
+  &:last-child {
+    padding-bottom: 0;
+  }
 
   display: grid;
   grid-template-columns: repeat(2, 1fr);

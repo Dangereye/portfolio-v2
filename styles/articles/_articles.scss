@@ -6,7 +6,6 @@
   justify-content: center;
 
   &__header {
-    @include bottom-margin;
     text-align: center;
 
     .body-text {

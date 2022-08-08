@@ -1,6 +1,6 @@
 &__skills {
+  padding-top: 0;
   padding-bottom: 0;
-
   @media (max-width: $laptop) {
     padding-left: 0;
     padding-right: 0;
@@ -38,13 +38,13 @@
   .article__header {
     position: relative;
     margin: 0;
-    @include vert-padding-small;
+    @include vert-padding;
     @include hoz-padding;
     z-index: 2;
 
     @media (max-width: $laptop) {
       padding: 0;
-      @include bottom-margin;
+      @include full-bottom-padding;
     }
   }
 

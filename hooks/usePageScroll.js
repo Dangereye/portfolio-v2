@@ -8,7 +8,12 @@ export default function usePageScroll() {
     const article = document.getElementById(hash);
     setTimeout(() => {
       window.scrollTo({
-        top: article ? article.offsetTop - 80 : 0,
+        top:
+          (article && hash === "skills") || (article && hash == "contact")
+            ? article.offsetTop - 120
+            : article
+            ? article.offsetTop - 80
+            : 0,
         behavior: "smooth",
       });
     }, 10);

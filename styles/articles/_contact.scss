@@ -1,4 +1,5 @@
 &__contact {
+  @include full-bottom-padding;
   position: relative;
 
   .container {

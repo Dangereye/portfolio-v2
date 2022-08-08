@@ -1,16 +1,12 @@
 &__projects {
-  @include vert-padding;
-  padding-bottom: 0;
-
-  .heading--h2 {
+  @include full-top-padding;
+  .heading--h2,
+  .heading--h3,
+  .heading--h4 {
     color: $heading-dark;
   }
 
   .body-text {
     color: $body-text-dark;
-  }
-
-  .project:not(:last-child) {
-    @include bottom-margin;
   }
 }

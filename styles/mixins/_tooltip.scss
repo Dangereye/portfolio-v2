@@ -1,0 +1,27 @@
+@mixin tooltip {
+  position: relative;
+  &::before {
+    content: attr(data-tooltip);
+    display: block;
+    position: absolute;
+    top: -2.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 8px 1.6rem;
+    color: #fff;
+    font-size: 1.6rem;
+    line-height: 1;
+    background-color: $light-color;
+    border-radius: 4rem;
+    opacity: 0;
+    transition: opacity $time, top $time;
+  }
+  @media (hover: hover) {
+    &:hover {
+      &::before {
+        top: -4.5rem;
+        opacity: 1;
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+@mixin full-top-padding {
+  padding-top: 24rem;
+
+  @media (max-width: $laptop) {
+    padding-top: 16rem;
+  }
+
+  @media (max-width: $tablet) {
+    padding-top: 12rem;
+  }
+  @media (max-width: $mobile) {
+    padding-top: 8rem;
+  }
+}
