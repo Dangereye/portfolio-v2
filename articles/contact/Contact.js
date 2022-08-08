@@ -209,9 +209,10 @@ export default function Contact() {
             handleChange={handleUpdateInput}
             handleBlur={checkMessage}
             error_msg={state.message.error_msg}
+            anim="contact-animate-form"
           />
 
-          <div className="btns">
+          <div className="btns contact-animate-form">
             <Button classes="btn--primary btn--large" name="Send message" />
           </div>
         </form>

@@ -35,6 +35,7 @@ InputGroup.defaultProps = {
     return;
   },
   error_msg: "",
+  anim: "",
 };
 
 InputGroup.propTypes = {
@@ -44,4 +45,5 @@ InputGroup.propTypes = {
   handleChange: PropTypes.func,
   handleBlur: PropTypes.func,
   error_msg: PropTypes.string,
+  anim: PropTypes.string,
 };
