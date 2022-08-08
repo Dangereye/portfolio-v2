@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 export default function InputGroup({
   name,
   type,
@@ -5,9 +7,10 @@ export default function InputGroup({
   handleChange,
   handleBlur,
   error_msg,
+  anim,
 }) {
   return (
-    <div className="form__input-group">
+    <div className={`form__input-group ${anim}`}>
       <label htmlFor={name}>{name}</label>
       <input
         type={type}
@@ -32,4 +35,13 @@ InputGroup.defaultProps = {
     return;
   },
   error_msg: "",
+};
+
+InputGroup.propTypes = {
+  name: PropTypes.string,
+  type: PropTypes.string,
+  value: PropTypes.string,
+  handleChange: PropTypes.func,
+  handleBlur: PropTypes.func,
+  error_msg: PropTypes.string,
 };

@@ -11,6 +11,8 @@ import IconText from "../../components/IconText";
 import SocialIcons from "./SocialIcons";
 import { Connect } from "../../data/Connect";
 
+import useFadeHorizontal from "../../hooks/animation/useFadeHorizontal";
+
 const defaultState = {
   name: { value: "", error_msg: "" },
   email: { value: "", error_msg: "" },
@@ -19,6 +21,7 @@ const defaultState = {
 };
 
 export default function Contact() {
+  const {} = useFadeHorizontal(true, ".contact-animate-form", "#contact", 150);
   const { setToast } = useContext(AppContext);
   const [state, setState] = useState(defaultState);
 
@@ -189,6 +192,7 @@ export default function Contact() {
             handleChange={handleUpdateInput}
             handleBlur={checkName}
             error_msg={state.name.error_msg}
+            anim="contact-animate-form"
           />
           <InputGroup
             type="email"
@@ -197,6 +201,7 @@ export default function Contact() {
             handleChange={handleUpdateInput}
             handleBlur={checkEmail}
             error_msg={state.email.error_msg}
+            anim="contact-animate-form"
           />
           <TextAreaGroup
             name="message"
