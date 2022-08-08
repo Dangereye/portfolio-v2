@@ -12,6 +12,7 @@ import SocialIcons from "./SocialIcons";
 import { Connect } from "../../data/Connect";
 
 import useFadeHorizontal from "../../hooks/animation/useFadeHorizontal";
+import useFadeDown from "../../hooks/animation/useFadeDown";
 
 const defaultState = {
   name: { value: "", error_msg: "" },
@@ -22,6 +23,7 @@ const defaultState = {
 
 export default function Contact() {
   const {} = useFadeHorizontal(true, ".contact-animate-form", "#contact", 150);
+  const {} = useFadeDown(".contact-animate", "#contact");
   const { setToast } = useContext(AppContext);
   const [state, setState] = useState(defaultState);
 
@@ -175,8 +177,12 @@ export default function Contact() {
     <article className="article article__contact" id="contact">
       <div className="container">
         <header className="article__header">
-          <ArticleHeading lead="Contact" h2="Let's talk!" />
-          <p className="body-text">
+          <ArticleHeading
+            lead="Contact"
+            h2="Let's talk!"
+            anim="contact-animate"
+          />
+          <p className="body-text contact-animate">
             To discuss career & freelance opportunities, contact me directly or
             fill out the form and I'll get back to you promptly.
           </p>
