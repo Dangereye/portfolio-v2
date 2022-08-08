@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-export default function SocialIcons({ list }) {
+export default function SocialIcons({ list, anim }) {
   return (
     <div className="btns">
       {list.map((item) => (
@@ -8,7 +8,7 @@ export default function SocialIcons({ list }) {
           href={item.anchor ? item.anchor : "/"}
           target="_blank"
           rel="noreferrer"
-          className="social-icon"
+          className={`social-icon ${anim}`}
           data-tooltip={item.name ? item.name : ""}
         >
           {item.icon ? item.icon : "N/A"}
@@ -25,6 +25,7 @@ SocialIcons.defaultProps = {
     { name: "03", anchor: "/", icon: "03" },
     { name: "04", anchor: "/", icon: "04" },
   ],
+  anim: "",
 };
 
 SocialIcons.propTypes = {
@@ -35,4 +36,5 @@ SocialIcons.propTypes = {
       icon: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
     })
   ),
+  anim: PropTypes.string,
 };

@@ -186,8 +186,12 @@ export default function Contact() {
             To discuss career & freelance opportunities, contact me directly or
             fill out the form and I'll get back to you promptly.
           </p>
-          <IconText icon={<MdEmail />} text="craig_puxty@talktalk.net" />
-          <SocialIcons list={Connect} />
+          <IconText
+            icon={<MdEmail />}
+            text="craig_puxty@talktalk.net"
+            anim="contact-animate"
+          />
+          <SocialIcons list={Connect} anim="contact-animate" />
         </header>
 
         <form className="form" onSubmit={handleSubmit}>
