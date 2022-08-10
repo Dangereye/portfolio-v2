@@ -28,11 +28,11 @@ export default function Hero() {
             </div>
           </h1>
           <p className="body-text hero-animate">
-            I’m a software engineer specializing in{" "}
-            <Anchor anchor="https://reactjs.org" text="React JS" /> &amp;{" "}
+            Specializing in{" "}
+            <Anchor anchor="https://reactjs.org" text="React JS" /> and{" "}
             <Anchor anchor="https://nextjs.org/" text="Next JS" /> development.
-            I love building (and occasionally designing) beautiful, modern,
-            responsive and performant user experiences.
+            <br /> I love building (and occasionally designing) beautiful,
+            modern software that's both responsive and performance-driven.
           </p>
           <div className="btns hero-animate">
             <Link href="/#projects">
