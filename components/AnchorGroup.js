@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import Anchor from "./Anchor";
 export default function AnchorGroup({ heading, list }) {
   return (
     <div className="list-group">
@@ -6,13 +7,7 @@ export default function AnchorGroup({ heading, list }) {
       <ul className="list">
         {list.map((item) => (
           <li key={item.name} className="list__item">
-            <a
-              href={item.anchor ? item.anchor : "/"}
-              target="_blank"
-              rel="noreferrer"
-            >
-              {item.name ? item.name : "N/A"}
-            </a>
+            <Anchor anchor={item.anchor} text={item.name} />
           </li>
         ))}
       </ul>

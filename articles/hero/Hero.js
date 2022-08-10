@@ -7,6 +7,7 @@ import Feature from "./Feature";
 
 import useScaleDown from "../../hooks/animation/useScaleDown";
 import useFadeDown from "../../hooks/animation/useFadeDown";
+import Anchor from "../../components/Anchor";
 
 export default function Hero() {
   const {} = useScaleDown(".hero-animate-bg", "#hero");
@@ -27,9 +28,11 @@ export default function Hero() {
             </div>
           </h1>
           <p className="body-text hero-animate">
-            I love building (and occasionally designing) exceptional user
-            experiences. My niche concerns <span>React JS</span> &amp;{" "}
-            <span>Next JS</span> orientated development.
+            I’m a software engineer specializing in{" "}
+            <Anchor anchor="https://reactjs.org" text="React JS" /> &amp;{" "}
+            <Anchor anchor="https://nextjs.org/" text="Next JS" /> development.
+            I love building (and occasionally designing) beautiful, modern,
+            responsive and performant user experiences.
           </p>
           <div className="btns hero-animate">
             <Link href="/#projects">
