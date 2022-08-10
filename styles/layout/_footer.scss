@@ -21,6 +21,13 @@
     border: 6px solid #fff;
     border-radius: 50%;
     background-color: $light-color;
+    transition: background-color $time;
+
+    @media (hover: hover) {
+      &:hover {
+        background-color: darken($light-color, 15%);
+      }
+    }
 
     @media (max-width: $laptop) {
       width: 6rem;
@@ -56,7 +63,7 @@
     justify-content: space-evenly;
     gap: 4rem;
 
-    @media (max-width: 1104px) {
+    @media (max-width: 1345px) {
       justify-content: flex-start;
     }
   }
