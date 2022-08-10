@@ -6,7 +6,7 @@ import ArticleHeading from "../../components/ArticleHeading";
 import useFadeDown from "../../hooks/animation/useFadeDown";
 
 export default function Projects() {
-  const {} = useFadeDown(".projects-animate", "#projects");
+  const {} = useFadeDown(".projects-animate", "#projects", 0.1, 0.6, 0.3);
   return (
     <article className="article article__projects" id="projects">
       <div className="container">
@@ -23,8 +23,8 @@ export default function Projects() {
             quisquam non id!
           </p>
         </header>
-        <Project project={games} />
-        <Project project={the_weather} alt />
+        <Project project={games} hozDelay={0.6} downDelay={0.9} />
+        <Project project={the_weather} alt downDelay={0.3} />
         <Project project={movies} />
       </div>
     </article>
