@@ -77,10 +77,13 @@
   .body-text {
     max-width: 40ch;
     color: $body-text-light;
+  }
 
-    span {
-      color: $light-color;
-      font-weight: 600;
+  a {
+    @media (hover: hover) {
+      &:hover {
+        color: #fff;
+      }
     }
   }
 
