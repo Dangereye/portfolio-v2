@@ -18,10 +18,10 @@ export default function AnchorGroup({ heading, list }) {
 AnchorGroup.defaultProps = {
   heading: "Anchors heading",
   list: [
-    { name: "Anchor item 01", anchor: "/" },
-    { name: "Anchor item 02", anchor: "/" },
-    { name: "Anchor item 03", anchor: "/" },
-    { name: "Anchor item 04", anchor: "/" },
+    { name: "Item 01", anchor: "/" },
+    { name: "Item 02", anchor: "/" },
+    { name: "Item 03", anchor: "/" },
+    { name: "Item 04", anchor: "/" },
   ],
 };
 

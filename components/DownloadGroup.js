@@ -1,16 +1,15 @@
 import PropTypes from "prop-types";
-import Link from "next/link";
 
-export default function LinkGroup({ heading, list }) {
+export default function DownloadGroup({ heading, list }) {
   return (
     <div className="list-group">
       <h3 className="heading heading--h3">{heading}</h3>
       <ul className="list">
         {list.map((item) => (
           <li key={item.name} className="list__item">
-            <Link href={item.link ? item.link : "/"}>
-              <a>{item.name ? item.name : "N/A"}</a>
-            </Link>
+            <a href={item.link} download>
+              {item.name}
+            </a>
           </li>
         ))}
       </ul>
@@ -18,8 +17,8 @@ export default function LinkGroup({ heading, list }) {
   );
 }
 
-LinkGroup.defaultProps = {
-  heading: "Links heading",
+DownloadGroup.defaultProps = {
+  heading: "Download heading",
   list: [
     { name: "Item 01", link: "/" },
     { name: "Item 02", link: "/" },
@@ -28,7 +27,7 @@ LinkGroup.defaultProps = {
   ],
 };
 
-LinkGroup.propTypes = {
+DownloadGroup.propTypes = {
   heading: PropTypes.string,
   list: PropTypes.arrayOf(
     PropTypes.exact({

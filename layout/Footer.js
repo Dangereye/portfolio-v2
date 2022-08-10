@@ -3,11 +3,13 @@ import LinkGroup from "../components/LinkGroup";
 import { Pages } from "../data/Pages";
 import { Connect } from "../data/Connect";
 import { SourceCode } from "../data/SourceCode";
+import { Downloads } from "../data/Downloads";
 import { MdEmail } from "react-icons/md";
 import { BiArrowToTop } from "react-icons/bi";
 import IconText from "../components/IconText";
 import AnchorGroup from "../components/AnchorGroup";
 import Link from "next/link";
+import DownloadGroup from "../components/DownloadGroup";
 
 export default function () {
   return (
@@ -24,6 +26,7 @@ export default function () {
             <LinkGroup heading="Pages" list={Pages} />
             <AnchorGroup heading="Connect" list={Connect} />
             <AnchorGroup heading="Source Code" list={SourceCode} />
+            <DownloadGroup heading="Downloads" list={Downloads} />
             <ListGroup
               heading="Contact"
               list={[
