@@ -12,7 +12,7 @@ export default function Projects() {
       <div className="container">
         <header className="article__header">
           <ArticleHeading
-            lead="projects"
+            lead="Projects"
             h2="Latest projects"
             anim="projects-animate"
           />
