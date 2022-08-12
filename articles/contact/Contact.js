@@ -7,6 +7,8 @@ import TextAreaGroup from "./TextAreaGroup";
 import Button from "../../components/Button";
 
 import { MdEmail } from "react-icons/md";
+import { VscPassFilled } from "react-icons/vsc";
+import { MdOutlineError } from "react-icons/md";
 import IconText from "../../components/IconText";
 import SocialIcons from "./SocialIcons";
 import { Connect } from "../../data/Connect";
@@ -24,15 +26,8 @@ const defaultState = {
 export default function Contact() {
   const {} = useFadeHorizontal(true, ".contact-animate-form", "#contact", 150);
   const {} = useFadeDown(".contact-animate", "#contact");
-  const { setToast } = useContext(AppContext);
+  const { toast, setToast } = useContext(AppContext);
   const [state, setState] = useState(defaultState);
-
-  const useToast = (message) => {
-    setToast({ isActive: true, message });
-    setTimeout(() => {
-      setToast({ isActive: false, message: "" });
-    }, 5000);
-  };
 
   const handleUpdateInput = (e) => {
     const { name, value } = e.target;
@@ -138,6 +133,14 @@ export default function Contact() {
     target.classList.add("success");
     setState((prev) => ({ ...prev, complete: true }));
   };
+
+  const useToast = (message, status, icon) => {
+    setToast({ message, status, icon });
+    setTimeout(() => {
+      setToast({ message: "", status: "unused", icon: "" });
+    }, 6000);
+  };
+
   const sendMail = (e) => {
     if (state.complete) {
       emailjs
@@ -149,12 +152,21 @@ export default function Contact() {
         )
         .then(
           (result) => {
-            useToast("Message sent Successfully!");
+            useToast(
+              "Message sent successfully!",
+              "success",
+              <VscPassFilled />
+            );
             resetValidation();
             setState(defaultState);
           },
           (error) => {
-            useToast("Oops! Something went wrong. Please, try again.");
+            useToast(
+              "Message NOT sent. Please, try again.",
+              "error",
+              <MdOutlineError />
+            );
+            console.log(toast.status);
           }
         );
     }

@@ -11,17 +11,29 @@
   width: 100%;
   padding: 4rem;
   color: #fff;
-  background-color: $light-color;
+  background-color: transparent;
 
-  transition: bottom $time;
+  transition: bottom $time, background-color $time;
 
   z-index: 2;
 
-  &.active {
+  &.success,
+  &.error {
     bottom: 0;
   }
 
-  &__text {
+  &.success {
+    background-color: $success-color;
+  }
+
+  &.error {
+    background-color: $error-color;
+  }
+
+  &__message {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
   }
 
   .btn {

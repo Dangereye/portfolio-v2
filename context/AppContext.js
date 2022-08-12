@@ -2,8 +2,9 @@ import { createContext, useState } from "react";
 export const AppContext = createContext();
 
 const toastDefault = {
-  isActive: false,
   message: "Golden brown.",
+  status: "",
+  icon: "",
 };
 
 export default function AppProvider({ children }) {
