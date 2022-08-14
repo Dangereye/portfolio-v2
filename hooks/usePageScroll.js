@@ -9,8 +9,8 @@ export default function usePageScroll() {
     setTimeout(() => {
       window.scrollTo({
         top:
-          (article && hash === "skills") || (article && hash == "contact")
-            ? article.offsetTop - 120
+          article && hash === "skills"
+            ? article.offsetTop
             : article
             ? article.offsetTop - 80
             : 0,
