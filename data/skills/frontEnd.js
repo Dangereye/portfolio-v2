@@ -1,4 +1,11 @@
 export const frontEnd = {
   heading: "Front-end",
-  list: ["HTML5", "CSS3", "SCSS (SASS)", "JavaScript", "React JS", "Next JS"],
+  list: [
+    "HTML5",
+    "CSS3",
+    "SASS (SCSS)",
+    "JavaScript (ES6+)",
+    "React JS",
+    "Next JS",
+  ],
 };

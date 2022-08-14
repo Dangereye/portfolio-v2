@@ -60,7 +60,7 @@ export default function Project({ project, alt, hozDelay, downDelay }) {
         />
         <div className="btns">
           <a
-            href={project.project__url}
+            href={project.project__anchor}
             target="_blank"
             rel="noreferrer"
             className={`btn btn--primary btn--large ${id()}-animate-text`}
@@ -68,7 +68,7 @@ export default function Project({ project, alt, hozDelay, downDelay }) {
             Launch Site
           </a>
           <a
-            href={project.repo__url}
+            href={project.repo__anchor}
             target="_blank"
             rel="noreferrer"
             className={`btn btn--tertiary ${id()}-animate-text`}
