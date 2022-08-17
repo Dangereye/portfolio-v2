@@ -38,11 +38,11 @@ export default function About() {
           <p className="body-text about-animate-text">
             I am meticulous in my development process, following fundamental
             principles; KISS, DRY, navigation, visual hierarchy, consistency,
-            performance and responsive content, etc.
+            etc.
           </p>
           <p className="body-text about-animate-text">
-            I can create beautiful, modern software that's both responsive and
-            performance-driven, complete with custom, high-quality imagery.
+            I can create beautiful, modern software with custom, high-quality
+            imagery - that's scalable, device responsive and performance-driven.
           </p>
           <div className="btns ">
             <Link href="/#contact">
