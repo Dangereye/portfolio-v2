@@ -49,4 +49,10 @@ html {
   max-width: 80ch;
   font-size: $body-text-size;
   line-height: 1.618;
+
+  &--lead {
+    font-size: $lead-body-text-size;
+    font-weight: 100;
+    font-style: italic;
+  }
 }

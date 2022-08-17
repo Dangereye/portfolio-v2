@@ -20,8 +20,11 @@ export default function About() {
         </div>
         <div className="text">
           <header className="article__header about-animate-text">
-            <ArticleHeading lead="" h2="About me" />
+            <ArticleHeading lead="About me" h2="Your problems, solved!" />
           </header>
+          <p className="body-text body-text--lead about-animate-text">
+            Specializing in React JS and Next JS development.
+          </p>
           <p className="body-text about-animate-text">
             Hi! I'm Craig Puxty, a bespoke front-end developer from a small town
             in Flintshire, North Wales, UK.
