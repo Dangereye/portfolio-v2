@@ -21,10 +21,10 @@ export default function Skills() {
             anim="skills-animate"
           />
           <p className="body-text skills-animate">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse,
-            tenetur maxime, tempore aspernatur aperiam ut fugit recusandae odit
-            corrupti at excepturi doloribus, tempora non? Autem assumenda neque
-            quisquam non id!
+            My typical environmental setup and design tools - I have reached an
+            advanced level in Photoshop. Frequently used front-end technologies,
+            frameworks and libraries. I have gained some knowledge of the listed
+            back-end technologies - DB connection, routing, schemas etc.
           </p>
         </header>
         <div className="lists">

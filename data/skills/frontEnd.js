@@ -3,7 +3,7 @@ export const frontEnd = {
   list: [
     "HTML5",
     "CSS3",
-    "SASS (SCSS)",
+    "SASS",
     "JavaScript (ES6+)",
     "React JS",
     "JSX",
