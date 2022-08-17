@@ -6,6 +6,8 @@ export const frontEnd = {
     "SASS (SCSS)",
     "JavaScript (ES6+)",
     "React JS",
+    "JSX",
     "Next JS",
+    "More...",
   ],
 };
