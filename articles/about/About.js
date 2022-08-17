@@ -23,28 +23,26 @@ export default function About() {
             <ArticleHeading lead="" h2="About me" />
           </header>
           <p className="body-text about-animate-text">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit,
-            harum. Cum eveniet earum quam recusandae natus reiciendis impedit
-            ullam est velit temporibus expedita assumenda, ad itaque minima
-            adipisci suscipit fugiat.
+            Hi! I'm Craig Puxty, a bespoke front-end developer from a small town
+            in Flintshire, North Wales, UK.
           </p>
           <p className="body-text about-animate-text">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit,
-            harum. Cum eveniet earum quam recusandae natus reiciendis impedit
-            ullam est velit temporibus expedita assumenda, ad itaque minima
-            adipisci suscipit fugiat.
+            Over several years, I've dedicated much of my free time to gaining
+            proficiency in several front-end technologies and design tools,
+            together with some back-end knowledge.
           </p>
           <p className="body-text about-animate-text">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit,
-            harum. Cum eveniet earum quam recusandae natus reiciendis impedit
-            ullam est velit temporibus expedita assumenda, ad itaque minima
-            adipisci suscipit fugiat.
+            I am an analytical thinker, able to identify and define problems and
+            then develop a workable solution.
           </p>
           <p className="body-text about-animate-text">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit,
-            harum. Cum eveniet earum quam recusandae natus reiciendis impedit
-            ullam est velit temporibus expedita assumenda, ad itaque minima
-            adipisci suscipit fugiat.
+            I am meticulous in my development process, following fundamental
+            principles; KISS, DRY, navigation, visual hierarchy, consistency,
+            performance and responsive content, etc.
+          </p>
+          <p className="body-text about-animate-text">
+            I can create beautiful, modern software that's both responsive and
+            performance-driven, complete with custom, high-quality imagery.
           </p>
           <div className="btns ">
             <Link href="/#contact">
