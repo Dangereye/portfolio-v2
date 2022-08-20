@@ -1,14 +1,14 @@
 import PropTypes from "prop-types";
 export default function SocialIcons({ list, anim }) {
   return (
-    <div className="btns">
+    <div className={`btns ${anim}`}>
       {list.map((item) => (
         <a
           key={`social-icon-${item.name}`}
           href={item.anchor ? item.anchor : "/"}
           target="_blank"
           rel="noreferrer"
-          className={`social-icon ${anim}`}
+          className="social-icon"
           data-tooltip={item.name ? item.name : ""}
         >
           {item.icon ? item.icon : "N/A"}

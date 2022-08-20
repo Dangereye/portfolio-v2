@@ -1,20 +1,30 @@
-import { useState, useContext } from "react";
+// Context
 import { AppContext } from "../../context/AppContext";
+
+// React hooks
+import { useState, useContext } from "react";
+
+// Email JS
 import emailjs from "emailjs-com";
+
+// Components
 import ArticleHeading from "../../components/ArticleHeading";
 import InputGroup from "./InputGroup";
 import TextAreaGroup from "./TextAreaGroup";
 import Button from "../../components/Button";
+import SocialIcons from "./SocialIcons";
+import IconText from "../../components/IconText";
 
+// Icons
 import { MdEmail } from "react-icons/md";
 import { VscPassFilled } from "react-icons/vsc";
 import { MdOutlineError } from "react-icons/md";
-import IconText from "../../components/IconText";
-import SocialIcons from "./SocialIcons";
+
+// Data
 import { Connect } from "../../data/Connect";
 
-import useFadeHorizontal from "../../hooks/animation/useFadeHorizontal";
-import useFadeDown from "../../hooks/animation/useFadeDown";
+// Animation hook
+import useAnimation from "../../hooks/useAnimation";
 
 const defaultState = {
   name: { value: "", error_msg: "" },
@@ -24,22 +34,26 @@ const defaultState = {
 };
 
 export default function Contact() {
-  // const {} = useFadeHorizontal(true, ".contact-animate-form", "#contact", 150);
-  // const {} = useFadeDown(".contact-animate", "#contact");
   const { toast, setToast } = useContext(AppContext);
   const [state, setState] = useState(defaultState);
 
-  const handleUpdateInput = (e) => {
-    const { name, value } = e.target;
-    setState({
-      ...state,
-      [name]: {
-        value,
-        error_msg: "",
-      },
-    });
-  };
+  // Animation
+  // useAnimation(element id,trigger id,{animation options},{trigger options})
+  const {} = useAnimation(".contact-animate-form", "#contact", {
+    x: 300,
+    y: 0,
+    stagger: 0.05,
+    ease: "back.out(1.4)",
+  });
 
+  const {} = useAnimation(".contact-animate", "#contact", {
+    x: -300,
+    y: 0,
+    stagger: 0.05,
+    ease: "back.out(1.4)",
+  });
+
+  // Functions
   const resetValidation = () => {
     setState((prev) => ({
       ...prev,
@@ -58,6 +72,17 @@ export default function Contact() {
     const textArea = document.querySelector("textarea");
     textArea.classList.remove("success");
     textArea.classList.remove("error");
+  };
+
+  const handleUpdateInput = (e) => {
+    const { name, value } = e.target;
+    setState({
+      ...state,
+      [name]: {
+        value,
+        error_msg: "",
+      },
+    });
   };
 
   const checkName = () => {
@@ -134,11 +159,17 @@ export default function Contact() {
     setState((prev) => ({ ...prev, complete: true }));
   };
 
-  const useToast = (message, status, icon) => {
-    setToast({ message, status, icon });
-    setTimeout(() => {
-      setToast({ message: "", status: "unused", icon: "" });
-    }, 6000);
+  const validation = () => {
+    resetValidation();
+    checkName();
+    checkEmail();
+    checkMessage();
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    validation();
+    sendMail(e);
   };
 
   const sendMail = (e) => {
@@ -172,17 +203,11 @@ export default function Contact() {
     }
   };
 
-  const validation = () => {
-    resetValidation();
-    checkName();
-    checkEmail();
-    checkMessage();
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    validation();
-    sendMail(e);
+  const useToast = (message, status, icon) => {
+    setToast({ message, status, icon });
+    setTimeout(() => {
+      setToast({ message: "", status: "unused", icon: "" });
+    }, 6000);
   };
 
   return (
@@ -233,7 +258,6 @@ export default function Contact() {
             error_msg={state.message.error_msg}
             anim="contact-animate-form"
           />
-
           <div className="btns contact-animate-form">
             <Button classes="btn--primary btn--large" name="Send message" />
           </div>
