@@ -10,7 +10,6 @@ export default function About() {
   // Animation
   // useAnimation(element id,trigger id,{animation options},{trigger options})
   const {} = useAnimation(".about-animate", "#about", {
-    delay: 0,
     duration: 1,
     scale: 1.3,
   });
