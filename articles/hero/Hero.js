@@ -29,7 +29,6 @@ export default function Hero() {
   const {} = useAnimation(".hero-animate-down", "#hero", {
     y: -300,
     delay: 0.4,
-    duration: 0.6,
     stagger: 0.05,
     ease: "back.out(1.4)",
   });

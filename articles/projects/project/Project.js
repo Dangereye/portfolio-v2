@@ -20,12 +20,15 @@ export default function Project({ project, alt }) {
   const {} = useAnimation(`.${id()}-animate-image`, `#${id()}`, {
     x: alt ? 300 : -300,
     y: 0,
-    ease: "back.out(1.4)",
+    scale: 1.3,
+    duration: 1,
+    ease: "ease-out",
   });
 
   const {} = useAnimation(`.${id()}-animate-text`, `#${id()}`, {
     x: alt ? -300 : 300,
     y: 0,
+    delay: 0.4,
     ease: "back.out(1.4)",
     stagger: 0.05,
   });
