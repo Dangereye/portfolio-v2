@@ -1,12 +1,25 @@
-import Project from "./project/Project";
+// Data
 import { games } from "../../data/projects/games_data";
 import { movies } from "../../data/projects/movies_data";
 import { the_weather } from "../../data/projects/the_weather_data";
+
+// Components
 import ArticleHeading from "../../components/ArticleHeading";
-import useFadeDown from "../../hooks/animation/useFadeDown";
+import Project from "./project/Project";
+
+// Animation hook
+import useAnimation from "../../hooks/useAnimation";
 
 export default function Projects() {
-  // const {} = useFadeDown(".projects-animate", "#projects", 0.1, 0.6, 0.3);
+  // Animation
+  // useAnimation(element id,trigger id,{animation options},{trigger options})
+  const {} = useAnimation(".projects-animate", "#projects", {
+    y: -300,
+    duration: 0.6,
+    stagger: 0.05,
+    ease: "back.out(1.4)",
+  });
+
   return (
     <article className="article article__projects" id="projects">
       <div className="container">
@@ -23,8 +36,8 @@ export default function Projects() {
             quisquam non id!
           </p>
         </header>
-        <Project project={games} hozDelay={0.6} downDelay={0.9} />
-        <Project project={the_weather} alt downDelay={0.3} />
+        <Project project={games} />
+        <Project project={the_weather} alt />
         <Project project={movies} />
       </div>
     </article>

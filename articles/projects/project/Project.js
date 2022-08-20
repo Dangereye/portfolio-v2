@@ -1,36 +1,38 @@
+// Prop types
+import PropTypes from "prop-types";
+
+// Components
 import Image from "next/image";
 import Apis from "./Apis";
 import Technologies from "./Technologies";
 import ThirdParty from "./ThirdParty";
-import PropTypes from "prop-types";
-import useFadeHorizontal from "../../../hooks/animation/useFadeHorizontal";
-import useFadeDown from "../../../hooks/animation/useFadeDown";
 
-export default function Project({ project, alt, hozDelay, downDelay }) {
+// Animation hook
+import useAnimation from "../../../hooks/useAnimation";
+
+export default function Project({ project, alt }) {
   const id = () => {
     return project.name.replace(" ", "-").toLowerCase();
   };
 
-  // const {} = useFadeHorizontal(
-  //   true,
-  //   `.${id()}-animate-img`,
-  //   `#${id()}`,
-  //   alt ? 150 : -150,
-  //   0.1,
-  //   0.6,
-  //   hozDelay
-  // );
+  // Animation
+  // useAnimation(element id,trigger id,{animation options},{trigger options})
+  const {} = useAnimation(`.${id()}-animate-image`, `#${id()}`, {
+    x: alt ? 300 : -300,
+    y: 0,
+    ease: "back.out(1.4)",
+  });
 
-  // const {} = useFadeDown(
-  //   `.${id()}-animate-text`,
-  //   `#${id()}`,
-  //   0.03,
-  //   0.6,
-  //   downDelay
-  // );
+  const {} = useAnimation(`.${id()}-animate-text`, `#${id()}`, {
+    x: alt ? -300 : 300,
+    y: 0,
+    ease: "back.out(1.4)",
+    stagger: 0.05,
+  });
+
   return (
     <div className={alt ? "project alt" : "project"} id={id()}>
-      <div className={`project__img ${id()}-animate-img`}>
+      <div className={`project__img ${id()}-animate-image`}>
         <div className="project__img__wrapper">
           <Image src={project.image} layout="fill" alt={project.name} />
         </div>
@@ -58,12 +60,12 @@ export default function Project({ project, alt, hozDelay, downDelay }) {
           third_party={project.third_party}
           anim={`${id()}-animate-text`}
         />
-        <div className="btns">
+        <div className={`btns ${id()}-animate-text`}>
           <a
             href={project.project__anchor}
             target="_blank"
             rel="noreferrer"
-            className={`btn btn--primary btn--large ${id()}-animate-text`}
+            className="btn btn--primary btn--large"
           >
             Launch Site
           </a>
@@ -71,7 +73,7 @@ export default function Project({ project, alt, hozDelay, downDelay }) {
             href={project.repo__anchor}
             target="_blank"
             rel="noreferrer"
-            className={`btn btn--tertiary ${id()}-animate-text`}
+            className="btn btn--tertiary"
           >
             View Code
           </a>
@@ -102,8 +104,6 @@ Project.defaultProps = {
     repo__anchor: "/",
   },
   alt: false,
-  hozDelay: 0,
-  downDelay: 0,
 };
 
 Project.propTypes = {
@@ -119,6 +119,4 @@ Project.propTypes = {
     repo__anchor: PropTypes.string,
   }),
   alt: PropTypes.bool,
-  hozDelay: PropTypes.number,
-  downDelay: PropTypes.number,
 };

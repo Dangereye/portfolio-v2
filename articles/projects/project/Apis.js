@@ -3,8 +3,8 @@ export default function Apis({ name, apis, anim }) {
   return (
     <>
       {apis.length > 0 && (
-        <div className="apis">
-          <h4 className={`heading heading--h3 ${anim}`}>APIs</h4>
+        <div className={`apis ${anim}`}>
+          <h4 className="heading heading--h3">APIs</h4>
           <div className="btns tags">
             {apis.map((item, i) => (
               <a
@@ -12,7 +12,7 @@ export default function Apis({ name, apis, anim }) {
                 href={item.anchor}
                 target="_blank"
                 rel="noreferrer"
-                className={`btn btn--tag ${anim}`}
+                className="btn btn--tag"
               >
                 {item.name}
               </a>

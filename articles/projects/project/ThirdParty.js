@@ -3,8 +3,8 @@ export default function ThirdParty({ name, third_party, anim }) {
   return (
     <>
       {third_party.length > 0 && (
-        <div className="third-party">
-          <h4 className={`heading heading--h3 ${anim}`}>Third party</h4>
+        <div className={`third-party ${anim}`}>
+          <h4 className="heading heading--h3">Third party</h4>
           <div className="btns tags">
             {third_party.map((item, i) => (
               <a
@@ -12,7 +12,7 @@ export default function ThirdParty({ name, third_party, anim }) {
                 href={item.anchor}
                 target="_blank"
                 rel="noreferrer"
-                className={`btn btn--tag ${anim}`}
+                className="btn btn--tag"
               >
                 {item.name}
               </a>
