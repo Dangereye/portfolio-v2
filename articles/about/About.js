@@ -1,12 +1,28 @@
+// Components
 import Image from "next/image";
 import Link from "next/link";
 import ArticleHeading from "../../components/ArticleHeading";
-import useScale from "../../hooks/animation/useScale";
-import useFadeDown from "../../hooks/animation/useFadeDown";
+
+// Animation hook
+import useAnimation from "../../hooks/useAnimation";
 
 export default function About() {
-  // const {} = useScale(".about-animate", "#about");
-  // const {} = useFadeDown(".about-animate-text", "#about");
+  // Animation
+  // useAnimation(element id,trigger id,{animation options},{trigger options})
+  const {} = useAnimation(".about-animate", "#about", {
+    delay: 0,
+    duration: 1,
+    scale: 1.3,
+  });
+
+  const {} = useAnimation(".about-animate-text", "#about", {
+    y: -300,
+    delay: 0.4,
+    duration: 0.6,
+    stagger: 0.05,
+    ease: "back.out(1.4)",
+  });
+
   return (
     <article className="article article__about" id="about">
       <div className="container">
@@ -47,16 +63,11 @@ export default function About() {
             I can create beautiful, modern software with custom, high-quality
             imagery - that's scalable, device responsive and performance-driven.
           </p>
-          <div className="btns ">
+          <div className="btns about-animate-text">
             <Link href="/#contact">
-              <a className="btn btn--large btn--primary about-animate-text">
-                Contact me
-              </a>
+              <a className="btn btn--large btn--primary ">Contact me</a>
             </Link>
-            <a
-              href="/"
-              className="btn btn--large btn--tertiary about-animate-text"
-            >
+            <a href="/" className="btn btn--large btn--tertiary">
               Download CV
             </a>
           </div>

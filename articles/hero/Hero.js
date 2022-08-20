@@ -9,20 +9,29 @@ import NextSVG from "../../svgs/Next";
 import CompassSvg from "../../svgs/Compass";
 import ScreenSvg from "../../svgs/Screens";
 
-// Animation hooks
-import useScale from "../../hooks/animation/useScale";
-import useMove from "../../hooks/animation/useMove";
+// Animation hook
+import useAnimation from "../../hooks/useAnimation";
 
 export default function Hero() {
   // Animation
-  // useHook(element id,trigger id,{animation options},{trigger options})
-  const {} = useScale(".hero-animate-bg", "#hero");
-  const {} = useMove(".hero-animate-up", "#hero", { delay: 0, duration: 1 });
-  const {} = useMove(".hero-animate-down", "#hero", {
+  // useAnimation(element id,trigger id,{animation options},{trigger options})
+  const {} = useAnimation(".hero-animate-bg", "#hero", {
+    y: 0,
+    scale: 1.3,
+    duration: 1,
+  });
+
+  const {} = useAnimation(".hero-animate-up", "#hero", {
+    delay: 0,
+    duration: 1,
+  });
+
+  const {} = useAnimation(".hero-animate-down", "#hero", {
     y: -300,
-    delay: 1,
-    duration: 0.3,
-    stagger: 0.1,
+    delay: 0.4,
+    duration: 0.6,
+    stagger: 0.05,
+    ease: "back.out(1.4)",
   });
 
   return (

@@ -6,14 +6,14 @@ import MobileIcon from "./MobileIcon";
 import Navigation from "./Navigation";
 
 // Animation hooks
-import useMove from "../hooks/animation/useMove";
+import useAnimation from "../hooks/useAnimation";
 
 export default function Header() {
   const [background, setBackground] = useState(false);
 
   // Animation
   // useHook(element id,trigger id,{animation options},{trigger options})
-  const {} = useMove(".header-animate", "#hero", {
+  const {} = useAnimation(".header-animate", "#hero", {
     y: -300,
     duration: 1,
     delay: 0,
