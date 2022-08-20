@@ -29,8 +29,9 @@
     background-color: $grey-color;
     padding: 1rem 3rem;
     border-radius: 3rem;
-    transition: border $time, background-color $time;
     resize: vertical;
+    outline-color: transparent;
+    transition: border $time, background-color $time, outline-color $time;
 
     &.success {
       background-color: rgba($success-color, 0.05);
@@ -40,6 +41,13 @@
     &.error {
       background-color: rgba($error-color, 0.05);
       border-color: $error-color;
+    }
+
+    &:focus {
+      outline: auto;
+      outline-color: $light-color;
+      background-color: $grey-color;
+      box-shadow: 0 0 3px $light-color;
     }
   }
 
