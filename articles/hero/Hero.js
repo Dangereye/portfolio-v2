@@ -17,9 +17,12 @@ export default function Hero() {
   // Animation
   // useHook(element id,trigger id,{animation options},{trigger options})
   const {} = useScale(".hero-animate-bg", "#hero");
-  const {} = useMove(".hero-animate-up", "#hero");
+  const {} = useMove(".hero-animate-up", "#hero", { delay: 0, duration: 1 });
   const {} = useMove(".hero-animate-down", "#hero", {
     y: -300,
+    delay: 1,
+    duration: 0.3,
+    stagger: 0.1,
   });
 
   return (
@@ -49,7 +52,7 @@ export default function Hero() {
             </Link>
           </div>
         </div>
-        <div className="features">
+        <div className="features hero-animate-up">
           <Feature icon={<ReactSvg />} text="React JS focused" />
           <Feature icon={<NextSVG />} text="Enhanced with Next JS" />
           <Feature icon={<CompassSvg />} text="Modern designs" />

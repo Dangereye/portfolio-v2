@@ -17,7 +17,7 @@ export default function useMove(id, trigger, newOptions, newTriggers) {
       opacity: 0,
       x: 0,
       y: 300,
-      stagger: 0.1,
+      stagger: 0,
       duration: 0.3,
       delay: 0.7,
       ease: "ease-out",
