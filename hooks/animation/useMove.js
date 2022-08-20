@@ -4,7 +4,7 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-export default function useScale(id, trigger, newOptions, newTriggers) {
+export default function useMove(id, trigger, newOptions, newTriggers) {
   const animation = {
     id,
     options: {
@@ -15,9 +15,11 @@ export default function useScale(id, trigger, newOptions, newTriggers) {
         ...newTriggers,
       },
       opacity: 0,
-      scale: 1.3,
-      duration: 1,
-      delay: 0,
+      x: 0,
+      y: 300,
+      stagger: 0.1,
+      duration: 0.3,
+      delay: 0.7,
       ease: "ease-out",
       ...newOptions,
     },
