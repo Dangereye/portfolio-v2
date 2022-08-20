@@ -4,12 +4,12 @@ import { environment } from "../../data/skills/environment";
 import { designTools } from "../../data/skills/designTools";
 import { frontEnd } from "../../data/skills/frontEnd";
 import { backEnd } from "../../data/skills/backEnd";
-import useScaleDown from "../../hooks/animation/useScaleDown";
+import useScale from "../../hooks/animation/useScale";
 import useFadeDown from "../../hooks/animation/useFadeDown";
 
 export default function Skills() {
-  const {} = useScaleDown(".skills-animate-bg", "#skills");
-  const {} = useFadeDown(".skills-animate", "#skills", 0.02);
+  // const {} = useScaleDown(".skills-animate-bg", "#skills");
+  // const {} = useFadeDown(".skills-animate", "#skills", 0.02);
   return (
     <article className="article article__skills" id="skills">
       <div className="container skills-animate-bg">

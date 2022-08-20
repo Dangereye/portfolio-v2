@@ -5,13 +5,14 @@ import ReactSvg from "../../svgs/React";
 import ScreenSvg from "../../svgs/Screens";
 import Feature from "./Feature";
 
-import useScaleDown from "../../hooks/animation/useScaleDown";
+import useScale from "../../hooks/animation/useScale";
 import useFadeDown from "../../hooks/animation/useFadeDown";
 import Anchor from "../../components/Anchor";
 
 export default function Hero() {
-  const {} = useScaleDown(".hero-animate-bg", "#hero");
-  const {} = useFadeDown(".hero-animate", "#hero");
+  // useScale(id,trigger,{animation options},{trigger options})
+  const {} = useScale(".hero-animate-bg", "#hero");
+  // const {} = useFadeDown(".hero-animate", "#hero");
 
   return (
     <article className="article article__hero" id="hero">

@@ -24,8 +24,8 @@ const defaultState = {
 };
 
 export default function Contact() {
-  const {} = useFadeHorizontal(true, ".contact-animate-form", "#contact", 150);
-  const {} = useFadeDown(".contact-animate", "#contact");
+  // const {} = useFadeHorizontal(true, ".contact-animate-form", "#contact", 150);
+  // const {} = useFadeDown(".contact-animate", "#contact");
   const { toast, setToast } = useContext(AppContext);
   const [state, setState] = useState(defaultState);
 

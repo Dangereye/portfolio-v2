@@ -6,7 +6,7 @@ import ArticleHeading from "../../components/ArticleHeading";
 import useFadeDown from "../../hooks/animation/useFadeDown";
 
 export default function Projects() {
-  const {} = useFadeDown(".projects-animate", "#projects", 0.1, 0.6, 0.3);
+  // const {} = useFadeDown(".projects-animate", "#projects", 0.1, 0.6, 0.3);
   return (
     <article className="article article__projects" id="projects">
       <div className="container">

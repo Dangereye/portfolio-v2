@@ -11,23 +11,23 @@ export default function Project({ project, alt, hozDelay, downDelay }) {
     return project.name.replace(" ", "-").toLowerCase();
   };
 
-  const {} = useFadeHorizontal(
-    true,
-    `.${id()}-animate-img`,
-    `#${id()}`,
-    alt ? 150 : -150,
-    0.1,
-    0.6,
-    hozDelay
-  );
+  // const {} = useFadeHorizontal(
+  //   true,
+  //   `.${id()}-animate-img`,
+  //   `#${id()}`,
+  //   alt ? 150 : -150,
+  //   0.1,
+  //   0.6,
+  //   hozDelay
+  // );
 
-  const {} = useFadeDown(
-    `.${id()}-animate-text`,
-    `#${id()}`,
-    0.03,
-    0.6,
-    downDelay
-  );
+  // const {} = useFadeDown(
+  //   `.${id()}-animate-text`,
+  //   `#${id()}`,
+  //   0.03,
+  //   0.6,
+  //   downDelay
+  // );
   return (
     <div className={alt ? "project alt" : "project"} id={id()}>
       <div className={`project__img ${id()}-animate-img`}>

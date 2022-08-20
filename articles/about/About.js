@@ -1,12 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
 import ArticleHeading from "../../components/ArticleHeading";
-import useScaleDown from "../../hooks/animation/useScaleDown";
+import useScale from "../../hooks/animation/useScale";
 import useFadeDown from "../../hooks/animation/useFadeDown";
 
 export default function About() {
-  const {} = useScaleDown(".about-animate", "#about");
-  const {} = useFadeDown(".about-animate-text", "#about");
+  // const {} = useScale(".about-animate", "#about");
+  // const {} = useFadeDown(".about-animate-text", "#about");
   return (
     <article className="article article__about" id="about">
       <div className="container">
