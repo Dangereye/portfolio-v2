@@ -7,6 +7,7 @@ import { backEnd } from "../../data/skills/backEnd";
 // Components
 import ArticleHeading from "../../components/ArticleHeading";
 import ListGroup from "../../components/ListGroup";
+import Anchor from "../../components/Anchor";
 
 // Animation hook
 import useAnimation from "../../hooks/useAnimation";
@@ -36,11 +37,25 @@ export default function Skills() {
             h2="Knowledge & Experience"
             anim="skills-animate"
           />
+
           <p className="body-text skills-animate">
-            My typical environmental setup and design tools - I have reached an
-            advanced level in Photoshop. Frequently used front-end technologies,
-            frameworks and libraries. I have gained some knowledge of the listed
-            back-end technologies - DB connection, routing, schemas etc.
+            Experienced in building static websites,{" "}
+            <Anchor anchor="https://reactjs.org" text="React JS" /> and{" "}
+            <Anchor anchor="https://nextjs.org" text="Next JS" /> applications,
+            and customisation of eCommerce platforms such as{" "}
+            <Anchor
+              anchor="https://business.adobe.com/uk/products/magento/magento-commerce.html"
+              text="Magento"
+            />{" "}
+            and{" "}
+            <Anchor
+              anchor="https://wordpress.com/website-builder"
+              text="WordPress"
+            />
+            . Listed are typical environmental setup and design tools,
+            frequently used front-end technologies, frameworks and libraries. I
+            also have some experience with back-end technologies - DB
+            connection, routing, schemas etc.
           </p>
         </header>
         <div className="lists">
