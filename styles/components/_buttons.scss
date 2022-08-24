@@ -45,10 +45,13 @@
     color: #fff;
     background-color: $light-color;
 
+    &:focus {
+      @include primary-hover;
+    }
+
     @media (hover: hover) {
       &:hover {
-        color: #fff;
-        background-color: darken($light-color, 15%);
+        @include primary-hover;
       }
     }
   }
@@ -56,18 +59,29 @@
   &--secondary {
     border: 1px solid $dark-grey-color;
     color: $heading-dark;
+
+    &:focus {
+      @include secondary-hover;
+    }
+
     @media (hover: hover) {
       &:hover {
-        border-color: $light-color;
+        @include secondary-hover;
       }
     }
   }
+
   &--tertiary {
     padding: 1rem;
     color: $light-color;
+
+    &:focus {
+      @include tertiary-hover;
+    }
+
     @media (hover: hover) {
       &:hover {
-        color: $heading-dark;
+        @include tertiary-hover;
       }
     }
   }
@@ -79,10 +93,13 @@
     color: #000;
     background-color: $grey-color;
 
+    &:focus {
+      @include tag-hover;
+    }
+
     @media (hover: hover) {
       &:hover {
-        color: #fff;
-        background-color: $light-color;
+        @include tag-hover;
       }
     }
   }

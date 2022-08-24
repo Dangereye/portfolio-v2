@@ -1,0 +1,17 @@
+@mixin primary-hover {
+  color: #fff;
+  background-color: darken($light-color, 15%);
+}
+
+@mixin secondary-hover {
+  border-color: $light-color;
+}
+
+@mixin tertiary-hover {
+  color: $heading-dark;
+}
+
+@mixin tag-hover {
+  color: #fff;
+  background-color: $light-color;
+}

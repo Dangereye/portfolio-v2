@@ -7,7 +7,7 @@
     margin-top: 4rem;
   }
 
-  &__back-to-top {
+  .btn--back-to-top {
     display: block;
     position: relative;
     top: -5rem;
@@ -20,14 +20,6 @@
     place-content: center;
     border: 6px solid #fff;
     border-radius: 50%;
-    background-color: $light-color;
-    transition: background-color $time;
-
-    @media (hover: hover) {
-      &:hover {
-        background-color: darken($light-color, 15%);
-      }
-    }
 
     @media (max-width: $laptop) {
       width: 6rem;

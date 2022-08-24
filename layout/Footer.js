@@ -20,7 +20,7 @@ export default function () {
   return (
     <footer className="footer">
       <Link href="/">
-        <a className="footer__back-to-top">
+        <a className="btn btn--primary btn--back-to-top">
           <BiArrowToTop />
         </a>
       </Link>
