@@ -3,6 +3,11 @@
     font-size: 2rem;
     text-decoration: none;
     transition: color $time;
+
+    &:focus {
+      color: #fff;
+    }
+
     @media (hover: hover) {
       &:hover {
         color: #fff;
