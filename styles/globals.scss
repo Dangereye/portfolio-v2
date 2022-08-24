@@ -18,6 +18,10 @@ a {
   color: $light-color;
   text-decoration: none;
   transition: color $time;
+
+  &:focus {
+    color: #fff;
+  }
 }
 
 ul {
