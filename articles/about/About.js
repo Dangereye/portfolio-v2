@@ -34,10 +34,10 @@ export default function About() {
         </div>
         <div className="text">
           <header className="article__header about-animate-text">
-            <ArticleHeading lead="About me" h2="Your problems, solved!" />
+            <ArticleHeading lead="About me" h2="Front-end developer" />
           </header>
           <p className="body-text body-text--lead about-animate-text">
-            Specializing in React JS and Next JS development.
+            Specializing in React.js and Next.js development.
           </p>
           <p className="body-text about-animate-text">
             Hi! I'm Craig Puxty, a bespoke front-end developer from a small town
@@ -59,7 +59,8 @@ export default function About() {
           </p>
           <p className="body-text about-animate-text">
             I can create beautiful, modern software with custom, high-quality
-            imagery - that's scalable, device responsive and performance-driven.
+            imagery - that's accessible, scalable, responsive and
+            performance-driven.
           </p>
           <div className="btns about-animate-text">
             <Link href="/#contact">

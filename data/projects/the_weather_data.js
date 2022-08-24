@@ -12,10 +12,10 @@ export const the_weather = {
   description: (
     <p className="body-text">
       Check the forecast where you are - using Geolocation. Alternatively,
-      you're able to perform manual searches - anywhere else! Forecasts include
-      conditions, precipitation and wind (displayed hourly) in a format that
-      suits you. The presentation includes dynamic background images, courtesy
-      of Unsplash - which match (somewhat reliably) current weather conditions.
+      perform manual searches - elsewhere! Forecasts include conditions,
+      precipitation and wind (displayed hourly) in a format that suits you. The
+      presentation includes dynamic imagery, courtesy of Unsplash - which
+      matches (somewhat reliably) current weather conditions.
     </p>
   ),
   apis: [

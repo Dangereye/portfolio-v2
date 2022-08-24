@@ -12,10 +12,10 @@ export const movies = {
   description: (
     <p className="body-text">
       Search and explore millions of movies, television shows and people. Peruse
-      upcoming releases or re-discover forgotten favourites. We'll help keep you
-      up to date with who or what is currently popular and trending. Other
-      features include trailers, cast biographies and services to watch, buy,
-      rent and stream content.
+      upcoming releases or re-discover forgotten favourites. Stay up to date
+      with who or what is currently popular and trending. Other features include
+      trailers, cast biographies and services to watch, buy, rent and stream
+      content.
     </p>
   ),
   apis: [

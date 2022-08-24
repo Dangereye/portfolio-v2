@@ -52,7 +52,8 @@ export default function Hero() {
             <Anchor anchor="https://reactjs.org" text="React.js" /> and{" "}
             <Anchor anchor="https://nextjs.org/" text="Next.js" /> development.
             <br /> I love building (and occasionally designing) beautiful,
-            modern software that's both responsive and performance-driven.
+            modern software that's accessible, scalable, responsive and
+            performance-driven.
           </p>
           <div className="btns hero-animate-down">
             <Link href="/#projects">
