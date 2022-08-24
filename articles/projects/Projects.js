@@ -26,15 +26,9 @@ export default function Projects() {
         <header className="article__header">
           <ArticleHeading
             lead="Projects"
-            h2="Latest projects"
+            h2="Latest Work"
             anim="projects-animate"
           />
-          <p className="body-text projects-animate">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse,
-            tenetur maxime, tempore aspernatur aperiam ut fugit recusandae odit
-            corrupti at excepturi doloribus, tempora non? Autem assumenda neque
-            quisquam non id!
-          </p>
         </header>
         <Project project={games} />
         <Project project={the_weather} alt />
