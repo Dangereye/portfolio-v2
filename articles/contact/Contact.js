@@ -225,7 +225,7 @@ export default function Contact() {
           </p>
           <IconText
             icon={<MdEmail />}
-            text="craig_puxty@talktalk.net"
+            text="contactpux@gmail.com"
             anim="contact-animate"
           />
           <SocialIcons list={Connect} anim="contact-animate" />

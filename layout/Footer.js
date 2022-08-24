@@ -33,9 +33,7 @@ export default function () {
           <DownloadGroup heading="Downloads" list={Downloads} />
           <ListGroup
             heading="Contact"
-            list={[
-              <IconText icon={<MdEmail />} text="craig_puxty@talktalk.net" />,
-            ]}
+            list={[<IconText icon={<MdEmail />} text="contactpux@gmail.com" />]}
           />
         </div>
         <div className="copyright">
