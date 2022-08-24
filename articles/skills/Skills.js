@@ -40,8 +40,8 @@ export default function Skills() {
 
           <p className="body-text skills-animate">
             Experienced in building static websites,{" "}
-            <Anchor anchor="https://reactjs.org" text="React JS" /> and{" "}
-            <Anchor anchor="https://nextjs.org" text="Next JS" /> applications,
+            <Anchor anchor="https://reactjs.org" text="React.js" /> and{" "}
+            <Anchor anchor="https://nextjs.org" text="Next.js" /> applications,
             and customisation of eCommerce platforms such as{" "}
             <Anchor
               anchor="https://business.adobe.com/uk/products/magento/magento-commerce.html"

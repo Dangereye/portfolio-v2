@@ -7,7 +7,7 @@ export const movies = {
     { image: "/svg/css3.svg", name: "CSS3", width: "34.29", height: "40" },
     { image: "/svg/sass.svg", name: "SCSS", width: "53.38", height: "40" },
     { image: "/svg/js.svg", name: "JavaScript", width: "40", height: "40" },
-    { image: "/svg/react.svg", name: "ReactJS", width: "45.71", height: "40" },
+    { image: "/svg/react.svg", name: "React.js", width: "45.71", height: "40" },
   ],
   description: (
     <p className="body-text">

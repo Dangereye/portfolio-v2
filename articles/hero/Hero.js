@@ -49,8 +49,8 @@ export default function Hero() {
           </h1>
           <p className="body-text hero-animate-down">
             Specializing in{" "}
-            <Anchor anchor="https://reactjs.org" text="React JS" /> and{" "}
-            <Anchor anchor="https://nextjs.org/" text="Next JS" /> development.
+            <Anchor anchor="https://reactjs.org" text="React.js" /> and{" "}
+            <Anchor anchor="https://nextjs.org/" text="Next.js" /> development.
             <br /> I love building (and occasionally designing) beautiful,
             modern software that's both responsive and performance-driven.
           </p>

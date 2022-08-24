@@ -1,4 +1,4 @@
 export const backEnd = {
   heading: "Back-end",
-  list: ["Node JS", "Express", "Mongoose", "MongoDB"],
+  list: ["Node.js", "Express.js", "Mongoose", "MongoDB"],
 };

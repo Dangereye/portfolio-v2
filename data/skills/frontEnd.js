@@ -5,9 +5,9 @@ export const frontEnd = {
     "CSS3",
     "SASS",
     "JavaScript (ES6+)",
-    "React JS",
+    "React.js",
     "JSX",
-    "Next JS",
+    "Next.js",
     "More...",
   ],
 };
