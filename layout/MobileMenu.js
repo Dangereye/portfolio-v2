@@ -1,15 +1,12 @@
 import { useContext } from "react";
 import { AppContext } from "../context/AppContext";
-import useFadeHorizontal from "../hooks/animation/useFadeHorizontal";
+import useAnimation from "../hooks/useAnimation";
 import Navigation from "./Navigation";
 
 export default function MobileMenu() {
   const { menuIsOpen } = useContext(AppContext);
-  const {} = useFadeHorizontal(
-    menuIsOpen,
-    ".mobile-menu-animate",
-    "#mobile-menu"
-  );
+  const id = menuIsOpen ? ".mobile-menu-animate" : null;
+  const {} = useAnimation(id, "#mobile-menu", { y: 0, x: -300, stagger: 0.05 });
   return (
     <div
       className={menuIsOpen ? "mobile-menu open" : "mobile-menu"}

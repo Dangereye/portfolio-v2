@@ -33,6 +33,6 @@ export default function useMove(id, trigger, newOptions, newTriggers) {
         animate.kill();
       };
     }
-  }, []);
+  }, [id]);
   return { animation };
 }
