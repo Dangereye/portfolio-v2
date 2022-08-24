@@ -51,6 +51,10 @@
 
     @include tooltip;
 
+    &:focus {
+      fill: $light-color;
+    }
+
     @media (hover: hover) {
       &:hover {
         fill: $light-color;
