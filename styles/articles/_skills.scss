@@ -67,4 +67,14 @@
       row-gap: 4rem;
     }
   }
+
+  a:focus {
+    color: $heading-dark;
+  }
+
+  @media (hover: hover) {
+    a:hover {
+      color: $heading-dark;
+    }
+  }
 }
