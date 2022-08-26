@@ -1,6 +1,6 @@
 .modal {
   width: 100%;
-  max-width: 50rem;
+  max-width: 60rem;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -10,4 +10,8 @@
   border-radius: 4rem;
   box-shadow: 0 5px 15px rgba($heading-dark, 0.2);
   z-index: 100;
+
+  .btns {
+    justify-content: flex-end;
+  }
 }

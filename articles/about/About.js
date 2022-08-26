@@ -2,11 +2,14 @@
 import Image from "next/image";
 import Link from "next/link";
 import ArticleHeading from "../../components/ArticleHeading";
+import Button from "../../components/Button";
 
 // Animation hook
 import useAnimation from "../../hooks/useAnimation";
+import useModal from "../../hooks/useModal";
 
 export default function About() {
+  const { closeModal, downloadCV } = useModal();
   // Animation
   // useAnimation(element id,trigger id,{animation options},{trigger options})
   const {} = useAnimation(".about-animate", "#about", {
@@ -66,9 +69,11 @@ export default function About() {
             <Link href="/#contact">
               <a className="btn btn--large btn--primary ">Contact me</a>
             </Link>
-            <a href="/" className="btn btn--large btn--tertiary">
-              Download CV
-            </a>
+            <Button
+              name="Download CV"
+              classes="btn--large btn--tertiary"
+              func={downloadCV}
+            />
           </div>
         </div>
       </div>

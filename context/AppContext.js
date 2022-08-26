@@ -1,19 +1,10 @@
-import { createContext, useState } from "react";
-
 export const AppContext = createContext();
 
-const toastDefault = {
-  message: "Golden brown.",
-  status: "",
-  icon: "",
-};
+import { createContext, useState } from "react";
 
-const modalDefault = {
-  heading: "heading",
-  message: "Modal default text",
-  buttons: null,
-  isOpen: true,
-};
+// Data
+import { toastDefault } from "../data/toastDefault";
+import { modalDefault } from "../data/modalDefault";
 
 export default function AppProvider({ children }) {
   const [menuIsOpen, setMenuIsOpen] = useState(false);
