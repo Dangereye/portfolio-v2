@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useRouter } from "next/router";
 
 // Components
 import Link from "next/link";
@@ -10,10 +11,12 @@ import useAnimation from "../hooks/useAnimation";
 
 export default function Header() {
   const [background, setBackground] = useState(false);
+  const router = useRouter();
+  const { route } = router;
 
   // Animation
   // useHook(element id,trigger id,{animation options},{trigger options})
-  const {} = useAnimation(".header-animate", "#hero", {
+  const {} = useAnimation(".header-animate", "#header", {
     y: -300,
     duration: 1,
     delay: 0,
@@ -24,11 +27,19 @@ export default function Header() {
   };
 
   useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
+    if (route !== "/") {
+      setBackground(true);
+    }
+  });
 
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+  useEffect(() => {
+    if (route === "/") {
+      window.addEventListener("scroll", handleScroll);
+
+      return () => {
+        window.removeEventListener("scroll", handleScroll);
+      };
+    }
   });
 
   return (
@@ -39,6 +50,7 @@ export default function Header() {
             ? "header header-animate background"
             : "header header-animate"
         }
+        id="header"
       >
         <div className="container">
           <Link href="/">
