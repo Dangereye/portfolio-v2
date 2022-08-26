@@ -1,0 +1,14 @@
+&__404 {
+  height: 100vh;
+
+  .heading {
+    text-align: left;
+    &--404 {
+      color: $heading-dark;
+    }
+  }
+
+  .container {
+    margin-top: 7rem;
+  }
+}
