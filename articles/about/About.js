@@ -37,7 +37,7 @@ export default function About() {
             <ArticleHeading lead="About me" h2="Front-end developer" />
           </header>
           <p className="body-text body-text--lead about-animate-text">
-            Specializing in React.js and Next.js development.
+            Specialising in React.js and Next.js development.
           </p>
           <p className="body-text about-animate-text">
             Hi! I'm Craig Puxty, a bespoke front-end developer from a small town
