@@ -4,7 +4,6 @@ import Projects from "../articles/projects/Projects";
 import Skills from "../articles/skills/Skills";
 import About from "../articles/about/About";
 import Contact from "../articles/contact/Contact";
-import MobileMenu from "../layout/MobileMenu";
 import usePageScroll from "../hooks/usePageScroll";
 import { Toast } from "../articles/contact/Toast";
 import Head from "next/head";
@@ -32,7 +31,6 @@ I love building (and occasionally designing) beautiful, modern software that's a
       <Projects />
       <Contact />
       <Toast />
-      <MobileMenu />
     </>
   );
 }

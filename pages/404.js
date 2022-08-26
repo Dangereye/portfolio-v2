@@ -8,8 +8,8 @@ export default function Custom404() {
   // Animation
   // useHook(element id,trigger id,{animation options},{trigger options})
   const {} = useAnimation("._404-animate", "#_404", {
-    y: -300,
-    delay: 1,
+    y: 0,
+    x: -300,
     stagger: 0.05,
     ease: "back.out(1.4)",
   });
