@@ -21,8 +21,8 @@ export default function Custom404() {
           <h1 className="heading heading--404 _404-animate">Awkward...</h1>
         </header>
         <p className="body-text _404-animate">
-          We don't know what happened, or why? The page you requested isn't
-          here. Sorry!
+          We don&apos;t know what happened, or why? The page you requested
+          isn&apos;t here. Sorry!
         </p>
         <div className="btns _404-animate">
           <Link href="/">
