@@ -1,9 +1,13 @@
 import { AppContext } from "../context/AppContext";
 import { useContext, useEffect } from "react";
 import { useRouter } from "next/router";
+import Header from "./Header";
+import Footer from "./Footer";
+import MobileMenu from "./MobileMenu";
+import Modal from "../components/Modal";
 
 export default function Layout({ children }) {
-  const { menuIsOpen, setMenuIsOpen } = useContext(AppContext);
+  const { menuIsOpen, setMenuIsOpen, modal } = useContext(AppContext);
   const router = useRouter();
 
   useEffect(() => {
@@ -12,5 +16,13 @@ export default function Layout({ children }) {
     }
   }, [router.asPath]);
 
-  return <div className="layout">{children}</div>;
+  return (
+    <div className="layout">
+      <Header />
+      <MobileMenu />
+      {modal.isOpen && <Modal />}
+      {children}
+      <Footer />
+    </div>
+  );
 }
