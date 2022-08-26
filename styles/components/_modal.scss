@@ -1,5 +1,5 @@
 .modal {
-  width: 100%;
+  width: 95%;
   max-width: 60rem;
   position: fixed;
   top: 50%;
@@ -11,7 +11,19 @@
   box-shadow: 0 5px 15px rgba($heading-dark, 0.2);
   z-index: 100;
 
+  @media (max-width: 400px) {
+    padding: 4rem 2rem;
+  }
+
+  .heading {
+    color: $heading-dark;
+  }
+
   .btns {
     justify-content: flex-end;
+
+    @media (max-width: 468px) {
+      flex-direction: column-reverse;
+    }
   }
 }

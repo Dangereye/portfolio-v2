@@ -4,7 +4,7 @@ import { useRouter } from "next/router";
 import Header from "./Header";
 import Footer from "./Footer";
 import MobileMenu from "./MobileMenu";
-import Modal from "../components/Modal";
+import Modal from "./Modal";
 
 export default function Layout({ children }) {
   const { menuIsOpen, setMenuIsOpen, modal } = useContext(AppContext);

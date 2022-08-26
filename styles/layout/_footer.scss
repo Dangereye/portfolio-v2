@@ -61,6 +61,17 @@
     }
   }
 
+  .btn--tertiary {
+    padding: 0;
+    line-height: 1;
+
+    @media (hover: hover) {
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
+
   @media (hover: hover) {
     a:hover {
       color: #fff;
