@@ -29,7 +29,7 @@ export default function About() {
       <div className="container">
         <div className="image about-animate">
           <Image
-            src="/img/about/profile.jpg"
+            src="/img/about/profile.webp"
             width="500"
             height="500"
             alt="Craig Puxty"
