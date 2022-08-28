@@ -180,7 +180,7 @@ export default function Contact() {
           (result) => {
             useToast("Message sent!", "success", <VscPassFilled />);
             resetValidation();
-            setState(defaultState);
+            setState(formDefault);
           },
           (error) => {
             useToast(
