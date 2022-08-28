@@ -28,6 +28,10 @@ ul {
   list-style: none;
 }
 
+img {
+  aspect-ratio: attr(width) / attr(height);
+}
+
 // Global Styles
 html {
   scroll-behavior: smooth;
@@ -64,4 +68,4 @@ body {
 @import "components/icon-text";
 @import "components/list-group";
 @import "components/toast";
-@import "components/modal"
+@import "components/modal";
