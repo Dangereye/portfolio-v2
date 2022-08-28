@@ -11,6 +11,10 @@
   justify-content: center;
   z-index: 100;
 
+  @media (max-width: $tablet) {
+    height: 6rem;
+  }
+
   &.background {
     background-color: $dark-color;
   }
