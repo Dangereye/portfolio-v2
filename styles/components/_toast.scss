@@ -2,20 +2,21 @@
   position: fixed;
   bottom: -100%;
   left: 0;
-
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-
   width: 100%;
-  padding: 4rem;
+  padding: 2rem;
+  @include hoz-padding;
   color: #fff;
   background-color: transparent;
-
   transition: bottom $time, background-color $time;
 
   z-index: 2;
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
 
   &.success,
   &.error {
@@ -30,10 +31,21 @@
     background-color: $error-color;
   }
 
+  &__icon {
+    display: grid;
+    place-content: center;
+
+    svg {
+      width: 3rem;
+      height: 3rem;
+      fill: #fff;
+    }
+  }
+
   &__message {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: 6px;
   }
 
   .btn {

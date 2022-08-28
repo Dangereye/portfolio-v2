@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { AppContext } from "../../context/AppContext";
+import { MdClose } from "react-icons/md";
 import Button from "../../components/Button";
 
 export function Toast() {
@@ -10,12 +11,19 @@ export function Toast() {
 
   return (
     <div className={`toast ${toast.status}`}>
-      <div className="toast__message">
-        <div className="toast__icon">{toast.icon}</div>
-        <div className="toast__text">{toast.message}</div>
-      </div>
+      <div className="container">
+        <div className="toast__message">
+          <div className="toast__icon">{toast.icon}</div>
+          <div className="toast__text">{toast.message}</div>
+        </div>
 
-      <Button name="X" classes="btn btn--tertiary" func={closeToast} />
+        <Button
+          icon={<MdClose />}
+          name={null}
+          classes="btn btn--toast "
+          func={closeToast}
+        />
+      </div>
     </div>
   );
 }

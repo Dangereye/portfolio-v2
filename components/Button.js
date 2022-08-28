@@ -12,7 +12,7 @@ export default function Button({ icon, name, classes, func }) {
       onClick={func}
       onKeyDown={handleKeyDown}
     >
-      {icon && <span>{icon}</span>}
+      {icon && <span className="btn__icon">{icon}</span>}
       <span>{name}</span>
     </button>
   );
