@@ -23,13 +23,14 @@ import { MdOutlineError } from "react-icons/md";
 // Data
 import { Connect } from "../../data/Connect";
 import { toastDefault } from "../../data/toastDefault";
+import { formDefault } from "../../data/formDefault";
 
 // Animation hook
 import useAnimation from "../../hooks/useAnimation";
 
 export default function Contact() {
-  const { toast, setToast } = useContext(AppContext);
-  const [state, setState] = useState(defaultState);
+  const { setToast } = useContext(AppContext);
+  const [state, setState] = useState(formDefault);
 
   // Animation
   // useAnimation(element id,trigger id,{animation options},{trigger options})
@@ -187,7 +188,6 @@ export default function Contact() {
               "error",
               <MdOutlineError />
             );
-            console.log(toast.status);
           }
         );
     }
