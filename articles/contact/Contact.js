@@ -22,16 +22,10 @@ import { MdOutlineError } from "react-icons/md";
 
 // Data
 import { Connect } from "../../data/Connect";
+import { toastDefault } from "../../data/toastDefault";
 
 // Animation hook
 import useAnimation from "../../hooks/useAnimation";
-
-const defaultState = {
-  name: { value: "", error_msg: "" },
-  email: { value: "", error_msg: "" },
-  message: { value: "", error_msg: "" },
-  complete: false,
-};
 
 export default function Contact() {
   const { toast, setToast } = useContext(AppContext);
@@ -183,17 +177,13 @@ export default function Contact() {
         )
         .then(
           (result) => {
-            useToast(
-              "Message sent successfully!",
-              "success",
-              <VscPassFilled />
-            );
+            useToast("Message sent!", "success", <VscPassFilled />);
             resetValidation();
             setState(defaultState);
           },
           (error) => {
             useToast(
-              "Message NOT sent. Please, try again.",
+              "Message failed! Please, try again.",
               "error",
               <MdOutlineError />
             );
@@ -206,7 +196,7 @@ export default function Contact() {
   const useToast = (message, status, icon) => {
     setToast({ message, status, icon });
     setTimeout(() => {
-      setToast({ message: "", status: "unused", icon: "" });
+      setToast(toastDefault);
     }, 6000);
   };
 
