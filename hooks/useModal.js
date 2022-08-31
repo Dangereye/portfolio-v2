@@ -26,7 +26,7 @@ export default function useModal() {
             func={closeModal}
           />
           <a
-            href="/"
+            href="/curriculum_vitae.pdf"
             className="btn btn--large btn--primary"
             download
             onClick={closeModal}
