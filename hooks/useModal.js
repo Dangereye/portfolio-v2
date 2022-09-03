@@ -25,6 +25,7 @@ export default function useModal() {
             classes="btn-large btn--secondary"
             func={closeModal}
           />
+
           <a
             href="/curriculum_vitae.pdf"
             className="btn btn--large btn--primary"
