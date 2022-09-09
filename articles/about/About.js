@@ -53,16 +53,14 @@ export default function About() {
           </p>
           <p className="body-text about-animate-text">
             I am an analytical thinker, able to identify and define problems and
-            then develop a workable solution.
+            then develop a workable solution, utilising a meticulous development
+            process and following fundamental principles: keep it simple, stupid
+            (kiss), don't repeat yourself (dry), simple navigation, visual
+            hierarchy, consistency, etc.
           </p>
           <p className="body-text about-animate-text">
-            I am meticulous in my development process, following fundamental
-            principles; KISS, DRY, navigation, visual hierarchy, consistency,
-            etc.
-          </p>
-          <p className="body-text about-animate-text">
-            I can create beautiful, modern software with custom, high-quality
-            imagery - that's accessible, scalable, responsive and
+            My mission is to create beautiful, modern software with custom,
+            high-quality imagery - that's accessible, scalable, responsive and
             performance-driven.
           </p>
           <div className="btns about-animate-text">
