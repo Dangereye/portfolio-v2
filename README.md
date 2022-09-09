@@ -1,6 +1,6 @@
 # Portfolio v2
 
-A summary of my skills, knowledge and experience, current services offered, preferences and intentions. Also, providing a convenient way to view my latest work live and take a peek behind the scenes - while allowing further expansion and development of my skills and experience.
+A summary of my knowledge, current services offered, preferences and intentions. Also, providing a convenient way to view my latest work live and take a peek behind the scenes - while allowing further expansion and development of my skills and experience.
 
 ## Features
 
