@@ -78,7 +78,7 @@ export default function Project({ project, alt }) {
             rel="noreferrer"
             className="btn btn--tertiary"
           >
-            View Code
+            view on Github
           </a>
         </div>
       </div>
