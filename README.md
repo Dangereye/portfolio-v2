@@ -1,22 +1,17 @@
 # Portfolio v2
 
-Solo project, designed & developed by myself.
-
-Provides a convenient way to view my latest work live. Additionally, inspect project repositories where you can view folder structure and hierarchy and take a peek at the code while allowing further expansion and development of my skills and experience.
+A summary of my skills, knowledge and experience, current services offered, preferences and intentions. Also, providing a convenient way to view my latest work live and take a peek behind the scenes - while allowing further expansion and development of my skills and experience.
 
 ## Features
 
 - Single page application
 - Responsive design
 - Navigate / smooth scroll to articles
-- Gsap animation
-- Gsap scroll triggers
+- Gsap animation & scroll triggers
 - Modal
 - Toast
+- Tooltips
 - Curriculum vitae download (PDF format)
-- Recent projects, including project description, technologies, apis and any additional third party software
-- Project live view
-- Project repository view
 - Contact form
 
 ## Technologies
