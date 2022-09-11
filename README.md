@@ -2,6 +2,10 @@
 
 A summary of my knowledge, current services offered, preferences and intentions. Also, providing a convenient way to view my latest work live and take a peek behind the scenes - while allowing further expansion and development of my skills and experience.
 
+## Design
+
+My goal was to combine modern, responsive design, elegant aesthetics, smooth transitions and ease of use to provide adequate information to technical and non-technical people quickly.
+
 ## Features
 
 - Single page application
