@@ -29,6 +29,10 @@ My goal was to combine modern, responsive design, elegant aesthetics, smooth tra
 - Next
 - Gsap
 
+## Third party
+
+- React icons
+
 ## Design tools
 
 - Adobe Experience design (Xd)
