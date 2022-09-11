@@ -32,7 +32,12 @@ export const games = {
         "https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API",
     },
   ],
-  third_party: [],
+  third_party: [
+    {
+      name: "React icons",
+      anchor: "https://react-icons.github.io/react-icons/",
+    },
+  ],
   project__anchor: "https://games-inky-seven.vercel.app",
   repo__anchor: "https://github.com/Dangereye/games",
 };
