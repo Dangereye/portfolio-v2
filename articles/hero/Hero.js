@@ -62,8 +62,8 @@ export default function Hero() {
           </div>
         </div>
         <div className="features hero-animate-up">
-          <Feature icon={<ReactSvg />} text="React JS focused" />
-          <Feature icon={<NextSVG />} text="Enhanced with Next JS" />
+          <Feature icon={<ReactSvg />} text="React.js focused" />
+          <Feature icon={<NextSVG />} text="Enhanced with Next.js" />
           <Feature icon={<CompassSvg />} text="Modern designs" />
           <Feature icon={<ScreenSvg />} text="Device responsive" />
         </div>
