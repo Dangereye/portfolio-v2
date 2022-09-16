@@ -18,6 +18,7 @@ export default function Technologies({ name, tech, anim }) {
                   src={item.image}
                   width={item.width}
                   height={item.height}
+                  layout="responsive"
                   alt={item.name}
                 />
               </div>

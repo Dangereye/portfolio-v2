@@ -110,6 +110,9 @@
 
     &__icon {
       @include tooltip;
+      display: block;
+      width: 100%;
+      max-width: 4rem;
     }
 
     @media (max-width: $mobile) {
