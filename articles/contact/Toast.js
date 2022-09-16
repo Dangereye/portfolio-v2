@@ -20,6 +20,7 @@ export function Toast() {
         <Button
           icon={<MdClose />}
           name={null}
+          label="close"
           classes="btn btn--toast "
           func={closeToast}
         />
