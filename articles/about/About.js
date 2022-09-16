@@ -28,12 +28,15 @@ export default function About() {
     <article className="article article__about" id="about">
       <div className="container">
         <div className="image about-animate">
-          <Image
-            src="/img/about/profile.webp"
-            width="500"
-            height="500"
-            alt="Craig Puxty"
-          />
+          <div className="image__wrapper">
+            <Image
+              src="/img/about/profile.webp"
+              width={500}
+              height={500}
+              layout="responsive"
+              alt="Craig Puxty"
+            />
+          </div>
         </div>
         <div className="text">
           <header className="article__header about-animate-text">

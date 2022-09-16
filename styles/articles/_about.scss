@@ -19,6 +19,13 @@
     display: flex;
     justify-content: center;
     align-items: flex-start;
+
+    &__wrapper {
+      display: block;
+      width: 100%;
+      max-width: 55rem;
+      height: 100%;
+    }
   }
 
   .text {
