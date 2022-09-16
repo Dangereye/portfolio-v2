@@ -10,6 +10,7 @@ export default function SocialIcons({ list, anim }) {
           rel="noreferrer"
           className="social-icon"
           data-tooltip={item.name ? item.name : ""}
+          aria-label={item.name ? item.name : "Social icon"}
         >
           {item.icon ? item.icon : "N/A"}
         </a>
