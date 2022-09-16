@@ -13,6 +13,7 @@ export default function InputGroup({
     <div className={`form__input-group ${anim}`}>
       <label htmlFor={name}>{name}</label>
       <input
+        id={name}
         type={type}
         name={name}
         value={value}
