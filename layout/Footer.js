@@ -23,7 +23,10 @@ export default function () {
   return (
     <footer className="footer">
       <Link href="/">
-        <a className="btn btn--primary btn--back-to-top">
+        <a
+          className="btn btn--primary btn--back-to-top"
+          aria-label="back to the top"
+        >
           <BiArrowToTop />
         </a>
       </Link>
