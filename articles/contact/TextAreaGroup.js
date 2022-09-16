@@ -12,6 +12,7 @@ export default function TextAreaGroup({
     <div className={`form__textarea-group ${anim}`}>
       <label htmlFor={name}>{name}</label>
       <textarea
+        id={name}
         name={name}
         value={value}
         onChange={handleChange}
