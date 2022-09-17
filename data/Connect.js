@@ -8,7 +8,7 @@ export const Connect = [
   },
   {
     name: "Linkedin",
-    anchor: "https://uk.linkedin.com/",
+    anchor: "https://www.linkedin.com/in/craig-puxty",
     icon: <BsLinkedin />,
   },
   {
