@@ -1,4 +1,5 @@
 // Data
+import { portfolio } from "../../data/projects/portfolio_data";
 import { games } from "../../data/projects/games_data";
 import { movies } from "../../data/projects/movies_data";
 import { the_weather } from "../../data/projects/the_weather_data";
@@ -30,9 +31,10 @@ export default function Projects() {
             anim="projects-animate"
           />
         </header>
-        <Project project={games} />
-        <Project project={the_weather} alt />
-        <Project project={movies} />
+        <Project project={portfolio} />
+        <Project project={games} alt />
+        <Project project={the_weather} />
+        <Project project={movies} alt />
       </div>
     </article>
   );

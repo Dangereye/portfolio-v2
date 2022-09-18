@@ -64,14 +64,16 @@ export default function Project({ project, alt }) {
           anim={`${id()}-animate-text`}
         />
         <div className={`btns ${id()}-animate-text`}>
-          <a
-            href={project.project__anchor}
-            target="_blank"
-            rel="noreferrer"
-            className="btn btn--primary btn--large"
-          >
-            Launch Site
-          </a>
+          {project.project__anchor && (
+            <a
+              href={project.project__anchor}
+              target="_blank"
+              rel="noreferrer"
+              className="btn btn--primary btn--large"
+            >
+              Launch Site
+            </a>
+          )}
           <a
             href={project.repo__anchor}
             target="_blank"

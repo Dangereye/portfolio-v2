@@ -6,8 +6,18 @@ export const the_weather = {
     { image: "/svg/html5.svg", name: "HTML5", width: "34.29", height: "40" },
     { image: "/svg/css3.svg", name: "CSS3", width: "34.29", height: "40" },
     { image: "/svg/sass.svg", name: "SCSS", width: "53.38", height: "40" },
-    { image: "/svg/js.svg", name: "JavaScript", width: "40", height: "40" },
-    { image: "/svg/react.svg", name: "React.js", width: "45.71", height: "40" },
+    {
+      image: "/svg/js.svg",
+      name: "JavaScript ES6+",
+      width: "40",
+      height: "40",
+    },
+    {
+      image: "/svg/react.svg",
+      name: "React: 17.0.1",
+      width: "45.71",
+      height: "40",
+    },
   ],
   description: (
     <p className="body-text">

@@ -6,9 +6,24 @@ export const games = {
     { image: "/svg/html5.svg", name: "HTML5", width: "34.29", height: "40" },
     { image: "/svg/css3.svg", name: "CSS3", width: "34.29", height: "40" },
     { image: "/svg/sass.svg", name: "SCSS", width: "53.38", height: "40" },
-    { image: "/svg/js.svg", name: "JavaScript", width: "40", height: "40" },
-    { image: "/svg/react.svg", name: "React.js", width: "45.71", height: "40" },
-    { image: "/svg/next.svg", name: "Next.js", width: "40", height: "40" },
+    {
+      image: "/svg/js.svg",
+      name: "JavaScript ES6+",
+      width: "40",
+      height: "40",
+    },
+    {
+      image: "/svg/react.svg",
+      name: "React: 17.0.2",
+      width: "45.71",
+      height: "40",
+    },
+    {
+      image: "/svg/next.svg",
+      name: "Next: 12.1.0",
+      width: "40",
+      height: "40",
+    },
   ],
   description: (
     <p className="body-text">
