@@ -39,7 +39,7 @@
   &__img {
     &__wrapper {
       position: relative;
-      aspect-ratio: 4/5;
+      aspect-ratio: 0.73/1;
 
       @media (max-width: $laptop) {
         margin: 0 auto;
