@@ -27,11 +27,13 @@ My goal was to combine modern, responsive design, elegant aesthetics, smooth tra
 - SVGs
 - React
 - Next
-- Gsap
 
 ## Third party
 
 - React icons
+- Prop-Types
+- Gsap
+- EmailJS
 
 ## Design tools
 
