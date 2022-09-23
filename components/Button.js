@@ -1,7 +1,15 @@
-export default function Button({ icon, name, label, classes, func }) {
+export default function Button({
+  iconBefore,
+  iconAfter,
+  iconClasses,
+  name,
+  label,
+  classes,
+  func,
+  disabled,
+}) {
   const handleKeyDown = (e) => {
     if (e.code === "Enter") {
-      console.log("Key press.");
       func();
     }
   };
@@ -12,19 +20,24 @@ export default function Button({ icon, name, label, classes, func }) {
       onClick={func}
       onKeyDown={handleKeyDown}
       aria-label={name ? name : label}
+      disabled={disabled}
     >
-      {icon && <span className="btn__icon">{icon}</span>}
+      {iconBefore && <span className={`btn__icon ${iconClasses}`}>{icon}</span>}
       <span>{name}</span>
+      {iconAfter && <span className={`btn__icon ${iconClasses}`}>{icon}</span>}
     </button>
   );
 }
 
 Button.defaultProps = {
-  icon: null,
+  iconBefore: null,
+  iconAfter: null,
+  iconClasses: "",
   name: "Button Name",
   label: null,
   classes: "",
   func: () => {
     return;
   },
+  disabled: false,
 };
