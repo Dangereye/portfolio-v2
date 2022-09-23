@@ -18,6 +18,7 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  gap: 8px;
 
   border: none;
   border-radius: 5rem;
@@ -34,6 +35,10 @@
   &__icon {
     display: grid;
     place-content: center;
+
+    &.spinner {
+      animation: spinner 2s linear infinite forwards;
+    }
   }
 
   &--large {
@@ -45,6 +50,12 @@
     @media (max-width: $mobile) {
       padding: 1.6rem 3.2rem;
     }
+  }
+
+  &--disabled {
+    color: $heading-dark;
+    background-color: $grey-color;
+    cursor: not-allowed;
   }
 
   &--primary {
@@ -118,5 +129,11 @@
       width: 3rem;
       height: 3rem;
     }
+  }
+}
+
+@keyframes spinner {
+  100% {
+    transform: rotate(360deg);
   }
 }

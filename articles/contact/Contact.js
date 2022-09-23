@@ -16,9 +16,9 @@ import SocialIcons from "./SocialIcons";
 import IconText from "../../components/IconText";
 
 // Icons
-import { MdEmail } from "react-icons/md";
+import { MdEmail, MdOutlineError } from "react-icons/md";
 import { VscPassFilled } from "react-icons/vsc";
-import { MdOutlineError } from "react-icons/md";
+import { FaSpinner } from "react-icons/fa";
 
 // Data
 import { Connect } from "../../data/Connect";
@@ -169,6 +169,10 @@ export default function Contact() {
 
   const sendMail = (e) => {
     if (state.complete) {
+      setState((prev) => ({
+        ...prev,
+        sending: true,
+      }));
       emailjs
         .sendForm(
           "gmail",
@@ -249,7 +253,17 @@ export default function Contact() {
             anim="contact-animate-form"
           />
           <div className="btns contact-animate-form">
-            <Button classes="btn--primary btn--large" name="Send message" />
+            <Button
+              classes={
+                state.complete
+                  ? "btn--primary btn--large"
+                  : "btn--disabled btn--large"
+              }
+              name={state.sending ? "Sending" : "Send message"}
+              iconAfter={state.sending ? <FaSpinner /> : null}
+              iconClasses="spinner"
+              disabled={!state.complete}
+            />
           </div>
         </form>
       </div>

@@ -22,9 +22,13 @@ export default function Button({
       aria-label={name ? name : label}
       disabled={disabled}
     >
-      {iconBefore && <span className={`btn__icon ${iconClasses}`}>{icon}</span>}
+      {iconBefore && (
+        <span className={`btn__icon ${iconClasses}`}>{iconBefore}</span>
+      )}
       <span>{name}</span>
-      {iconAfter && <span className={`btn__icon ${iconClasses}`}>{icon}</span>}
+      {iconAfter && (
+        <span className={`btn__icon ${iconClasses}`}>{iconAfter}</span>
+      )}
     </button>
   );
 }
