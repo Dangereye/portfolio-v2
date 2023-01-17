@@ -32,9 +32,8 @@ export const the_weather = {
     { name: "Weather", anchor: "https://www.weatherapi.com/" },
     { name: "Unsplash", anchor: "https://unsplash.com/developers" },
     {
-      name: "Local storage",
-      anchor:
-        "https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage",
+      name: "Fetch",
+      anchor: "https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API",
     },
     {
       name: "Geolocation",

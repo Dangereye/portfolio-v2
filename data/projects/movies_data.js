@@ -30,6 +30,11 @@ export const movies = {
   ),
   apis: [
     { name: "TMDB", anchor: "https://www.themoviedb.org/documentation/api" },
+    ,
+    {
+      name: "Fetch",
+      anchor: "https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API",
+    },
   ],
   third_party: [
     { name: "YouTube", anchor: "https://www.youtube.com/" },

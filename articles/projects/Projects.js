@@ -10,6 +10,7 @@ import Project from "./project/Project";
 
 // Animation hook
 import useAnimation from "../../hooks/useAnimation";
+import { starWars } from "../../data/projects/star_wars_data";
 
 export default function Projects() {
   // Animation
@@ -31,10 +32,11 @@ export default function Projects() {
             anim="projects-animate"
           />
         </header>
-        <Project project={portfolio} />
-        <Project project={games} alt />
-        <Project project={the_weather} />
-        <Project project={movies} alt />
+        <Project project={starWars} />
+        <Project project={portfolio} alt />
+        <Project project={games} />
+        <Project project={the_weather} alt />
+        <Project project={movies} />
       </div>
     </article>
   );

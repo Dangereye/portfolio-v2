@@ -36,10 +36,10 @@ export const games = {
   ),
   apis: [
     { name: "RAWG", anchor: "https://rawg.io/apidocs" },
+
     {
-      name: "Local storage",
-      anchor:
-        "https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage",
+      name: "Fetch",
+      anchor: "https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API",
     },
     {
       name: "Intersection observer",
