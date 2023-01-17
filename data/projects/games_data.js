@@ -30,8 +30,8 @@ export const games = {
       Search and explore 500,000+ games for 50 platforms - including mobiles.
       Containing comprehensive video game data - courtesy of RAWG: videos,
       screenshots, descriptions, genres, ERSB ratings, Metacritic ratings and
-      more... Games utilises the intersection observer API to provide an
-      optional infinite scrolling feature.
+      more... Additional features include optional infinite scrolling and a
+      light or dark theme.
     </p>
   ),
   apis: [
