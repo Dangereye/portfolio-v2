@@ -55,11 +55,9 @@ export default function About() {
             together with some back-end knowledge.
           </p>
           <p className="body-text about-animate-text">
-            I am an analytical thinker, able to identify and define problems and
-            then develop a workable solution, utilising a meticulous development
-            process and following fundamental principles: keep it simple stupid
-            (kiss), don't repeat yourself (dry), simple navigation, visual
-            hierarchy, consistency, etc.
+            My development process is meticulous, following fundamental design
+            principles: "keep it simple, stupid" (KISS), "don't repeat yourself"
+            (DRY), simple navigation, visual hierarchy, consistency, etc.
           </p>
           <p className="body-text about-animate-text">
             My mission is to create beautiful, modern software with custom,
