@@ -32,11 +32,11 @@ export default function Projects() {
             anim="projects-animate"
           />
         </header>
-        <Project project={starWars} />
-        <Project project={portfolio} alt />
-        <Project project={games} />
-        <Project project={the_weather} alt />
         <Project project={movies} />
+        <Project project={starWars} alt/>
+        <Project project={portfolio} />
+        <Project project={games} alt/>
+        <Project project={the_weather} />
       </div>
     </article>
   );

@@ -1,5 +1,9 @@
 export const SourceCode = [
   {
+    name: "Movies",
+    anchor: "https://github.com/Dangereye/movies-ts",
+  },
+  {
     name: "Star Wars",
     anchor: "https://github.com/Dangereye/star-wars-ts",
   },
@@ -14,9 +18,5 @@ export const SourceCode = [
   {
     name: "The Weather",
     anchor: "https://github.com/Dangereye/the-weather",
-  },
-  {
-    name: "Movies",
-    anchor: "https://github.com/Dangereye/movies",
   },
 ];

@@ -1,6 +1,7 @@
+
 export const movies = {
   image: "/img/portfolio/movies-project.webp",
-  date: " Jan 2021",
+  date: "Dec 2022",
   name: "Movies",
   tech: [
     { image: "/svg/html5.svg", name: "HTML5", width: "34.29", height: "40" },
@@ -11,21 +12,24 @@ export const movies = {
       name: "JavaScript ES6+",
       width: "40",
       height: "40",
+      
+    },
+    {
+      image: "/svg/typescript.svg",
+      name: "TypeScript: 4.9.4",
+      width: "40",
+      height: "40",
     },
     {
       image: "/svg/react.svg",
-      name: "React: 17.0.1",
+      name: "React: 18.2.0",
       width: "45.71",
       height: "40",
     },
   ],
   description: (
     <p className="body-text">
-      Search and explore millions of movies, television shows and people. Peruse
-      upcoming releases or re-discover forgotten favourites. Stay up to date
-      with who or what is currently popular and trending. Other features include
-      trailers, cast biographies and services to watch, buy, rent and stream
-      content.
+      Search and explore millions of movies, television shows and personalities. Browse upcoming releases, rediscover favourites, and stay up-to-date on the latest trends. Use our filters to find exactly what you're looking for, including trailers, teasers, ratings, and reviews. With endless options, you'll never run out of things to watch.
     </p>
   ),
   apis: [
@@ -34,6 +38,11 @@ export const movies = {
     {
       name: "Fetch",
       anchor: "https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API",
+    },
+    {
+      name: "Intersection observer",
+      anchor:
+        "https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API",
     },
   ],
   third_party: [
@@ -44,10 +53,10 @@ export const movies = {
     },
     {
       name: "React router",
-      anchor: "https://v5.reactrouter.com/web/guides/quick-start",
+      anchor: "https://reactrouter.com/en/main",
     },
-    { name: "React query", anchor: "https://react-query.tanstack.com/" },
+    { name: "React query", anchor: "https://tanstack.com/query/latest/" },
   ],
   project__anchor: "https://pux-movies.netlify.app/",
-  repo__anchor: "https://github.com/Dangereye/Movies",
+  repo__anchor: "https://github.com/Dangereye/movies-ts",
 };
